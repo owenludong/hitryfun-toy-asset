@@ -1,0 +1,566 @@
+.blue-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #8dd9bf;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.blue-button.touched {
+    background-color: #1baae2
+}
+
+.blue-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.gold-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #ffd522;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.gold-button.touched {
+    background-color: #f2ca1f
+}
+
+.gold-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.white-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #ffffff;
+    color: #616161;
+    cursor: pointer
+}
+
+.white-button.touched {
+    background-color: #f4f4f4
+}
+
+.white-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.red-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #e97985;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.red-button.touched {
+    background-color: #c76770
+}
+
+.red-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.gray-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #bbb;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.gray-button.touched {
+    background-color: #888
+}
+
+.gray-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.orange-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #ea9c51;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.orange-button.touched {
+    background-color: #eda968
+}
+
+.orange-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.black-pill-button {
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #000;
+    border: 1px solid #bbb;
+    color: #ffffff;
+    cursor: pointer;
+    zoom:1;filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.black-pill-button.touched {
+    zoom:1;filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9
+}
+
+.black-pill-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.gray-outline-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    color: #777;
+    cursor: pointer
+}
+
+.gray-outline-button.touched {
+    background-color: #ccc
+}
+
+.gray-outline-button.disabled {
+    zoom:1;filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    cursor: default
+}
+
+.blue-outline-button {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 36px;
+    width: 100px;
+    border: 1px solid #8dd9bf;
+    color: #8dd9bf;
+    cursor: pointer
+}
+
+.blue-outline-button.touched {
+    border: 1px solid #8dd9bf;
+    color: #8dd9bf
+}
+
+.blue-outline-button.disabled {
+    border: 1px solid #dae3e3;
+    color: #dae3e3
+}
+
+#credit-card-section .table-form-row {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-collapse: separate;
+    margin: 20px 0 10px
+}
+
+#credit-card-section td {
+    vertical-align: top
+}
+
+#credit-card-section td.with-border {
+    background-color: #f7f7f7;
+    border: solid 1px #e8e8e8;
+    border-style: solid none;
+    padding: 6px
+}
+
+#credit-card-section td.with-border:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px
+}
+
+#credit-card-section td.with-border:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px
+}
+
+#credit-card-section #cc-number {
+    padding: 0;
+    border: 0
+}
+
+#credit-card-section #cc-img-cell {
+    width: 40px;
+    height: 19px
+}
+
+#credit-card-section #cc-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 30px 19px;
+    display: inline-block
+}
+
+#credit-card-section .cc-label-cell {
+    width: 60%;
+    padding-right: 10px
+}
+
+#credit-card-section .cc-label {
+    font-size: 14px;
+    margin: 0
+}
+
+#credit-card-section .cc-label.subscript {
+    font-size: 10px;
+    color: #a8a8a8
+}
+
+#credit-card-section #billing-address-form {
+    margin-top: 20px
+}
+
+#credit-card-section #billing-address-form .subscript {
+    font-size: 12px;
+    margin: 5px 0
+}
+
+#credit-card-section #billing-address-form input[type="text"],#credit-card-section #billing-address-form select {
+    margin-bottom: 10px
+}
+
+#credit-card-section #billing-address-form #billing-same-as-shipping-container {
+    margin-bottom: 10px
+}
+
+#credit-card-section #billing-address-form #billing-same-as-shipping-container input {
+    margin: 0;
+    vertical-align: middle
+}
+
+#credit-card-section #billing-address-form #billing-same-as-shipping-container label {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#credit-card-section #billing-address-form .table-row {
+    width: 100%
+}
+
+#credit-card-section #billing-address-form .table-row .content-col {
+    width: 49%
+}
+
+.secure-payment-table {
+    margin: 15px
+}
+
+.secure-payment-table .secure-payment-image-row {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle
+}
+
+.secure-payment-table .secure-payment-text-row {
+    vertical-align: middle
+}
+
+.secure-payment-table .secure-payment-title {
+    font-size: 13px;
+    font-weight: bold
+}
+
+.secure-payment-table .secure-payment-text {
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: normal
+}
+
+/*.secure-payment-table .secure-payment-image {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background-size: 35px 35px;
+    background-image: url("../assets/images/ic_lock.png")
+}*/
+
+.mobile-cart-billing-page {
+    color: #555
+}
+
+.mobile-cart-billing-page #bill-to-container .bill-to-text {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px
+}
+
+.mobile-cart-billing-page #bill-to-container .cancel-link {
+    display: inline-block;
+    float: right;
+    text-decoration: underline;
+    font-size: 12px;
+    color: #a8a8a8;
+    padding: 10px
+}
+
+.mobile-cart-billing-page #payment-header {
+    display: table;
+    width: 100%;
+    border-top: #f7f7f7 solid 1px;
+    border-bottom: #f7f7f7 solid 1px;
+    margin-bottom: 10px
+}
+
+.mobile-cart-billing-page #payment-header .payment-option {
+    /*display: table-cell;*/
+    padding: 15px 0 15px 0;
+    cursor: pointer;
+    position: relative
+}
+
+.mobile-cart-billing-page #payment-header .payment-option.selected {
+    background-color: #f7f7f7
+}
+
+.mobile-cart-billing-page #payment-header .payment-option.selected::after {
+    /*content: '';
+    position: absolute;
+    bottom: -30px;
+    width: 0;
+    height: 0;
+    border-color: #f7f7f7 transparent transparent transparent;
+    border-style: solid;
+    border-width: 15px*/
+}
+
+.mobile-cart-billing-page #payment-header .payment-option .payment-img {
+    display: block;
+    height: 40px;
+    margin: 0 auto
+}
+
+.mobile-cart-billing-page .payment-info-form {
+    padding: 6px
+}
+
+.mobile-cart-billing-page .payment-info-form #apple-pay-section {
+    background-color: black;
+    background-image: -webkit-named-image(apple-pay-logo-white);
+    background-size: 100%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px
+}
+
+.mobile-cart-billing-page .payment-info-form #apple-pay-section:hover {
+    zoom:1;filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8
+}
+
+/*.mobile-cart-billing-page .payment-info-form #apple-pay-section-v2 {
+    background-color: black;
+    background-image: url("//main.cdn.wish.com/ec05fc1c53c5/img/apple_pay/apple_pay_medium.png?v=13");
+    background-size: 100%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px
+}*/
+
+.mobile-cart-billing-page .payment-info-form #apple-pay-section-v2:hover {
+    zoom:1;filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8
+}
+
+.mobile-cart-billing-page .payment-info-form .section-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 0
+}
+
+.mobile-cart-billing-page .payment-info-form .input-row {
+    margin-bottom: 10px
+}
+
+.mobile-cart-billing-page .payment-info-form .input-row label {
+    font-size: 14px;
+    margin: 10px 0 5px
+}
+
+.mobile-cart-billing-page .payment-info-form .error-input {
+    color: #e57d89
+}
+
+.mobile-cart-billing-page .payment-info-form input[type="tel"],.mobile-cart-billing-page .payment-info-form input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: 0;
+    padding: 6px;
+    font-size: 15px;
+    background-color: #f7f7f7;
+    border: solid 1px #e8e8e8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-cart-billing-page .payment-info-form select {
+    width: 100%;
+    padding: 6px 2px;
+    font-size: 15px;
+    background-color: #f7f7f7;
+    border: solid 1px #e8e8e8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-cart-billing-page .save-billing-button-container {
+    padding: 6px;
+    width: 100%;
+    background-color: #FFF;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-cart-billing-page .save-billing-button-container .save-billing-button {
+    padding: 10px;
+    font-size: 13px
+}
+
+.mobile-cart-billing-page #klarna-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    padding: 15px;
+    margin-left: -100px;
+    margin-top: -40px;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-cart-billing-page #klarna-error .back-to-cart-button {
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+

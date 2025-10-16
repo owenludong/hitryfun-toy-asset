@@ -1,0 +1,159 @@
+/*确认框*/
+.confirm-fade-enter-active {
+  animation: confirm-fade-in .2s;
+}
+
+.confirm-fade-leave-active {
+  animation: confirm-fade-out .2s;
+}
+
+@keyframes confirm-fade-in {
+  0% {
+    transform: translate3d(0, -150px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes confirm-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -150px, 0);
+    opacity: 0;
+  }
+}
+
+/*确认框*/
+.zoom-fade-enter-active {
+  animation: zoom-fade-in .2s;
+}
+
+.zoom-fade-leave-active {
+  animation: zoom-fade-out .2s;
+}
+
+@keyframes zoom-fade-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-fade-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+/*模态框*/
+.modal-fade-enter-active {
+  animation: modal-fade-in .2s;
+}
+
+.modal-fade-leave-active {
+  animation: modal-fade-out .2s;
+}
+
+@keyframes modal-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes modal-fade-out {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.modern-alert-modal, .modern-confirmation-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0,0,0,0.5); */
+    z-index: 99999;
+    color: #3c4646;
+}
+.modern-alert-modal .modern-alert-modal-pane, .modern-alert-modal .modern-confirmation-modal-pane, .modern-confirmation-modal .modern-alert-modal-pane, .modern-confirmation-modal .modern-confirmation-modal-pane {
+    width: 350px;
+    margin: auto;
+    margin-top: 150px;
+    background-color: white;
+    background-size: 740px 640px;
+    /*padding: 58px;*/
+    overflow: hidden;
+    opacity: 1;
+    border-radius: 3px;
+    position: relative;
+}
+.modern-alert-modal .title, .modern-confirmation-modal .title {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+.modern-alert-modal .message, .modern-confirmation-modal .message {
+    padding-top: 32px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+}
+.modern-confirmation-modal .cancel {
+    margin: 40px auto 0px auto;
+    padding: 14px 16px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+}
+.main-color-background {
+    background: #8dd9bf !important;
+}
+.modern-confirmation-modal .confirm {
+    font-size: 16px;
+    display: table;
+    margin: auto;
+    margin-top: 22px;
+}
+.luoji-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    z-index: 90000;
+    color: #3c4646;
+    opacity: .5;
+}
+.header {
+  text-align: right;
+  padding: 14px;
+  padding-bottom: 0;
+}
+.content {
+  padding: 30px;
+}

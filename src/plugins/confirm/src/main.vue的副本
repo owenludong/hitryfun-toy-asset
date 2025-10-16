@@ -1,0 +1,75 @@
+<template>
+  <transition name="msgbox-fade">
+    <div class="modern-confirmation-modal">
+      <div class="modern-confirmation-modal-pane">
+        <div class="title">
+          Are you sure?
+        </div>
+        <div class="message">
+          {{message}}
+        </div>
+        <a class="cancel main-color-background" @click="handleAction('cancel')">
+          No
+        </a>
+        <a class="confirm main-color" @click="handleAction('confirm')">
+          Yes
+        </a>
+      </div>
+    </div>
+  </transition>
+
+</template>
+
+<script>
+export default {
+
+  name: 'confirm',
+  props: {
+    message: {
+      default: 'Do you want to remove this from your cart?',
+      type: String
+    }
+  },
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+    handleAction (action) {
+    }
+  }
+}
+</script>
+
+<style lang="css" scoped>
+  .msgbox-fade-enter-active {
+    animation: msgbox-fade-in .3s;
+  }
+
+  .msgbox-fade-leave-active {
+    animation: msgbox-fade-out .3s;
+  }
+
+  @keyframes msgbox-fade-in {
+    0% {
+      transform: translate3d(0, -20px, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes msgbox-fade-out {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(0, -20px, 0);
+      opacity: 0;
+    }
+  }
+</style>

@@ -1,0 +1,363 @@
+<template>
+  <div class="index-page">
+    <my-header></my-header>
+    <ul class="category-nav" v-show="isIndex">
+      <!-- <li @click="changeCategory()" class="category-name">ChrisTmas Decoration</li> -->
+      <li v-for="item in catergories" @click="changeCategory(item, $event)" :class="{selected: currentCategory === item}" class="category-name">{{item}}</li>
+    </ul>
+    <div class="mobile-page-content ui-content" data-role="content" role="main">
+      <div class="mobile-page-state-content default-hide" style="display: block;">
+        <div class="mobile-feed-page">
+          <div class="mobile-feed-promo-container">
+          </div>
+          <div>
+            <div class="mobile-feed-header-view-show">
+            </div>
+            <div class="mobile-feed-container-show">
+              <table class="mobile-feed-table-show">
+                <tbody>
+                  <tr class="mobile-feed-content-view-show">
+                    <td class="feed-column-show" v-for="item in tdList" @click="goDetail()">
+                      <div class="mobile-feed-item" :style="{width: columnWidth}">
+                        <div class="mobile-feed-item-container-show">
+                          <div class="feed-image-container-show" :style="{width: columnWidth, height: columnWidth}">
+                            <div class="mobile-feed-item-image-show" style="background-image:url(https://contestimg.wish.com/api/image/fetch?contest_id=592624bdf3fe33095a257e0a&w=340&h=340&cache_buster=3528ea6abe83a2c6ff2b979e6057bc36)" :style="{width: columnWidth, height: columnWidth, backgroundSize: columnWidth}">
+                            </div>
+                            <div class="discount-banner-show"> -96% </div>
+                            <div class="urgency-inventory-show">Almost Gone!</div>
+                          </div>
+                          <div class="feed-item-details-section-show">
+                            <div class="product-prices-show">
+                              <div class="actual-price-show">$325</div>
+                              <div class="crossed-price-show">$30</div>
+                            </div>
+                            <div class="badge-details-show">
+                              <img class="small-badge-show" src="//main.cdn.wish.com/fdb08fd8820d/img/product_badges/verified_by_wish/badge.png?v=13" />
+                            </div>
+                            <div class="feed-number-bought-show">
+                              100+ bought this
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="mobile-feed-footer-view-show" :colspan="column">
+                      <div>
+                        <div class="mobile-infinite-scroll-footer">
+                          <div class="footer-loading-view" style="display: block;">
+                            <img class="footer-loading-spinner" src="../assets/images/loading1.gif" />
+                              Loading
+                          </div>
+                          <div class="footer-click-more-view" style="display: none;">
+                            Click to load more...
+                          </div>
+                          <div class="footer-no-more-view" style="display: none;">
+                            No more items
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-page-state-loading default-hide" style="display: none;">
+        <div class="page-state-loading-icon">
+        </div>
+        Loading
+      </div>
+      <div class="mobile-page-state-no-items default-hide" style="display: none;">
+        No items found
+      </div>
+      <div class="mobile-page-state-error default-hide" style="display: none;">
+        Error loading
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<style lang="scss" scoped>
+  .index-page {
+    margin-top: 64px;
+  }
+  .category-nav {
+    display: block;
+    height: 52px;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    overflow-x: auto;
+    font-size: 14px;
+    background-color: #8dd9bf;
+    padding-left: 10px;
+    padding-right: 10px;
+    .category-name {
+      display: inline-block;
+      padding: 0 20px 0 20px;
+      height: 52px;
+      line-height: 52px;
+      vertical-align: middle;
+      text-align: center;
+      color: #Fff;
+      opacity: 0.7;
+    }
+    .selected {
+      height: 53px;
+      border-bottom: 8px solid white;
+      opacity: 1;
+    }
+  }
+  .mobile-page-content {
+    min-height: calc(100% - 44px);
+    color: #777;
+    padding: 0px;
+    text-shadow: none;
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    .mobile-page-state-content {
+      height: 100%;
+      .mobile-feed-promo-container {
+        width: 100%;
+      }
+      .mobile-feed-container-show {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 8px 16px 0 8px;
+      }
+      .mobile-feed-table-show {
+        margin: 0 auto;
+      }
+      .feed-column-show {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        vertical-align: top;
+      }
+      .mobile-feed-item {
+        margin-bottom: 6px;
+        background-color: #fff;
+      }
+      .mobile-feed-item-container-show {
+        margin-bottom: 16px;
+        background-color: #fff;
+        font-family: Roboto;
+      }
+      .urgency-inventory-show {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          height: 20px;
+          line-height: 20px;
+          border-top-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          color: #fff;
+          background-color: #3c4646;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 0px 4px;
+      }
+      .feed-image-container-show {
+          background-size: 20px 20px;
+          background-image: url(//main.cdn.wish.com/fdb08fd8820d/img/msite/blue_spin.png?v=13);
+          background-repeat: no-repeat;
+          background-position: center center;
+          position: relative;
+      }
+      .mobile-feed-item-image-show {
+          border-radius: 2px;
+      }
+      .authorized-brand-logo-show {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 20px;
+      }
+      .discount-banner-show {
+          position: absolute;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 0px 4px 0px 4px;
+          height: 20px;
+          line-height: 20px;
+          color: #fff;
+          top: 0;
+          left: 0;
+          border-top-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          background-color: #3c4646;
+      }
+      .feed-item-details-section-show {
+          background-color: #fff;
+          overflow: hidden;
+          margin-top: 8px;
+          font-size: initial;
+      }
+      .product-prices-show {
+          display: inline-block;
+          margin-bottom: 4px;
+          height: 18px;
+      }
+      .actual-price-show {
+          display: inline-block;
+          color: #3c4646;
+          font-weight: normal;
+          font-size: 14px;
+      }
+      .crossed-price-show {
+          display: inline-block;
+          text-decoration: line-through;
+          font-size: 12px;
+          color: #959f9f;
+      }
+      .badge-details-show {
+          float: right;
+        .small-badge-show {
+            height: 18px;
+        }
+      }
+      .feed-number-bought-show {
+          height: 13px;
+          text-align: left;
+          font-size: 10px;
+          color: #959f9f;
+          display: block;
+      }
+    }
+  }
+  .mobile-feed-footer-view-show {
+    .mobile-infinite-scroll-footer {
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      font-size: 13px;
+      font-weight: normal;
+      color: #999;
+      width: 100%;
+      .footer-loading-spinner {
+          width: 30px;
+          height: 20px;
+          padding-right: 10px;
+          vertical-align: middle;
+      }
+    }
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: fixed;
+  }
+  .mobile-page-state-loading, .mobile-page-state-default-loading, .mobile-page-state-error, .mobile-page-state-no-items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      padding: 15px;
+      margin-left: -100px;
+      margin-top: -25px;
+      font-size: 14px;
+      text-align: center;
+      color: #999;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  .mobile-page-state-loading .page-state-loading-icon, .mobile-page-state-default-loading .page-state-loading-icon, .mobile-page-state-error .page-state-loading-icon, .mobile-page-state-no-items .page-state-loading-icon {
+      background-image: url(../assets/images/loading1.gif);
+      background-size: 64px 64px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 64px;
+      margin-bottom: 15px;
+  }
+  ::-webkit-scrollbar {
+    display:none
+  }
+</style>
+
+<script>
+import MyHeader from '../components/header'
+import $ from 'jquery'
+
+export default {
+
+  name: 'index',
+  components: { MyHeader },
+  data () {
+    return {
+      column: null, // 图片展示列数
+      columnWidth: null, // 每列的宽度(除去padding 8)
+      slidePosition: 120, // 位置中心点
+      currentCategory: 'Fashion',
+      catergories: ['ChrisTmas Decoration', 'Fashion', 'Automotive', 'Makeup & Beauty', 'Shoes', 'Jackets', 'Kids Bags', 'Home Decor', 'Jewelry', 'Tops', 'Dresses', 'Leggings', 'Rings', 'Phones'],
+      tdList: {},
+      isIndex: '', // 是否是主页还是搜索结果页面
+    }
+  },
+  created () {
+    if (this.$route.name === 'index') {
+      this.isIndex = true
+    } else {
+      this.isIndex = false
+    }
+    // 4列 > 1000 >3列 > 640 > 2列
+    let deviceWidth = document.documentElement.clientWidth
+    if (deviceWidth >= 1000) {
+      this.column = 4
+      this.tdList = {
+        firstColumn: [],
+        secondColumn: [],
+        thirdColumn: [],
+        forthColumn: []
+      }
+    } else if (deviceWidth >= 640) {
+      this.column = 3
+      this.tdList = {
+        firstColumn: [],
+        secondColumn: [],
+        thirdColumn: []
+      }
+    } else {
+      this.column = 2
+      this.tdList = {
+        firstColumn: [],
+        secondColumn: []
+      }
+    }
+    // 计算每列的宽度: 8 左边padding, 16 右边padding
+    this.columnWidth = (deviceWidth  - 8 - 16) / this.column - 8 + 'px'
+  },
+  methods: {
+    changeCategory (category, e) { // 目标位置定在距离左边120px
+      if (this.currentCategory === category) {
+        return
+      }
+      this.currentCategory = category
+      let slideOffsetLeft = e.target.offsetLeft // 点击元素距离父元素左边的距离
+      let slideScrollLeft = $('.category-nav').scrollLeft() // 类目往左滚动距离
+      let fixedLeft = slideScrollLeft + this.slidePosition // 固定的点距离父元素左边距离
+      if (slideOffsetLeft > fixedLeft) {
+        // 在固定距离右边
+        let toScroll = slideOffsetLeft - fixedLeft
+        $('.category-nav').animate({scrollLeft: slideScrollLeft + toScroll + 'px'}, 200)
+      } else {
+        // 在固定距离左边
+        let toScroll = fixedLeft - slideOffsetLeft
+        $('.category-nav').animate({scrollLeft: slideScrollLeft - toScroll + 'px'}, 200)
+      }
+    },
+    goDetail () { // 跳转到商品详情页
+      this.$router.push({path: '/product-detail/999'})
+    }
+  }
+}
+</script>
+

@@ -1,0 +1,662 @@
+.gray-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #bbb;
+    color: #ffffff;
+    cursor: pointer;
+}
+.blue-button {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    background-color: #8dd9bf;
+    color: #ffffff;
+    cursor: pointer;
+}
+.mobile-guarantee .guarantee-text {
+    vertical-align: middle;
+    font-size: 13px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.mobile-guarantee {
+    position: relative;
+    width: 100%;
+}
+.mobile-guarantee .guarantee-seal-container {
+    width: 70px;
+}
+.mobile-guarantee .guarantee-seal-container .guarantee-seal {
+    width: 70px;
+    height: 70px;
+    padding: 10px 10px 10px 5px;
+}
+.mobile-transaction-expanded-row-item {
+    text-align: left;
+    margin-bottom: 40px
+}
+
+.mobile-transaction-expanded-row-item .item-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%
+}
+
+.mobile-transaction-expanded-row-item .item-info .mystery-box-image {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+    pointer-events: none
+}
+
+.mobile-transaction-expanded-row-item .item-info .product-image {
+    width: 75px;
+    height: 100px;
+    margin-right: 10px
+}
+
+.mobile-transaction-expanded-row-item .item-info .product-details {
+    width: 100%;
+    vertical-align: top
+}
+
+.mobile-transaction-expanded-row-item .item-info .product-details .product-title-text {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px
+}
+
+.mobile-transaction-expanded-row-item .item-info .product-details .product-sub-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-expanded-row-item .item-info .order-information-header {
+    padding-top: 10px
+}
+
+.mobile-transaction-expanded-row-item .item-info .order-information-header .order-state {
+    font-size: 14px;
+    font-weight: bold
+}
+
+.mobile-transaction-expanded-row-item .item-info .order-information-header .order-details {
+    font-size: 11px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-expanded-row-item .item-info .order-information-header .order-tracking-number {
+    font-size: 11px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-expanded-row-item .item-info .order-information-header .order-cancelled-msg {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #ffec8b;
+    font-size: 12px
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item {
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #ffec8b;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item .response-is-no {
+    display: none
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item .response-is-no .image {
+    height: 40px;
+    vertical-align: middle
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item .response-is-no .msg {
+    padding-top: 10px
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item .have-you-received-item-msg .received-item {
+    margin-top: 8px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .have-you-received-item .have-you-received-item-msg .did-not-receive-item {
+    display: inline-block;
+    margin-top: 8px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .late-box {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 20px
+}
+
+.mobile-transaction-expanded-row-item .late-box .late-title {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #f3f3f3;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .late-box .late-message {
+    font-size: 12px;
+    padding: 10px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow-title {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #f3f3f3;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow {
+    padding: 15px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .tracking-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #d8d8d8;
+    z-index: 4;
+    margin-right: 25px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-processing {
+    overflow: visible;
+    height: 35px;
+    vertical-align: middle
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-processing .blue-progress-bar-cell {
+    overflow: visible;
+    max-height: 35px;
+    height: 35px;
+    width: 35px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-processing .blue-progress-bar-cell .blue-progress-bar {
+    position: absolute;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    width: 14px;
+    height: 0px;
+    z-index: 5;
+    padding: 0px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-processing .blue-progress-bar-cell .gray-progress-bar-background {
+    position: absolute;
+    background: #ebebeb;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    width: 14px;
+    height: 144px;
+    z-index: -1;
+    padding: 0px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-shipping {
+    height: 35px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-almost {
+    height: 35px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-process-deliver-divider {
+    height: 25px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-arriving {
+    height: 35px
+}
+
+.mobile-transaction-expanded-row-item .order-flow-box .order-flow .order-flow-overall .order-progress-text .order-arriving .delivered-on-progress-label {
+    display: inline
+}
+
+.mobile-transaction-expanded-row-item .price-area {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    border-top: 0px solid #dddddd;
+    text-align: left
+}
+
+.mobile-transaction-expanded-row-item .price-area .price-subline {
+    font-size: 13px;
+    color: #999
+}
+
+.mobile-transaction-expanded-row-item .price-area .price-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mobile-transaction-expanded-row-item .last-update-box {
+    margin-top: 15px;
+    border: 1px solid #f3f3f3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .box-title {
+    padding: 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #f3f3f3;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content {
+    padding: 8px;
+    font-size: 13px;
+    line-height: 15px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .last-status-line {
+    font-size: 16px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .last-details-line {
+    word-wrap: break-word
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .last-date-line {
+    font-size: 13px;
+    color: #999999
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .no-more-tracking {
+    display: none;
+    padding-top: 10px;
+    text-align: center
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .no-more-tracking .title {
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .no-more-tracking .image {
+    height: 40px;
+    vertical-align: middle
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .no-more-tracking .msg {
+    padding-top: 10px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .last-location-title-line,.mobile-transaction-expanded-row-item .last-update-box .last-update-content .last-event-line,.mobile-transaction-expanded-row-item .last-update-box .last-update-content .description-line {
+    margin-top: 8px;
+    font-weight: bold
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item {
+    padding: 8px;
+    background: #ffec8b;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 8px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item .response-is-no {
+    display: none
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item .response-is-no .image {
+    height: 40px;
+    vertical-align: middle
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item .response-is-no .msg {
+    padding-top: 10px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item .have-you-received-item-msg .received-item {
+    margin-top: 8px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .last-update-box .last-update-content .have-you-received-item .have-you-received-item-msg .did-not-receive-item {
+    display: inline-block;
+    margin-top: 8px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-expanded-row-item .ellipsized-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0
+}
+
+.mobile-transaction-expanded-row-item .ellipsized-table .ellipsized-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.mobile-transaction-expanded-row-item .product-state {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8dd9bf;
+}
+
+.mobile-transaction-expanded-row-item .product-subline {
+    font-size: 13px;
+    padding-top: 2px
+}
+
+.mobile-transaction-expanded-row-item .action-button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal
+}
+
+.mobile-transaction-expanded-row-item .return-center-button,.mobile-transaction-expanded-row-item .missing-item-button,.mobile-transaction-expanded-row-item .contact-button,.mobile-transaction-expanded-row-item .payment-issue-button,.mobile-transaction-expanded-row-item .track-button,.mobile-transaction-expanded-row-item .returns-button,.mobile-transaction-expanded-row-item .refund-button,.mobile-transaction-expanded-row-item .change-address-button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal
+}
+
+.mobile-transaction-expanded-row-item .currency-subscript {
+    font-size: 9px;
+    margin-left: 3px
+}
+
+.mobile-transaction-expanded-row-item .ship-note-container {
+    background: #f3f3f3;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #dddddd
+}
+
+.mobile-transaction-expanded-row-item .ship-note-container .ship-note-title {
+    font-weight: bold
+}
+
+.mobile-transaction-expanded-row-item .ship-note-container .ship-note-message {
+    margin-top: 7px;
+    word-wrap: break-word
+}
+
+.mobile-transaction-expanded-row-item .refund-note-container {
+    background: #f3f3f3;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #dddddd
+}
+
+.mobile-transaction-expanded-row-item .refund-note-container .refund-note-title {
+    font-weight: bold
+}
+
+.mobile-transaction-expanded-row-item .refund-note-container .refund-note-message {
+    margin-top: 7px;
+    word-wrap: break-word
+}
+
+.mobile-transaction-expanded-row-item .missing-item-section {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px
+}
+
+.mobile-transaction-expanded-row-item .mystery-box-icon {
+    width: 15px;
+    height: 15px
+}
+
+.mobile-transaction-expanded-row-item .sms-div {
+    margin-top: 17px;
+    margin-bottom: 17px
+}
+
+.mobile-transaction-expanded-row-item .sms-div .sms-label .wish-checkbox {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 2px solid;
+    float: left
+}
+
+.mobile-transaction-expanded-row-item .sms-div .sms-text {
+    display: flex;
+    padding-left: 7px;
+    font-size: 16px
+}
+
+.mobile-transaction-expanded-row-item .sms-div .sms-checkbox {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    overflow: hidden
+}
+
+.mobile-transaction-expanded-row-item .sms-div .success-msg {
+    color: #88c43f;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.7px
+}
+
+
+
+.mobile-transaction-expanded-row .transaction-content-wrapper {
+    margin: 10px 10px 20px 10px
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-header {
+    cursor: pointer;
+    margin-bottom: 8px
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-header .header-text-cell {
+    width: 100%;
+    font-size: 13px;
+    line-height: 18px;
+    vertical-align: middle
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-header .header-text-cell .header-text-line-one {
+    font-weight: bold
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-header .detail-button-cell {
+    margin-left: 10px;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-header .detail-button-cell .detail-button {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 8px 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .transaction-content-separator {
+    height: 1px;
+    background-color: #dddddd;
+    width: 100%
+}
+
+.mobile-transaction-expanded-row .transaction-content-wrapper .item-list {
+    padding-top: 10px
+}
+
+.mobile-transaction-list-page {
+    padding-bottom: 10px
+}
+
+.mobile-transaction-list-page .page-title {
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 12px 6px 12px
+}
+
+.mobile-transaction-list-page .guarantee-placeholder {
+    padding: 0px 3px
+}
+
+.mobile-transaction-list-page .empty-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -125px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    font-size: 14px
+}
+
+.mobile-transaction-list-page .empty-view .empty-message {
+    margin-bottom: 20px
+}
+
+.mobile-transaction-list-page .empty-view .close-button {
+    padding: 12px 0px;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-list-page #transaction-pagination {
+    margin: 10px
+}
+
+.mobile-transaction-list-page #transaction-pagination .gray-button {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal
+}
+
+.mobile-transaction-list-page #transaction-pagination .gray-button button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: middle
+}
+
+.mobile-transaction-list-page #transaction-pagination .curr-button {
+    padding: 0
+}
+
+.mobile-transaction-list-page #transaction-pagination svg {
+    height: 38px;
+    width: 50px
+}
+
+.mobile-transaction-list-page #transaction-pagination path {
+    color: #FFF
+}
+
+.mobile-transaction-list-page .sms-text {
+    font-size: 11px;
+    margin-left: 10px
+}

@@ -1,0 +1,151 @@
+.mint-msgbox-confirm {
+    color: #8dd9bf;
+}
+/*detail*/
+#Details .mint-msgbox {
+  padding: 20px;
+}
+#Details .mint-msgbox-header {
+    padding: 0;
+}
+#Details .mint-msgbox-content {
+    padding: 15px 0px;
+    border-bottom: none;
+}
+#Details .mint-msgbox-title, #Details .mint-msgbox-message {
+  text-align: left;
+}
+#Details .mint-msgbox-confirm {
+  text-align: right;
+  font-size: 16px;
+}
+/*SignIn*/
+
+#SignIn .mint-msgbox {
+  padding: 20px;
+}
+#SignIn .mint-msgbox-header {
+    padding: 0;
+}
+#SignIn .mint-msgbox-content {
+    padding: 15px 0px;
+    border-bottom: none;
+}
+#SignIn .mint-msgbox-title, #SignIn .mint-msgbox-message {
+  text-align: left;
+}
+#SignIn .mint-msgbox-confirm {
+  text-align: right;
+  font-size: 16px;
+}
+/*CreateAccount*/
+#CreateAccount .mint-msgbox {
+  padding: 20px;
+}
+#CreateAccount .mint-msgbox-header {
+    padding: 0;
+}
+#CreateAccount .mint-msgbox-content {
+    padding: 15px 0px;
+    border-bottom: none;
+}
+#CreateAccount .mint-msgbox-title, #CreateAccount .mint-msgbox-message {
+  text-align: left;
+}
+#CreateAccount .mint-msgbox-confirm {
+  text-align: right;
+  font-size: 16px;
+}
+/*cart*/
+#Cart .mint-msgbox-title {
+  display: none;
+}
+#Cart .remove-img {
+  width: 100px;
+  height: 100px;
+}
+#Cart .remove-text {
+  font-weight: bold;
+  color: #333;
+}
+
+/*shipping*/
+#Shipping .mint-msgbox {
+  padding: 20px;
+}
+#Shipping .mint-msgbox-header {
+    padding: 0;
+}
+#Shipping .mint-msgbox-content {
+    padding: 15px 0px;
+    border-bottom: none;
+}
+#Shipping .mint-msgbox-title, #Shipping .mint-msgbox-message {
+  text-align: left;
+}
+#Shipping .mint-msgbox-message {
+  font-size: 14px;
+}
+#Shipping .mint-msgbox-confirm {
+  text-align: right;
+  font-size: 16px;
+  width: 20%;
+  flex: 0;
+}
+#Shipping .mint-msgbox-btns {
+  justify-content: flex-end;
+}
+#Shipping .mint-msgbox-cancel {
+  border: none;
+  font-size: 16px;
+  text-align: right;
+  width: 20%;
+  flex: 0;
+  margin-right: 20px;
+}
+
+/*contact*/
+
+#contactUs .mint-msgbox {
+  padding: 20px;
+}
+#contactUs .mint-msgbox-header {
+    padding: 0;
+}
+#contactUs .mint-msgbox-content {
+    padding: 15px 0px;
+    border-bottom: none;
+}
+#contactUs .mint-msgbox-title, #contactUs .mint-msgbox-message {
+  text-align: left;
+}
+#contactUs .mint-msgbox-confirm {
+  text-align: right;
+  font-size: 16px;
+}
+/*video*/
+#m-small-play-button{
+  height:1.5em!important;
+  line-height:1.5em !important;
+  border-radius:0.75em;
+  width:1.5em;
+  margin-left:-0.75em;
+}
+.video-play-img{
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  bottom:30px;
+  line-height:10px;
+  left:0px;
+  width: 100%;
+}
+.video-time{
+  line-height: 48px;
+  vertical-align: middle;
+  font-size: 16px;
+  color: white;
+  height: 48px;
+  display: inline-block;
+  padding: 0 10px;
+}

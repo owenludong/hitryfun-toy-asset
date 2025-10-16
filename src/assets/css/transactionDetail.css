@@ -1,0 +1,315 @@
+.mobile-transaction-detail .page-title {
+    font-size: 18px;
+    text-align: center;
+    padding: 12px
+}
+
+.mobile-transaction-detail .detail-content {
+    padding: 10px
+}
+
+.mobile-transaction-detail .item-list {
+    border-top: 1px solid #dddddd
+}
+
+.mobile-transaction-detail .page-subtitle {
+    font-size: 15px;
+    text-align: center;
+    padding: 12px
+}
+
+.mobile-transaction-detail .question-title {
+    padding-bottom: 2px
+}
+
+.mobile-transaction-detail .page-order-line-one {
+    font-size: 13px;
+    text-align: center;
+    padding: 4px 0px 4px 3px
+}
+
+.mobile-transaction-detail .page-order-line-two {
+    font-size: 13px;
+    text-align: center;
+    padding: 0px 0px 4px 3px
+}
+
+.mobile-transaction-detail .family-container {
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    padding: 12px;
+    background: #fff3d1;
+    margin: 10px 10px 0
+}
+
+.mobile-transaction-detail .family-container .family-content-table {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px #dddddd solid
+}
+
+.mobile-transaction-detail .family-container .family-content-table .bold {
+    font-weight: bold
+}
+
+.mobile-transaction-detail .family-container .family-content-table .family-content-cell {
+    vertical-align: top;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-detail .family-container .family-content-table .family-clock-image {
+    width: 20px;
+    height: 20px;
+    padding-bottom: 10px
+}
+
+.mobile-transaction-detail .family-container .family-content-table .family-clock-cell {
+    width: 30px;
+    vertical-align: top
+}
+
+.mobile-transaction-detail .family-container .family-payment-container {
+    margin-top: 10px;
+    font-weight: bold
+}
+
+.mobile-transaction-detail .family-container .family-payment-textarea {
+    width: 100%;
+    resize: none;
+    display: block;
+    height: 50px;
+    resize: none;
+    margin-top: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #777777;
+    padding: 5px;
+    background: #fffaeb;
+    border: dashed 1px #999999
+}
+
+.mobile-transaction-detail .boleto-container,.mobile-transaction-detail .oxxo-container,.mobile-transaction-detail .paynearme-container {
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    padding: 12px;
+    background: #f3f3f3;
+    margin: 10px 10px 0
+}
+
+.mobile-transaction-detail .boleto-container .bold,.mobile-transaction-detail .oxxo-container .bold,.mobile-transaction-detail .paynearme-container .bold {
+    font-weight: bold
+}
+
+.mobile-transaction-detail .boleto-container .view-boleto-button,.mobile-transaction-detail .boleto-container .view-oxxo-button,.mobile-transaction-detail .boleto-container .view-paynearme-button,.mobile-transaction-detail .oxxo-container .view-boleto-button,.mobile-transaction-detail .oxxo-container .view-oxxo-button,.mobile-transaction-detail .oxxo-container .view-paynearme-button,.mobile-transaction-detail .paynearme-container .view-boleto-button,.mobile-transaction-detail .paynearme-container .view-oxxo-button,.mobile-transaction-detail .paynearme-container .view-paynearme-button {
+    margin: 10px 0 0;
+    padding: 12px 0;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-detail .boleto-container .view-paynearme-button,.mobile-transaction-detail .oxxo-container .view-paynearme-button,.mobile-transaction-detail .paynearme-container .view-paynearme-button {
+    margin: 10px 0 10px
+}
+
+.mobile-transaction-detail .paynearme-container .view-paynearme-button {
+    margin: 10px 0 10px
+}
+
+.mobile-transaction-detail .paynearme-container .paynearme-note {
+    font-size: 11px
+}
+
+.mobile-transaction-detail .change-transaction-address-button {
+    margin: 10px 10px;
+    padding: 12px 0;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-detail .ship-bill-table {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 13px
+}
+
+.mobile-transaction-detail .shipping-section {
+    border: 1px solid #dddddd;
+    padding: 5px
+}
+
+.mobile-transaction-detail .shipping-section .shipping-title {
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 8px
+}
+
+.mobile-transaction-detail .shipping-section .shipping-address {
+    line-height: 16px
+}
+
+.mobile-transaction-detail .shipping-section .change-address-link {
+    vertical-align: middle;
+    padding-top: 5px;
+    white-space: nowrap;
+    text-align: right
+}
+
+.mobile-transaction-detail .shipping-section .change-address-link .change-address-text {
+    font-size: 13px;
+    color: #7dbde5
+}
+
+.mobile-transaction-detail .shipping-section .change-address-link .arrow {
+    width: 7px
+}
+
+.mobile-transaction-detail .billing-section {
+    border: 1px solid #dddddd;
+    padding: 5px
+}
+
+.mobile-transaction-detail .billing-section .billing-title {
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 8px
+}
+
+.mobile-transaction-detail .billing-section .billing-text {
+    line-height: 16px
+}
+
+.mobile-transaction-detail .billing-section .klarna-logo {
+    width: 70px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section {
+    border: 1px solid #dddddd;
+    padding: 5px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section .apple-pay-promo-title {
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 8px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section .apple-pay-promo-text {
+    line-height: 16px;
+    margin-bottom: 8px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section .code-box {
+    height: 26px;
+    line-height: 26px;
+    border-radius: 1px 0px 0px 1px;
+    background-color: #f3f3f3;
+    border: dashed 1px #dfe0df;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section .code-copy {
+    width: 52px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 0px 2px 2px 0px
+}
+
+.mobile-transaction-detail .apple-pay-promo-section .legal-text {
+    margin-top: 10px;
+    font-size: 9px;
+    color: #9d9d9d
+}
+
+.mobile-transaction-detail .question-placeholder {
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    padding: 6px;
+    background: #f3f3f3;
+    margin-top: 15px
+}
+
+.mobile-transaction-detail .question-placeholder .help-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.mobile-transaction-detail .summary-section {
+    border: 1px solid #dddddd;
+    padding: 2px 4px
+}
+
+.mobile-transaction-detail .summary-section .summary-table {
+    width: 100%;
+    font-size: 13px
+}
+
+.mobile-transaction-detail .summary-section .summary-table .label-col {
+    white-space: nowrap;
+    padding: 5px 0px
+}
+
+.mobile-transaction-detail .summary-section .summary-table .value-col {
+    width: 100%;
+    text-align: right;
+    padding: 5px 0px
+}
+
+.mobile-transaction-detail .summary-section .summary-table .value-col .currency-subscript {
+    font-size: 9px;
+    margin-left: 3px
+}
+
+.mobile-transaction-detail .summary-section .summary-table .order-total {
+    font-weight: bold;
+    font-size: 14px
+}
+
+.mobile-transaction-detail .summary-section .summary-table .credit {
+    color: #EA9C51
+}
+
+.mobile-transaction-detail .cancel-order-button {
+    padding: 12px 0px;
+    margin-bottom: 8px;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-detail .all-orders-button {
+    padding: 12px 0px;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-detail .sms-text {
+    font-size: 11px;
+    padding-bottom: 5px
+}
+.mobile-transaction-expanded-row-item .item-info .product-image {
+    width: 75px;
+    height: 100px;
+    margin-right: 10px;
+}

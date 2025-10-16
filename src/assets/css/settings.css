@@ -1,0 +1,309 @@
+.user-info-item {
+  margin-top: 6px;
+}
+a {
+  text-decoration: none;
+}
+.ui-input-text textarea {
+    font-size: 15px;
+    background-color: #f7f7f7;
+    font-weight: 100;
+    outline: none;
+    border: none;
+}
+.mobile-page-content {
+    min-height: calc(100% - 44px) !important
+}
+
+.mobile-page-state-content {
+    height: 100%
+}
+
+.mobile-settings-page li {
+    padding: 16px;
+    border-bottom: 1px solid #f3f8f8;
+    color: #3c4646;
+    font-weight: normal
+}
+
+.mobile-settings-page .information-text {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 100%;
+    font-size: 10px;
+    color: #959f9f
+}
+
+.mobile-settings-notification-page {
+    color: #3c4646
+}
+
+.mobile-settings-notification-page .all-notifications-block {
+    padding: 24px 16px;
+    border-bottom: 1px solid #f3f8f8
+}
+
+.mobile-settings-notification-page .notification-settings-header {
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #f3f8f8;
+    padding-top: 16px;
+    padding-bottom: 16px
+}
+
+.mobile-settings-notification-page .notification-settings-header .with-padding {
+    padding-left: 16px
+}
+
+.mobile-settings-notification-page .notification-settings-header .two.columns {
+    text-align: center
+}
+
+.mobile-settings-notification-page .notification-setting {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f3f8f8
+}
+
+.mobile-settings-notification-page .notification-setting .with-padding {
+    padding-left: 16px
+}
+
+.mobile-settings-notification-page .notification-setting .subtitle {
+    padding-top: 4px;
+    font-size: 12px;
+    color: #959f9f
+}
+
+.mobile-settings-notification-page .notification-setting .wish-checkbox {
+    margin: auto
+}
+
+.mobile-settings-change-email-page, .mobile-settings-change-password-page, .mobile-settings-profile-page {
+    height: 100%
+}
+
+.mobile-settings-change-email-page .save-button, .mobile-settings-change-password-page .save-button, .mobile-settings-profile-page .save-button {
+    text-align: center;
+    padding: 16px;
+    /*width: calc(100% - 64px);*/
+    margin: 16px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.main-color-background {
+    background: #2FB7EC !important;
+}
+.mobile-settings-change-email-page .save-button.disabled, .mobile-settings-change-password-page .save-button.disabled, .mobile-settings-profile-page .save-button.disabled {
+    /*background-color: #f3f8f8 !important;
+    color: #b0bfbf !important*/
+    opacity: .3;
+}
+
+.mobile-settings-profile-page-main-content, .mobile-settings-change-email-page-main-content, .mobile-settings-change-password-page-main-content {
+    height: calc(100% - 84px);
+    overflow: scroll;
+    color: #3c4646
+}
+
+.mobile-settings-profile-page-main-content .email-explanation, .mobile-settings-profile-page-main-content .password-explanation, .mobile-settings-change-email-page-main-content .email-explanation, .mobile-settings-change-email-page-main-content .password-explanation, .mobile-settings-change-password-page-main-content .email-explanation, .mobile-settings-change-password-page-main-content .password-explanation {
+    padding: 20px 16px;
+    line-height: 18px;
+    background: rgb(240,245,247);
+}
+
+.mobile-settings-profile-page-main-content .email-explanation .form-title, .mobile-settings-profile-page-main-content .password-explanation .form-title, .mobile-settings-change-email-page-main-content .email-explanation .form-title, .mobile-settings-change-email-page-main-content .password-explanation .form-title, .mobile-settings-change-password-page-main-content .email-explanation .form-title, .mobile-settings-change-password-page-main-content .password-explanation .form-title {
+    font-weight: bold;
+}
+
+.mobile-settings-profile-page-main-content .first-name, .mobile-settings-profile-page-main-content .last-name, .mobile-settings-profile-page-main-content .birthday, .mobile-settings-profile-page-main-content .gender, .mobile-settings-profile-page-main-content .old-email, .mobile-settings-profile-page-main-content .new-email, .mobile-settings-profile-page-main-content .old-password, .mobile-settings-profile-page-main-content .new-password, .mobile-settings-profile-page-main-content .confirm-new-password, .mobile-settings-change-email-page-main-content .first-name, .mobile-settings-change-email-page-main-content .last-name, .mobile-settings-change-email-page-main-content .birthday, .mobile-settings-change-email-page-main-content .gender, .mobile-settings-change-email-page-main-content .old-email, .mobile-settings-change-email-page-main-content .new-email, .mobile-settings-change-email-page-main-content .old-password, .mobile-settings-change-email-page-main-content .new-password, .mobile-settings-change-email-page-main-content .confirm-new-password, .mobile-settings-change-password-page-main-content .first-name, .mobile-settings-change-password-page-main-content .last-name, .mobile-settings-change-password-page-main-content .birthday, .mobile-settings-change-password-page-main-content .gender, .mobile-settings-change-password-page-main-content .old-email, .mobile-settings-change-password-page-main-content .new-email, .mobile-settings-change-password-page-main-content .old-password, .mobile-settings-change-password-page-main-content .new-password, .mobile-settings-change-password-page-main-content .confirm-new-password {
+    padding: 20px 16px 0px
+}
+
+.mobile-settings-profile-page-main-content .first-name .label, .mobile-settings-profile-page-main-content .last-name .label, .mobile-settings-profile-page-main-content .birthday .label, .mobile-settings-profile-page-main-content .gender .label, .mobile-settings-profile-page-main-content .old-email .label, .mobile-settings-profile-page-main-content .new-email .label, .mobile-settings-profile-page-main-content .old-password .label, .mobile-settings-profile-page-main-content .new-password .label, .mobile-settings-profile-page-main-content .confirm-new-password .label, .mobile-settings-change-email-page-main-content .first-name .label, .mobile-settings-change-email-page-main-content .last-name .label, .mobile-settings-change-email-page-main-content .birthday .label, .mobile-settings-change-email-page-main-content .gender .label, .mobile-settings-change-email-page-main-content .old-email .label, .mobile-settings-change-email-page-main-content .new-email .label, .mobile-settings-change-email-page-main-content .old-password .label, .mobile-settings-change-email-page-main-content .new-password .label, .mobile-settings-change-email-page-main-content .confirm-new-password .label, .mobile-settings-change-password-page-main-content .first-name .label, .mobile-settings-change-password-page-main-content .last-name .label, .mobile-settings-change-password-page-main-content .birthday .label, .mobile-settings-change-password-page-main-content .gender .label, .mobile-settings-change-password-page-main-content .old-email .label, .mobile-settings-change-password-page-main-content .new-email .label, .mobile-settings-change-password-page-main-content .old-password .label, .mobile-settings-change-password-page-main-content .new-password .label, .mobile-settings-change-password-page-main-content .confirm-new-password .label {
+    font-size: 12px
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text, .mobile-settings-profile-page-main-content .last-name .ui-input-text, .mobile-settings-profile-page-main-content .birthday .ui-input-text, .mobile-settings-profile-page-main-content .gender .ui-input-text, .mobile-settings-profile-page-main-content .old-email .ui-input-text, .mobile-settings-profile-page-main-content .new-email .ui-input-text, .mobile-settings-profile-page-main-content .old-password .ui-input-text, .mobile-settings-profile-page-main-content .new-password .ui-input-text, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text, .mobile-settings-change-email-page-main-content .first-name .ui-input-text, .mobile-settings-change-email-page-main-content .last-name .ui-input-text, .mobile-settings-change-email-page-main-content .birthday .ui-input-text, .mobile-settings-change-email-page-main-content .gender .ui-input-text, .mobile-settings-change-email-page-main-content .old-email .ui-input-text, .mobile-settings-change-email-page-main-content .new-email .ui-input-text, .mobile-settings-change-email-page-main-content .old-password .ui-input-text, .mobile-settings-change-email-page-main-content .new-password .ui-input-text, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text, .mobile-settings-change-password-page-main-content .first-name .ui-input-text, .mobile-settings-change-password-page-main-content .last-name .ui-input-text, .mobile-settings-change-password-page-main-content .birthday .ui-input-text, .mobile-settings-change-password-page-main-content .gender .ui-input-text, .mobile-settings-change-password-page-main-content .old-email .ui-input-text, .mobile-settings-change-password-page-main-content .new-email .ui-input-text, .mobile-settings-change-password-page-main-content .old-password .ui-input-text, .mobile-settings-change-password-page-main-content .new-password .ui-input-text, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text {
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-shadow: unset;
+    border-color: rgb(212,227,235)!important
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text input, .mobile-settings-profile-page-main-content .last-name .ui-input-text input, .mobile-settings-profile-page-main-content .birthday .ui-input-text input, .mobile-settings-profile-page-main-content .gender .ui-input-text input, .mobile-settings-profile-page-main-content .old-email .ui-input-text input, .mobile-settings-profile-page-main-content .new-email .ui-input-text input, .mobile-settings-profile-page-main-content .old-password .ui-input-text input, .mobile-settings-profile-page-main-content .new-password .ui-input-text input, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text input, .mobile-settings-change-email-page-main-content .first-name .ui-input-text input, .mobile-settings-change-email-page-main-content .last-name .ui-input-text input, .mobile-settings-change-email-page-main-content .birthday .ui-input-text input, .mobile-settings-change-email-page-main-content .gender .ui-input-text input, .mobile-settings-change-email-page-main-content .old-email .ui-input-text input, .mobile-settings-change-email-page-main-content .new-email .ui-input-text input, .mobile-settings-change-email-page-main-content .old-password .ui-input-text input, .mobile-settings-change-email-page-main-content .new-password .ui-input-text input, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text input, .mobile-settings-change-password-page-main-content .first-name .ui-input-text input, .mobile-settings-change-password-page-main-content .last-name .ui-input-text input, .mobile-settings-change-password-page-main-content .birthday .ui-input-text input, .mobile-settings-change-password-page-main-content .gender .ui-input-text input, .mobile-settings-change-password-page-main-content .old-email .ui-input-text input, .mobile-settings-change-password-page-main-content .new-email .ui-input-text input, .mobile-settings-change-password-page-main-content .old-password .ui-input-text input, .mobile-settings-change-password-page-main-content .new-password .ui-input-text input, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text input {
+    padding: 12px
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .last-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .birthday .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .gender .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .old-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .new-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .old-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .new-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .first-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .last-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .birthday .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .gender .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .old-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .new-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .old-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .new-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .first-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .last-name .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .birthday .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .gender .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .old-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .new-email .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .old-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .new-password .ui-input-text input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text input::-webkit-input-placeholder {
+    color: #dae3e3
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .last-name .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .birthday .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .gender .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .old-email .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .new-email .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .old-password .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .new-password .ui-input-text input::-moz-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .first-name .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .last-name .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .birthday .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .gender .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .old-email .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .new-email .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .old-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .new-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .first-name .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .last-name .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .birthday .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .gender .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .old-email .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .new-email .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .old-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .new-password .ui-input-text input::-moz-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text input::-moz-placeholder {
+    color: #dae3e3
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .last-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .birthday .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .gender .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .old-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .new-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .old-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .new-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .first-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .last-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .birthday .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .gender .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .old-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .new-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .old-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .new-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .first-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .last-name .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .birthday .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .gender .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .old-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .new-email .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .old-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .new-password .ui-input-text input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text input:-ms-input-placeholder {
+    color: #dae3e3
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .last-name .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .birthday .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .gender .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .old-email .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .new-email .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .old-password .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .new-password .ui-input-text input:-moz-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .first-name .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .last-name .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .birthday .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .gender .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .old-email .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .new-email .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .old-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .new-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .first-name .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .last-name .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .birthday .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .gender .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .old-email .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .new-email .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .old-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .new-password .ui-input-text input:-moz-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-input-text input:-moz-placeholder {
+    color: #dae3e3
+}
+
+.mobile-settings-profile-page-main-content .first-name .ui-state-disabled, .mobile-settings-profile-page-main-content .last-name .ui-state-disabled, .mobile-settings-profile-page-main-content .birthday .ui-state-disabled, .mobile-settings-profile-page-main-content .gender .ui-state-disabled, .mobile-settings-profile-page-main-content .old-email .ui-state-disabled, .mobile-settings-profile-page-main-content .new-email .ui-state-disabled, .mobile-settings-profile-page-main-content .old-password .ui-state-disabled, .mobile-settings-profile-page-main-content .new-password .ui-state-disabled, .mobile-settings-profile-page-main-content .confirm-new-password .ui-state-disabled, .mobile-settings-change-email-page-main-content .first-name .ui-state-disabled, .mobile-settings-change-email-page-main-content .last-name .ui-state-disabled, .mobile-settings-change-email-page-main-content .birthday .ui-state-disabled, .mobile-settings-change-email-page-main-content .gender .ui-state-disabled, .mobile-settings-change-email-page-main-content .old-email .ui-state-disabled, .mobile-settings-change-email-page-main-content .new-email .ui-state-disabled, .mobile-settings-change-email-page-main-content .old-password .ui-state-disabled, .mobile-settings-change-email-page-main-content .new-password .ui-state-disabled, .mobile-settings-change-email-page-main-content .confirm-new-password .ui-state-disabled, .mobile-settings-change-password-page-main-content .first-name .ui-state-disabled, .mobile-settings-change-password-page-main-content .last-name .ui-state-disabled, .mobile-settings-change-password-page-main-content .birthday .ui-state-disabled, .mobile-settings-change-password-page-main-content .gender .ui-state-disabled, .mobile-settings-change-password-page-main-content .old-email .ui-state-disabled, .mobile-settings-change-password-page-main-content .new-email .ui-state-disabled, .mobile-settings-change-password-page-main-content .old-password .ui-state-disabled, .mobile-settings-change-password-page-main-content .new-password .ui-state-disabled, .mobile-settings-change-password-page-main-content .confirm-new-password .ui-state-disabled {
+    background-color: #f3f8f8 !important;
+    opacity: 1
+}
+
+.mobile-settings-profile-page-main-content .first-name .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .last-name .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .birthday .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .gender .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .old-email .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .new-email .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .old-password .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .new-password .old-email-input::-webkit-input-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .first-name .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .last-name .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .birthday .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .gender .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .old-email .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .new-email .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .old-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .new-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .first-name .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .last-name .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .birthday .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .gender .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .old-email .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .new-email .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .old-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .new-password .old-email-input::-webkit-input-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .old-email-input::-webkit-input-placeholder {
+    color: #959f9f !important
+}
+
+.mobile-settings-profile-page-main-content .first-name .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .last-name .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .birthday .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .gender .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .old-email .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .new-email .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .old-password .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .new-password .old-email-input::-moz-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .first-name .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .last-name .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .birthday .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .gender .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .old-email .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .new-email .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .old-password .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .new-password .old-email-input::-moz-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .first-name .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .last-name .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .birthday .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .gender .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .old-email .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .new-email .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .old-password .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .new-password .old-email-input::-moz-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .old-email-input::-moz-placeholder {
+    color: #959f9f !important
+}
+
+.mobile-settings-profile-page-main-content .first-name .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .last-name .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .birthday .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .gender .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .old-email .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .new-email .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .old-password .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .new-password .old-email-input:-ms-input-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .first-name .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .last-name .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .birthday .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .gender .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .old-email .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .new-email .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .old-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .new-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .first-name .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .last-name .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .birthday .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .gender .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .old-email .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .new-email .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .old-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .new-password .old-email-input:-ms-input-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .old-email-input:-ms-input-placeholder {
+    color: #959f9f !important
+}
+
+.mobile-settings-profile-page-main-content .first-name .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .last-name .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .birthday .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .gender .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .old-email .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .new-email .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .old-password .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .new-password .old-email-input:-moz-placeholder, .mobile-settings-profile-page-main-content .confirm-new-password .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .first-name .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .last-name .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .birthday .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .gender .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .old-email .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .new-email .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .old-password .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .new-password .old-email-input:-moz-placeholder, .mobile-settings-change-email-page-main-content .confirm-new-password .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .first-name .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .last-name .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .birthday .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .gender .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .old-email .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .new-email .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .old-password .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .new-password .old-email-input:-moz-placeholder, .mobile-settings-change-password-page-main-content .confirm-new-password .old-email-input:-moz-placeholder {
+    color: #959f9f !important
+}
+
+.mobile-settings-profile-page-main-content .first-name .gender-selection, .mobile-settings-profile-page-main-content .last-name .gender-selection, .mobile-settings-profile-page-main-content .birthday .gender-selection, .mobile-settings-profile-page-main-content .gender .gender-selection, .mobile-settings-profile-page-main-content .old-email .gender-selection, .mobile-settings-profile-page-main-content .new-email .gender-selection, .mobile-settings-profile-page-main-content .old-password .gender-selection, .mobile-settings-profile-page-main-content .new-password .gender-selection, .mobile-settings-profile-page-main-content .confirm-new-password .gender-selection, .mobile-settings-change-email-page-main-content .first-name .gender-selection, .mobile-settings-change-email-page-main-content .last-name .gender-selection, .mobile-settings-change-email-page-main-content .birthday .gender-selection, .mobile-settings-change-email-page-main-content .gender .gender-selection, .mobile-settings-change-email-page-main-content .old-email .gender-selection, .mobile-settings-change-email-page-main-content .new-email .gender-selection, .mobile-settings-change-email-page-main-content .old-password .gender-selection, .mobile-settings-change-email-page-main-content .new-password .gender-selection, .mobile-settings-change-email-page-main-content .confirm-new-password .gender-selection, .mobile-settings-change-password-page-main-content .first-name .gender-selection, .mobile-settings-change-password-page-main-content .last-name .gender-selection, .mobile-settings-change-password-page-main-content .birthday .gender-selection, .mobile-settings-change-password-page-main-content .gender .gender-selection, .mobile-settings-change-password-page-main-content .old-email .gender-selection, .mobile-settings-change-password-page-main-content .new-email .gender-selection, .mobile-settings-change-password-page-main-content .old-password .gender-selection, .mobile-settings-change-password-page-main-content .new-password .gender-selection, .mobile-settings-change-password-page-main-content .confirm-new-password .gender-selection {
+    margin-top: 8px
+}
+
+.mobile-settings-profile-page-main-content .first-name .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .last-name .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .birthday .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .gender .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .old-email .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .new-email .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .old-password .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .new-password .gender-selection .gender-radio, .mobile-settings-profile-page-main-content .confirm-new-password .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .first-name .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .last-name .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .birthday .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .gender .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .old-email .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .new-email .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .old-password .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .new-password .gender-selection .gender-radio, .mobile-settings-change-email-page-main-content .confirm-new-password .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .first-name .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .last-name .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .birthday .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .gender .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .old-email .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .new-email .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .old-password .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .new-password .gender-selection .gender-radio, .mobile-settings-change-password-page-main-content .confirm-new-password .gender-selection .gender-radio {
+    display: inline-block
+}
+
+.mobile-settings-profile-page-main-content .first-name .gender-selection .gender-title, .mobile-settings-profile-page-main-content .last-name .gender-selection .gender-title, .mobile-settings-profile-page-main-content .birthday .gender-selection .gender-title, .mobile-settings-profile-page-main-content .gender .gender-selection .gender-title, .mobile-settings-profile-page-main-content .old-email .gender-selection .gender-title, .mobile-settings-profile-page-main-content .new-email .gender-selection .gender-title, .mobile-settings-profile-page-main-content .old-password .gender-selection .gender-title, .mobile-settings-profile-page-main-content .new-password .gender-selection .gender-title, .mobile-settings-profile-page-main-content .confirm-new-password .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .first-name .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .last-name .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .birthday .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .gender .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .old-email .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .new-email .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .old-password .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .new-password .gender-selection .gender-title, .mobile-settings-change-email-page-main-content .confirm-new-password .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .first-name .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .last-name .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .birthday .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .gender .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .old-email .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .new-email .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .old-password .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .new-password .gender-selection .gender-title, .mobile-settings-change-password-page-main-content .confirm-new-password .gender-selection .gender-title {
+    margin-right: 32px
+}
+
+.mobile-settings-profile-page-main-content .success-alert, .mobile-settings-profile-page-main-content .error-alert, .mobile-settings-change-email-page-main-content .success-alert, .mobile-settings-change-email-page-main-content .error-alert, .mobile-settings-change-password-page-main-content .success-alert, .mobile-settings-change-password-page-main-content .error-alert {
+    margin: 9px 16px 0px 16px;
+    font-size: 14px
+}
+
+.mobile-settings-profile-page-main-content .success-alert, .mobile-settings-change-email-page-main-content .success-alert, .mobile-settings-change-password-page-main-content .success-alert {
+    color: green
+}
+
+.mobile-settings-profile-page-main-content .error-alert, .mobile-settings-change-email-page-main-content .error-alert, .mobile-settings-change-password-page-main-content .error-alert {
+    color: red
+}
+
+.mobile-settings-profile-page-main-content .profile-picture-change {
+    margin-top: 16px;
+    display: inline-block;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.mobile-settings-profile-page-main-content .profile-picture-change .picture-change-img {
+    height: 82px;
+    width: 82px;
+    border-radius: 100%
+}
+
+.mobile-settings-profile-page-main-content .profile-picture-change .edit-tag {
+    text-align: center;
+    color: white;
+    margin: auto;
+    width: fit-content;
+    padding: 2px 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.mobile-settings-profile-page-main-content .profile-picture-change .edit-tag.hide {
+    display: none
+}
+
+.mobile-settings-profile-page-main-content .profile-picture-change .ui-input-text {
+    border-width: 0px !important
+}
+
+.mobile-settings-payment-settings-page {
+    height: 100%;
+    overflow: scroll;
+    color: #3c4646
+}
+
+.mobile-settings-payment-settings-page .divider {
+    height: 1px;
+    width: 100%;
+    background-color: #f3f8f8;
+    margin-top: 16px
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section, .mobile-settings-payment-settings-page .billing-details-section {
+    padding: 0px 16px 0px 16px;
+    position: relative
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details, .mobile-settings-payment-settings-page .shipping-details-section .billing-details, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details, .mobile-settings-payment-settings-page .billing-details-section .shipping-details, .mobile-settings-payment-settings-page .billing-details-section .billing-details, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details {
+    margin-left: 56px;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details.hide, .mobile-settings-payment-settings-page .shipping-details-section .billing-details.hide, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details.hide, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details.hide, .mobile-settings-payment-settings-page .billing-details-section .shipping-details.hide, .mobile-settings-payment-settings-page .billing-details-section .billing-details.hide, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details.hide, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details.hide {
+    display: none
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details .label, .mobile-settings-payment-settings-page .shipping-details-section .billing-details .label, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details .label, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details .label, .mobile-settings-payment-settings-page .billing-details-section .shipping-details .label, .mobile-settings-payment-settings-page .billing-details-section .billing-details .label, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details .label, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details .label {
+    padding-top: 0px;
+    padding-bottom: 8px
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details .label.with-padding, .mobile-settings-payment-settings-page .shipping-details-section .billing-details .label.with-padding, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details .label.with-padding, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details .label.with-padding, .mobile-settings-payment-settings-page .billing-details-section .shipping-details .label.with-padding, .mobile-settings-payment-settings-page .billing-details-section .billing-details .label.with-padding, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details .label.with-padding, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details .label.with-padding {
+    padding-top: 16px
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details .delete-shipping-details, .mobile-settings-payment-settings-page .shipping-details-section .shipping-details .delete-billing-details, .mobile-settings-payment-settings-page .shipping-details-section .billing-details .delete-shipping-details, .mobile-settings-payment-settings-page .shipping-details-section .billing-details .delete-billing-details, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details .delete-shipping-details, .mobile-settings-payment-settings-page .shipping-details-section .no-billing-details .delete-billing-details, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details .delete-shipping-details, .mobile-settings-payment-settings-page .shipping-details-section .no-shipping-details .delete-billing-details, .mobile-settings-payment-settings-page .billing-details-section .shipping-details .delete-shipping-details, .mobile-settings-payment-settings-page .billing-details-section .shipping-details .delete-billing-details, .mobile-settings-payment-settings-page .billing-details-section .billing-details .delete-shipping-details, .mobile-settings-payment-settings-page .billing-details-section .billing-details .delete-billing-details, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details .delete-shipping-details, .mobile-settings-payment-settings-page .billing-details-section .no-billing-details .delete-billing-details, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details .delete-shipping-details, .mobile-settings-payment-settings-page .billing-details-section .no-shipping-details .delete-billing-details {
+    margin-top: 16px;
+    display: block;
+    font-weight: normal
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details-icon, .mobile-settings-payment-settings-page .shipping-details-section .billing-details-icon, .mobile-settings-payment-settings-page .billing-details-section .shipping-details-icon, .mobile-settings-payment-settings-page .billing-details-section .billing-details-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 52px;
+    left: 28px;
+    background-size: 24px
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .shipping-details-icon, .mobile-settings-payment-settings-page .billing-details-section .shipping-details-icon {
+    background-image: url("//main.cdn.wish.com/061399f0f1c2/img/msite/v3/settings/address.png?v=13")
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .billing-details-icon, .mobile-settings-payment-settings-page .billing-details-section .billing-details-icon {
+    background-image: url("//main.cdn.wish.com/061399f0f1c2/img/msite/v3/settings/billing.png?v=13")
+}
+
+.mobile-settings-payment-settings-page .shipping-details-section .label, .mobile-settings-payment-settings-page .billing-details-section .label {
+    padding: 16px 0px;
+    font-weight: bold;
+    font-size: 16px
+}

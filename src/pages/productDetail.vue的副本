@@ -1,0 +1,976 @@
+<template>
+  <div>
+    <div class="mobile-page-content ui-content" data-role="content" role="main" style="overflow: hidden;">
+      <div class="mobile-page-state-content">
+        <div class="mobile-contest-page">
+          <table class="overview-content" style="display: table;">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="contest-image-container" style="height: 405px;">
+                    <div class="mobile-contest-image" style="height: 405px; width: 405px;">
+                      <div>
+                        <div class="dialog-content" data-role="content">
+                          <div class="photo-container" id="" style="width: 405px; height: 405px; ">
+                            <div class="photo-slide-container" style="width: 405px; height: 405px;">
+                              <div class="image-wrapper-cell" style="left: 0px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="0photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-large.jpg?cache_buster=3c748897891b82b84ff1b2a763d367f3" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 405px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="1photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-7-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 810px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="2photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-8-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 1215px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="3photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-9-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 1620px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="4photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-10-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 2025px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="5photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-11-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 2430px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="6photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-12-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 2835px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="7photo-id" src="https://contestimg.wish.com/api/webimage/568260f88a90b4244ff247f5-13-large.jpg" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 3240px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="8photo-id" src="https://contestimg.wish.com/api/image/rating?name=af7f888e604311e788130640371aa512.jpg&w=1000&h=1000&m=0&t=0" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 3645px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="9photo-id" src="https://contestimg.wish.com/api/image/rating?name=41d65cea6caf11e7beae0640371aa512.jpg&w=1000&h=1000&m=0&t=0" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 4050px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="10photo-id" src="https://contestimg.wish.com/api/image/rating?name=e5a59408b40811e787520200308558d2.jpg&w=1000&h=1000&m=0&t=0" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; height: 100%;" />
+
+                              </div>
+                              <div class="image-wrapper-cell" style="left: 4455px; width: 405px; height: 405px; line-height: 405px;">
+                                <img class="contest-imgs" id="11photo-id" src="https://contestimg.wish.com/api/image/rating?name=2e2057e6c98411e7899c026152ce4ae4.jpg&w=1000&h=1000&m=0&t=0" style="max-width: 405px; max-height: 405px; vertical-align: middle; margin-bottom: 3px; width: 100%;" />
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mobile-contest-extra-photos black-pill-button">
+                      <span class="extra-photos-text">
+                        <span class="image-index">
+                          1
+                        </span>
+                        /12
+                      </span>
+                    </div>
+                    <div class="share-button">
+                      <img class="share-button-img" src="https://main.cdn.wish.com/803e2d9bedb9/img/msite/v3/share.png" />
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="mobile-contest-info-container">
+                <td>
+                  <div class="mobile-contest-info">
+                    <div>
+                      <div class="mobile-contest-name">
+                        WAQIA  Adjustable snap kitchen sink faucet Storage Basket Drain racks sponge holder
+                      </div>
+                      <!-- <div class="product-rating-stars">
+                        <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_emptystar_16.png?v=13" />
+                      </div>
+                      <span class="contest-rating-count blue-small-text main-color">
+                        (6854)
+                      </span> -->
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr>
+              <tr class="group-buy-view">
+              </tr>
+              <!-- <tr>
+                <td>
+                  <div class="review-title-container">
+                    <span class="review-title title-text">
+                      Recent Reviews
+                    </span>
+                    <span class="view-more blue-small-text main-color">
+                      View All
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="rating-section">
+                    <div class="user-img-container">
+                      <div class="fake-circle main-color-background-opacity-30">
+                        <span class="user-initial main-color">
+                          R
+                        </span>
+                      </div>
+                    </div>
+                    <div class="rating-content-container">
+                      <div class="rating-user-name">
+                        Ramona Bigelow
+                      </div>
+                      <div class="rating-stars">
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img empty-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_emptystar_16.png?v=13" />
+                      </div>
+                      <div class="rating-date" title="2017-12-10T00:53:55+00:00">
+                        a day ago
+                      </div>
+                      <div class="rating-content">
+                        Just recieved it 2 weeks early
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="rating-section">
+                    <div class="user-img-container">
+                      <img class="user-img" src="https://graph.facebook.com/10153382514924659/picture?width=50&height=50" />
+                    </div>
+                    <div class="rating-content-container">
+                      <div class="rating-user-name">
+                        Shawlar Bhadmus
+                      </div>
+                      <div class="rating-stars">
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img empty-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_emptystar_16.png?v=13" />
+                      </div>
+                      <div class="rating-date" title="2017-12-02T06:32:45+00:00">
+                        9 days ago
+                      </div>
+                      <div class="rating-content">
+                        Nice.need to order more
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="rating-section">
+                    <div class="user-img-container">
+                      <div class="fake-circle main-color-background-opacity-30">
+                        <span class="user-initial main-color">
+                          S
+                        </span>
+                      </div>
+                    </div>
+                    <div class="rating-content-container">
+                      <div class="rating-user-name">
+                        Sybil Moyo
+                      </div>
+                      <div class="rating-stars">
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img full-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
+                        <img class="star-img empty-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_emptystar_16.png?v=13" />
+                      </div>
+                      <div class="rating-date" title="2017-11-30T05:27:24+00:00">
+                        11 days ago
+                      </div>
+                      <div class="rating-content">
+                        Ok arrived earlier than expected
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sizing-title title-text">
+                    Sizing
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sizing-container">
+                    <div class="sizing-name">
+                      Too Small
+                    </div>
+                    <div class="sizing-bar">
+                      <div class="sizing-bar-filled main-color-background" style="width: 5.0%;">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sizing-container">
+                    <div class="sizing-name">
+                      Just Right
+                    </div>
+                    <div class="sizing-bar">
+                      <div class="sizing-bar-filled main-color-background" style="width: 105.0%;">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sizing-container">
+                    <div class="sizing-name">
+                      Too Large
+                    </div>
+                    <div class="sizing-bar">
+                      <div class="sizing-bar-filled main-color-background" style="width: 5.0%;">
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sizing-subtitle">
+                    Based on 4287 shopper reviews
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="store-info-title-container">
+                    <span class="store-info-title title-text">
+                      Store Information
+                    </span>
+                    <span class="view-store-info blue-small-text main-color">
+                      View Store Reviews
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="store-info-container">
+                    <div class="store-img-container">
+                      <img class="store-img" src="https://s3-us-west-1.amazonaws.com/sweeper-production-merchantimage/light_default_dp.png" />
+
+                    </div>
+                    <div class="store-detail-container">
+                      <div class="store-name">
+                        shenzhen fast fashion Co., Ltd.
+                      </div>
+                      <div class="store-feedback">
+                        89% Positive Feedback (14,698 ratings)
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator">
+                </td>
+              </tr> -->
+              <tr>
+                <td class="item-specification-section">
+                  <div class="contest-product-details-container">
+                    <div class="contest-product-details-text title-text">
+                      Item Specification
+                    </div>
+                    <div class="arrow-img-container">
+                      <img class="arrow-img" src="https://main.cdn.wish.com/803e2d9bedb9/img/msite/v3/cart-right-chevron.png"/>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator item-specification-section">
+                </td>
+              </tr>
+              <tr>
+                <td class="description-section">
+                  <div class="contest-product-details-container">
+                    <span class="contest-product-details-text title-text">
+                      Description
+                    </span>
+                    <span class="arrow-img-container">
+                      <i class="wconfont wm-arrow-down"></i>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <!-- 描述内容 -->
+              <tr>
+                <td>
+
+                  <div>
+                    <span>阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发阿道夫阿斯顿发阿斯顿发阿斯顿发</span>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator description-section">
+                </td>
+              </tr>
+              <tr>
+                <td class="shipping-information-section">
+                  <div class="contest-product-details-container">
+                    <span class="contest-product-details-text title-text">
+                      Shipping Information
+                    </span>
+                    <span class="arrow-img-container">
+                      <img class="arrow-img" src="https://main.cdn.wish.com/803e2d9bedb9/img/msite/v3/cart-right-chevron.png" />
+
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-contest-separator shipping-information-section">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bottom-padding-space" style="height: 56px; display: block;">
+          </div>
+          <div class="contest-price-banner-bottom" style="display: block;">
+            <div class="contest-price">
+              <span class="contest-real-price">
+                HK$9
+              </span>
+              <span class="contest-retail-price">
+                HK$24
+              </span>
+              <span class="banner-currency-subscript">
+                HKD
+              </span>
+            </div>
+            <div class="contest-buy-button contest-bottom-button">
+              Buy
+            </div>
+            <div class="contest-sold-out-button contest-bottom-button" style="display: none;">
+              Sold Out
+            </div>
+          </div>
+          <!-- <div class="main-color-background mobile-contest-menu" id="mobile-contest-menutkn9ya">
+            <li class="tab-name selected-tab" id="overview-tab">
+              Overview
+            </li>
+            <li class="tab-name" id="related-tab">
+              Related
+            </li>
+          </div> -->
+        </div>
+      </div>
+      <div class="mobile-page-state-loading default-hide" style="display: none;">
+        <div class="page-state-loading-icon">
+        </div>
+        Loading
+      </div>
+      <div class="mobile-page-state-no-items default-hide" style="display: none;">
+        No items found
+      </div>
+      <div class="mobile-page-state-error default-hide" style="display: none;">
+        Error loading
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<style lang="scss" scoped>
+  .mobile-contest-page .overview-content {
+      margin-top: 92px;
+  }
+
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: fixed;
+  }
+
+  .mobile-contest-page .contest-image-container {
+      position: relative;
+      width: 100%;
+  }
+
+  .mobile-contest-page .contest-image-container .mobile-contest-image {
+      margin: 0 auto;
+      overflow: hidden;
+  }
+
+  .black-pill-button {
+      height: 30px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: none;
+      background-color: #000;
+      border: 1px solid #bbb;
+      color: #ffffff;
+      cursor: pointer;
+      zoom: 1;
+      filter: alpha(opacity=70);
+      -moz-opacity: 0.7;
+      -khtml-opacity: 0.7;
+      opacity: 0.7;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+  }
+
+  .mobile-contest-page .mobile-contest-extra-photos {
+      line-height: 30px;
+      padding: 0px 10px;
+      font-size: 0px;
+  }
+
+  .mobile-contest-page .mobile-contest-extra-photos {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      margin: 5px;
+  }
+
+  .mobile-contest-page .contest-image-container .share-button {
+      width: 46px;
+      height: 46px;
+      border-radius: 46px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #F3F8F8;
+      background-color: white;
+      position: absolute;
+      right: 16px;
+      bottom: -24px;
+      text-align: center;
+      line-height: 52px;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+  }
+
+  .photo-slide-container {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .photo-slide-container .image-wrapper-cell {
+      text-align: center;
+      overflow: hidden;
+      position: absolute;
+      display: inline-block;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info {
+      margin-top: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info #product-viewing-div {
+      font-size: 14px;
+      color: #E14D4C;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info #product-viewing-div #product-viewing-img {
+      height: 18px;
+      vertical-align: middle;
+      float: left;
+      margin-right: 4px;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .mobile-contest-name {
+      padding-top: 16px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #3C4646;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .product-rating-stars, .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .merchant-rating-stars {
+      display: inline-block;
+      font-size: 0px;
+      vertical-align: middle;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .product-rating-stars .rating-star, .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .merchant-rating-stars .rating-star {
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      margin-right: 4px;
+  }
+
+  .main-color {
+      color: #2FB7EC !important;
+  }
+
+  .mobile-contest-page .blue-small-text {
+      font-size: 14px !important;
+  }
+
+  .mobile-contest-page .mobile-contest-info-container .mobile-contest-info .contest-rating-count {
+      margin-left: 8px;
+      vertical-align: middle;
+  }
+
+  .mobile-contest-page .mobile-contest-separator {
+      height: 24px;
+      border-bottom: solid;
+      border-color: #F3F8F8;
+      border-width: 3px;
+  }
+
+  .mobile-contest-page .review-title-container {
+      margin-top: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+
+  .mobile-contest-page .title-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #3C4646;
+  }
+
+  .mobile-contest-page .review-title-container .review-title {
+      float: left;
+  }
+
+  .mobile-contest-page .review-title-container .view-more {
+      float: right;
+  }
+
+  .mobile-contest-page .rating-section {
+      margin-top: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+
+  .mobile-contest-page .rating-section .user-img-container {
+      float: left;
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container {
+      display: inline-block;
+      vertical-align: middle;
+      float: left;
+      width: calc(100vw - 80px);
+      position: relative;
+  }
+
+  .main-color-background-opacity-30 {
+      background: rgba(47, 183, 236, 0.3) !important;
+  }
+
+  .mobile-contest-page .rating-section .user-img-container .fake-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-family: roboto;
+      font-weight: bold;
+      font-size: 20px;
+      color: #2FB7EC;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container .rating-user-name {
+      font-size: 14px;
+      color: #3C4646;
+      font-weight: bold;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container .rating-stars {
+      top: 0px;
+      right: 0px;
+      position: absolute;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container .rating-stars .star-img {
+      float: left;
+      width: 16px;
+      height: 16px;
+      padding-right: 4px;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container .rating-date {
+      font-size: 14px;
+      color: #959F9F;
+  }
+
+  .mobile-contest-page .rating-section .rating-content-container .rating-content {
+      font-size: 14px;
+      color: #3C4646;
+  }
+
+  .mobile-contest-page .mobile-contest-separator {
+      height: 24px;
+      border-bottom: solid;
+      border-color: #F3F8F8;
+      border-width: 3px;
+  }
+
+  .mobile-contest-page .sizing-title {
+      padding-top: 24px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+  }
+
+  .mobile-contest-page .sizing-container {
+      padding-left: 16px;
+      padding-right: 16px;
+  }
+
+  .mobile-contest-page .sizing-container .sizing-name {
+      display: inline-block;
+      color: #3C4646;
+      font-size: 14px;
+      width: 90px;
+  }
+
+  .mobile-contest-page .sizing-container .sizing-bar {
+      display: inline-block;
+      vertical-align: middle;
+      height: 11px;
+      border-radius: 11px;
+      width: calc(100vw - 128px);
+      background-color: #F3F3F8;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .mobile-contest-page .sizing-container .sizing-bar .sizing-bar-filled {
+      position: absolute;
+      top: 0px;
+      left: -5%;
+      height: 11px;
+      background-color: #2FB7EC;
+      border-radius: 11px;
+  }
+
+  .mobile-contest-page .sizing-subtitle {
+      margin-top: 16px;
+      margin-right: 16px;
+      float: right;
+      font-size: 12px;
+      color: #B0BFBF;
+  }
+
+  .mobile-contest-page .store-info-title-container {
+      margin-top: 24px;
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+
+  .mobile-contest-page .store-info-title-container .store-info-title {
+      float: left;
+  }
+
+  .mobile-contest-page .store-info-title-container .view-store-info {
+      float: right;
+  }
+
+  .mobile-contest-page .store-info-container {
+      font-size: 14px;
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 16px;
+  }
+
+  .mobile-contest-page .store-info-container .store-img-container {
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+  }
+
+  .mobile-contest-page .store-info-container .store-detail-container {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100vw - 90px);
+  }
+
+  .mobile-contest-page .store-info-container .store-img-container .store-img {
+      vertical-align: middle;
+      width: 40px;
+      height: 40px;
+  }
+
+  .mobile-contest-page .store-info-container .store-detail-container .store-name {
+      font-weight: bold;
+      color: #3C4646;
+      margin-bottom: 8px;
+  }
+
+  .mobile-contest-page .store-info-container .store-detail-container .store-feedback {
+      color: #959F9F;
+  }
+
+  .mobile-contest-page .contest-product-details-container {
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 24px;
+      display: block;
+  }
+
+  .mobile-contest-page .contest-product-details-container .contest-product-details-text {
+      display: inline-block;
+  }
+
+  .mobile-contest-page .contest-product-details-container .arrow-img-container {
+      float: right;
+      display: inline-block;
+  }
+
+  .mobile-contest-page .contest-product-details-container .arrow-img-container .arrow-img {
+      width: 12px;
+      height: 12px;
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom {
+      width: 100%;
+      height: 56px;
+      position: fixed;
+      background-color: #1B2020;
+      bottom: 0px;
+      z-index: 10;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-price {
+      display: inline-block;
+      margin-left: 16px;
+      font-family: roboto;
+      height: 56px;
+      line-height: 56px;
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
+      display: inline-block;
+      height: 40px;
+      border-radius: 2px;
+      font-weight: bold;
+      font-size: 14px;
+      color: white;
+      background-color: #EA9C51;
+      width: 96px;
+      text-align: center;
+      line-height: 40px;
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+  @media (min-width: 350px) {
+      .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
+          width: 140px;
+      }
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
+      color: #EA9C51;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 8px;
+  }
+
+  @media (min-width: 350px) {
+      .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
+          font-size: 24px;
+      }
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
+      text-decoration: line-through;
+      font-size: 18px;
+      color: #B0BFBF;
+  }
+
+  @media (min-width: 350px) {
+      .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
+          font-size: 20px;
+      }
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-price .banner-currency-subscript {
+      display: inline-block;
+      color: #4e5867;
+      font-size: 9px;
+      font-weight: normal;
+      margin-left: 1px;
+  }
+
+  .mobile-contest-page .contest-price-banner-bottom .contest-sold-out-button {
+      opacity: 0.7;
+      display: none;
+  }
+
+  .main-color-background {
+      background: #2FB7EC !important;
+  }
+
+  .mobile-contest-page .mobile-contest-menu {
+      top: 64px;
+      position: fixed;
+      z-index: 999;
+      color: white;
+      width: 100%;
+      height: 48px;
+      font-size: 14px;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+  }
+
+  .mobile-contest-page .mobile-contest-menu li {
+      display: block;
+      float: left;
+      text-align: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      height: 48px;
+      line-height: 48px;
+      opacity: 0.6;
+  }
+
+  .mobile-contest-page .mobile-contest-menu .selected-tab {
+      border-bottom-width: 4px;
+      border-bottom-color: white;
+      border-bottom-style: solid;
+      font-weight: bold;
+      opacity: 1;
+      height: 44px;
+  }
+
+  .mobile-page-state-loading, .mobile-page-state-default-loading, .mobile-page-state-error, .mobile-page-state-no-items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      padding: 15px;
+      margin-left: -100px;
+      margin-top: -25px;
+      font-size: 14px;
+      text-align: center;
+      color: #999;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+
+  .mobile-page-state-loading .page-state-loading-icon, .mobile-page-state-default-loading .page-state-loading-icon, .mobile-page-state-error .page-state-loading-icon, .mobile-page-state-no-items .page-state-loading-icon {
+      background-image: url(//main.cdn.wish.com/803e2d9bedb9/img/msite/ajax_loader_small.gif?v=13);
+      background-size: 32px 32px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 32px;
+      margin-bottom: 15px;
+  }
+
+  .wish-loader {
+      margin: 0 auto;
+      width: 70px;
+      text-align: center;
+  }
+
+  .wish-loader>div {
+      width: 8px;
+      height: 8px;
+      margin: 0 2px;
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: sk-bouncedelay 1s infinite ease-in-out both;
+      animation: sk-bouncedelay 1s infinite ease-in-out both;
+  }
+
+  .wish-loader .circle1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+  }
+
+  .wish-loader .circle2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+  }
+</style>
+
+<script>
+// import $ from 'jquery'
+
+export default {
+
+  name: 'productDetail',
+  // components: { MyHeader },
+  data () {
+    return {
+    }
+  },
+  created () {
+  },
+  methods: {
+  }
+}
+</script>
+

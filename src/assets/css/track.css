@@ -1,0 +1,453 @@
+.mobile-guarantee {
+    position: relative;
+    width: 100%
+}
+
+.mobile-guarantee .guarantee-seal-container {
+    width: 70px
+}
+
+.mobile-guarantee .guarantee-seal-container .guarantee-seal {
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px 10px 5px
+}
+
+.mobile-guarantee .guarantee-text {
+    vertical-align: middle;
+    font-size: 13px;
+    padding-right: 10px;
+    overflow: hidden
+}
+
+.mobile-transaction-tracking {
+    padding: 10px;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .page-title {
+    font-size: 18px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 7px
+}
+
+.mobile-transaction-tracking .item-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%
+}
+
+.mobile-transaction-tracking .item-info .product-image {
+    width: 75px;
+    height: 100px;
+    margin-right: 10px
+}
+
+.mobile-transaction-tracking .item-info .product-details {
+    width: 100%;
+    vertical-align: top
+}
+
+.mobile-transaction-tracking .item-info .product-details .ellipsized-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0
+}
+
+.mobile-transaction-tracking .item-info .product-details .ellipsized-table .ellipsized-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.mobile-transaction-tracking .item-info .product-details .product-title-text {
+    font-size: 14px;
+    font-weight: bold
+}
+
+.mobile-transaction-tracking .item-info .product-details .product-sub-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-tracking .item-info .order-information-header {
+    height: 100%;
+    vertical-align: middle
+}
+
+.mobile-transaction-tracking .item-info .order-information-header .order-state {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline
+}
+
+.mobile-transaction-tracking .item-info .order-information-header .order-details {
+    font-size: 11px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-tracking .item-info .order-information-header .order-tracking-number {
+    font-size: 11px;
+    line-height: 16px;
+    color: #999
+}
+
+.mobile-transaction-tracking .tracking-header {
+    width: 100%;
+    cursor: pointer;
+    table-layout: auto
+}
+
+.mobile-transaction-tracking .tracking-header .header-text {
+    font-size: 13px;
+    line-height: 15px
+}
+
+.mobile-transaction-tracking .tracking-header .header-link {
+    text-align: right;
+    padding: 4px;
+    white-space: nowrap
+}
+
+.mobile-transaction-tracking .tracking-header .header-link .header-link-text {
+    text-decoration: underline;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .tracking-link-line {
+    padding-top: 5px
+}
+
+.mobile-transaction-tracking .tracking-link-line .tracking-link-text {
+    font-weight: bold;
+    font-size: 13px;
+    color: #7dbde5
+}
+
+.mobile-transaction-tracking .tracking-link-line .arrow {
+    width: 6px
+}
+
+.mobile-transaction-tracking .tracking-explanation {
+    border: 1px solid #f9e3b7;
+    background: #fcf6dd;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .tracking-explanation .explanation-title {
+    font-weight: bold;
+    margin-bottom: 5px
+}
+
+.mobile-transaction-tracking .order-details-button,.mobile-transaction-tracking .all-orders-button {
+    margin-top: 5px;
+    padding: 12px 0px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-tracking .order-details-button {
+    margin-top: 5px
+}
+
+.mobile-transaction-tracking .loading-tracking-box {
+    border: 1px solid #dddddd;
+    margin-top: 15px;
+    padding: 30px 15px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mobile-transaction-tracking .box-title {
+    padding: 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #f3f3f3;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center
+}
+
+.mobile-transaction-tracking .tracking-history-box {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    margin-top: 15px
+}
+
+.mobile-transaction-tracking .tracking-history-box #tracking-history-timeline {
+    position: relative
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content {
+    font-size: 11px;
+    line-height: 16px
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .tracking-history-items-simplified {
+    width: 100%
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .tracking-history-items-simplified #tracking-history-latest {
+    border-bottom: 1px solid #f3f3f3
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .tracking-history-items-simplified .tr {
+    padding: 5px
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-date {
+    width: 35%;
+    padding-left: 15px;
+    padding-top: 10px;
+    vertical-align: top;
+    text-align: left
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-content {
+    line-height: 16px;
+    vertical-align: top;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 25px;
+    width: 100%
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-content .location-line,.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-content .date-line {
+    color: #999999;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-content .status-line {
+    word-wrap: break-word
+}
+
+.mobile-transaction-tracking .tracking-history-box .tracking-history-content .history-item-content .status-line-special {
+    word-wrap: break-word;
+    font-weight: bold
+}
+
+.mobile-transaction-tracking .question-box {
+    padding: 10px;
+    margin-top: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #f3f3f3;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .question-box .have-questions {
+    font-weight: bold
+}
+
+.mobile-transaction-tracking .contact-seller-box {
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    padding: 6px;
+    background: #f3f3f3;
+    margin-top: 15px;
+    margin-bottom: 5px
+}
+
+.mobile-transaction-tracking .contact-seller-box.touched {
+    background: #e3e3e3
+}
+
+.mobile-transaction-tracking .contact-seller-box .text-container {
+    width: 100%;
+    line-height: 16px;
+    font-size: 13px
+}
+
+.mobile-transaction-tracking .contact-seller-box .text-container .title-line {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold
+}
+
+.mobile-transaction-tracking .contact-seller-box .text-container .text-line {
+    padding-top: 5px
+}
+
+.mobile-transaction-tracking .contact-seller-box .arrow-container {
+    vertical-align: middle
+}
+
+.mobile-transaction-tracking .contact-seller-box .arrow-container .arrow {
+    width: 8px;
+    margin-left: 5px
+}
+
+.mobile-transaction-tracking .main-section {
+    border: 1px solid #e8e8e8!important;
+    border-padding: 17px;
+    border-radius: 3px;
+    margin-top: 15px!important
+}
+
+.mobile-transaction-tracking .main-section .page-title {
+    font-size: 18px;
+    letter-spacing: 0.7px;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3c4646;
+    text-align: center
+}
+
+.mobile-transaction-tracking .main-section .inner {
+    margin: 5px 25px 17px 25px
+}
+
+.mobile-transaction-tracking .main-section .delivery-date-placeholder .l1 {
+    font-size: 20px
+}
+
+.mobile-transaction-tracking .main-section .delivery-date-placeholder .l2 {
+    font-size: 68px
+}
+
+.mobile-transaction-tracking .main-section .delivery-date-placeholder .l3 {
+    font-size: 16px
+}
+
+.mobile-transaction-tracking .main-section .sms-msg {
+    font-family: Roboto;
+    font-size: 11px;
+    text-align: center
+}
+
+.mobile-transaction-tracking .main-section .sms-edit {
+    margin-top: 5px;
+    text-align: center;
+    font-family: Roboto
+}
+
+.mobile-transaction-tracking .main-section .phone-input {
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 8px -10px #888,inset 0px 0px 8px -10px #888;
+    outline: none;
+    border: 1px solid #b0bfbf;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: #777777;
+    padding: 0px 70px 0px 20px
+}
+
+.mobile-transaction-tracking .main-section .phone-update {
+    margin-left: -70px;
+    position: absolute;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #8dd9bf;
+    font-weight: bold;
+    width: 66px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px
+}
+
+.mobile-transaction-tracking .main-section .phone-update.touched {
+    text-decoration: underline
+}
+
+.mobile-transaction-tracking .main-section .product-sub-text {
+    height: 15px
+}
+
+.mobile-transaction-tracking .main-section .also-like-text {
+    color: #3c4646;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Roboto;
+    letter-spacing: 0.7px;
+    text-transform: uppercase
+}
+
+.mobile-transaction-tracking .main-section .also-like-image {
+    width: 86px;
+    height: 100px;
+    margin-right: 10px
+}
+
+.mobile-transaction-tracking .main-section .buy-now {
+    font-weight: normal;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-top: 11px;
+    padding-bottom: 11px
+}
+
+.mobile-transaction-tracking .main-section .buy-now-button {
+    border-radius: 3px;
+    text-align: center;
+    text-shadow: none;
+    background-color: #2FB7EC;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 14px;
+    width: 115px;
+    font-family: Roboto;
+    letter-spacing: 0.7px
+}
+
+.mobile-transaction-tracking .main-section .buy-now-button.touched {
+    background-color: #1BAAE2 !important
+}
+
+.mobile-transaction-tracking .sms-text {
+    display: none
+}
+
+.mobile-transaction-tracking .track-package {
+    margin-top: 0px!important
+}
+
+.mobile-transaction-tracking .sms-main-div {
+    display: none
+}
+
+@media screen and (max-width: 388px) {
+    .mobile-transaction-tracking .phone-input {
+        width:150px !important;
+        font-size: 14px !important
+    }
+}
+
+@media screen and (max-width: 337px) {
+    .mobile-transaction-tracking .phone-input {
+        width:100px !important
+    }
+}
+
+@media screen and (max-width: 288px) {
+    .mobile-transaction-tracking .phone-input {
+        width:60px !important
+    }
+}

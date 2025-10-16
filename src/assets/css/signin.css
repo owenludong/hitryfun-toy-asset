@@ -1,0 +1,451 @@
+.login-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 8;
+  background-color: #fff;
+}
+.mobile-signup-dialog {
+    font-size: 1em;
+    line-height: 1.3;
+    font-family: sans-serif;
+}
+/*.ui-input-text {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 15px;
+    margin: 0px;
+    text-shadow: none !important;
+    border-color: #ccc !important
+}*/
+legend, .ui-input-text input, .ui-input-search input {
+    color: inherit;
+    text-shadow: inherit;
+}
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text {
+    padding: .4em;
+    line-height: 1.4em;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+}
+.ui-input-text input, .ui-input-search input {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none;
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+}
+.msite-signin-signup-modal .input-fields-v2 input:focus {
+    /*border: 1px solid #2FB7EC !important;*/
+}
+#msite-signup-modal .email-signup-button-v2, #msite-signup-modal .email-signin-button-v2, #msite-signup-modal .email-forgot-pwd-btn-v2 {
+    background-color: #6ec9a8;
+}
+#msite-signup-modal .signup-btn-signin, #msite-signup-modal .signin-btn-signup {
+    color: #6ec9a8;
+}
+.ui-input-text input {
+    color: #777;
+}
+.ui-page {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: #777;
+    z-index: 10;
+}
+.ui-dialog {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100% !important;
+    background: transparent !important;
+}
+.ui-overlay-shadow {
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+.ui-dialog-contain {
+    width: 92.5%;
+    max-width: 500px;
+    margin: 10% auto 1em auto;
+    padding: 0;
+    position: relative;
+    top: -1em;
+}
+#msite-signup-modal {
+    background-color: white;
+    margin-top: 50px;
+}
+.msite-signin-signup-modal {
+    background-color: white
+}
+
+.msite-signin-signup-modal .singin-v2 {
+    height: 420px
+}
+
+.msite-signin-signup-modal .singin-v2 ul {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px
+}
+
+.msite-signin-signup-modal .singin-v2 ul .forgot-password-v2 {
+    margin-top: 16px !important;
+    height: 22px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 3px;
+    color: #b0bfbf;
+    text-align: right;
+    float: right
+}
+
+.msite-signin-signup-modal .singin-v2 ul .email-signin-button-v2 {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    border-radius: 2px !important;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.msite-signin-signup-modal .singin-v2 ul .signin-new {
+    margin-top: 24px;
+    margin-bottom: 24px
+}
+
+.msite-signin-signup-modal .singin-v2 ul .signin-new-txt {
+    float: left;
+    font-size: 14px;
+    padding-left: calc(50% - 107px)
+}
+
+.msite-signin-signup-modal .singin-v2 ul .signin-btn-signup {
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+    margin-left: 8px
+}
+
+.msite-signin-signup-modal .singin-v2 ul .input-fields-v2-label {
+    padding-top: 0px !important
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 {
+    height: 280px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .email-forgot-pwd-btn-v2 {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    border-radius: 2px !important;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .back-v2 {
+    padding: 20px 0 0 20px;
+    cursor: pointer;
+    width: 40px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .back-v2 img {
+    width: 20px;
+    height: 20px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .forgotpassword-v2-div {
+    padding-left: 40px;
+    padding-right: 40px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .forgotpassword-v2-email-label {
+    margin-top: 24px
+}
+
+.msite-signin-signup-modal .forgotpassword-v2 .forgotpassword-v2-email {
+    margin-top: 8px
+}
+
+.msite-signin-signup-modal .singup-v2 {
+    height: 465px
+}
+
+.msite-signin-signup-modal .singup-v2 ul {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-v2-names {
+    height: 53px
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-v2-names .signup-v2-fname-div {
+    float: left;
+    width: 49%
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-v2-names .signup-v2-lname-div {
+    float: left;
+    width: 49%;
+    margin-left: 2%
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-v2-input-div {
+    /*padding-top: 8px*/
+    clear: both;
+}
+
+.msite-signin-signup-modal .singup-v2 ul .email-signup-button-v2 {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    border-radius: 2px !important;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-existing {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-existing-txt {
+    float: left;
+    font-size: 14px;
+    padding-left: calc(50% - 107px)
+}
+
+.msite-signin-signup-modal .singup-v2 ul .signup-btn-signin {
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+    margin-left: 8px
+}
+#required-text {
+    font-size: 12px;
+    display: block;
+    margin: .4em 0 .4em;
+    color: rgb(100,100,100);
+}
+
+/*.msite-signin-signup-modal .ui-mobile-input-overwrite div {
+    border-width: 0 !important;
+    border-style: none !important;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important
+}*/
+
+.msite-signin-signup-modal .ui-mobile-btn-overwrite {
+    border-width: 0 !important;
+    border-style: none !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    text-shadow: none !important
+}
+
+.msite-signin-signup-modal .loginmodal-v2-social-div {
+    height: 40px;
+    margin-top: 20px
+}
+
+.msite-signin-signup-modal .loginmodal-v2-social-div .loginmodal-v2-social-btn {
+    width: 100%;
+    float: left;
+    margin: 8px 0 0 0;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px !important
+}
+
+.msite-signin-signup-modal .loginmodal-v2-social-div .loginmodal-v2-social-btn div {
+    float: left;
+    margin-left: 45%
+}
+
+.msite-signin-signup-modal .loginmodal-v2-social-div .loginmodal-v2-social-btn img {
+    height: 18px;
+    vertical-align: middle
+}
+
+.msite-signin-signup-modal .loginmodal-v2-social-div .loginmodal-v2-social-btn span {
+    margin-left: 4px
+}
+
+.msite-signin-signup-modal .title-v2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3C4646;
+    text-align: center;
+    margin-bottom: 16px
+}
+
+.msite-signin-signup-modal .input-fields-v2 {
+    color: #4A4A4A
+}
+
+.msite-signin-signup-modal .input-fields-v2 label {
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+    padding-top: 8px
+}
+
+.msite-signin-signup-modal .input-fields-v2 input {
+    display: block;
+    height: 34px;
+    /*border: 1px solid #F0F5F5;*/
+    padding-left: 5px;
+    color: #3C4646 !important;
+    background-color: #FAFCFC;
+    /*border-radius: 2px*/
+}
+.ui-input-text {
+    box-shadow: none;
+    font-size: 15px;
+    margin: 0px;
+    text-shadow: none !important;
+    border-color: #ccc !important;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+}
+.msite-signin-signup-modal .input-fields-v2 input.selected {
+    border: 1px solid #2FB7EC !important
+}
+
+.msite-signin-signup-modal .input-fields-v2 input.error {
+    border: 1px solid #EE6C6B
+}
+
+.msite-signin-signup-modal .text-link {
+    color: #4A4A4A;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.msite-signin-signup-modal .btn-v2 {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 12px
+}
+
+.msite-signin-signup-modal .btn-v2 .image {
+    display: inline-block;
+    text-align: center
+}
+
+.msite-signin-signup-modal .btn-v2 .image img {
+    height: 18px;
+    vertical-align: middle
+}
+
+.msite-signin-signup-modal .btn-v2 .text {
+    text-align: center;
+    display: inline-block;
+    line-height: 34px;
+    font-size: 13px;
+    text-shadow: none !important;
+    font-weight: normal
+}
+
+.msite-signin-signup-modal .btn-v2.fb-login-btn {
+    background-color: #2450AF
+}
+
+.msite-signin-signup-modal .btn-v2.gplus-login-btn {
+    background-color: #DF4A32;
+    margin-left: 2% !important
+}
+
+.msite-signin-signup-modal .btn-v2.gplus-login-btn .image img {
+    height: 16px
+}
+
+.msite-signin-signup-modal .btn-v2.fb-login-btn,.msite-signin-signup-modal .btn-v2.gplus-login-btn {
+    color: #FFF
+}
+
+.msite-signin-signup-modal .login-separator-v2 {
+    color: #DAE3E3;
+    margin-top: 8px
+}
+
+.msite-signin-signup-modal .login-separator-v2 .text {
+    background-color: #FFF;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: #DAE3E3
+}
+
+.msite-signin-signup-modal .message-v2 {
+    font-size: 13px;
+    margin: 8px 0px;
+    text-align: center
+}
+
+.msite-signin-signup-modal .error {
+    color: #FF0000
+}
+
+.msite-signin-signup-modal .loader-v2 {
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-left: calc(50% - 12px);
+    margin-top: 8px
+}
+
+.msite-signin-signup-modal .hide {
+    display: none
+}
