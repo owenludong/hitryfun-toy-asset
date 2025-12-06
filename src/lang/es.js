@@ -99,5 +99,8 @@ export default {
   removeItemTips: "¿Eliminar este artículo del carrito?",
   removeItem: "Eliminar artículo",
   cancel: "Cancelar",
-  placeorder: "Realizar pedido"
+  placeorder: "Realizar pedido",
+  currencyChangeTips: "Solo como referencia. El pago se procesará en Euro (€).",
+  selectCurrency: "Seleccionar moneda",
+  approx: "Aprox.",
 };

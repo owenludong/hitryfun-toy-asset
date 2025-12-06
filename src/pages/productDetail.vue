@@ -153,10 +153,10 @@
       <div class="contest-price-banner-bottom" style="display: block;">
         <div class="contest-price">
           <span class="contest-real-price">
-            €{{detail.productPrice}}
+            {{ formatPrice(detail.productPrice) }}
           </span>
           <span class="contest-retail-price" v-show="detail.discounted">
-            €{{detail.originalPrice}}
+            {{ formatPrice(detail.originalPrice) }}
           </span>
           <span class="banner-currency-subscript">
             {{detail.currencyCode}}
@@ -212,7 +212,7 @@
                 <div v-else class="sku-thumb placeholder"></div>
               </div>
               <div class="content" :class="{skuless: sku.quantity <= 0, 'all-capital': currentSku.type==='size', 'first-capital': currentSku.type==='color'}">{{sku[currentSku.type]}}</div>
-              <div class="right-item price" v-show="currentSku.step === 'end' && sku.quantity > 0">{{detail.symbol}}{{sku.price}}</div>
+              <div class="right-item price" v-show="currentSku.step === 'end' && sku.quantity > 0">{{ formatPrice(sku.price) }}</div>
             </div>
           </div>
 
@@ -1038,6 +1038,27 @@ export default {
   },
   methods: {
 
+    // ✅ 新增：价格格式化方法 (与 Index.vue 逻辑一致)
+    formatPrice(basePrice) {
+      if (basePrice === null || basePrice === undefined) return '';
+
+      const currency = localStorage.getItem('currency') || 'EUR';
+      const rate = parseFloat(localStorage.getItem('currencyRate')) || 1;
+
+      let finalPrice = basePrice * rate;
+
+      // 非欧元强制 .99 结尾
+      if (currency !== 'EUR') {
+        finalPrice = Math.floor(finalPrice) + 0.99;
+      }
+
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(finalPrice);
+    },
 
     handleSlideChange() {
       const swiperRef = this.$refs.mySwiper

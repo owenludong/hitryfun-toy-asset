@@ -99,5 +99,8 @@ export default {
   removeItemTips: "Retirer cet article du panier ?",
   removeItem: "Retirer l’article",
   cancel: "Annuler",
-  placeorder: "Passer la commande"
+  placeorder: "Passer la commande",
+  currencyChangeTips: "À titre indicatif. Le règlement s'effectue en Euro (€).",
+  selectCurrency: "Sélectionner la devise",
+  approx: "Env.",
 };

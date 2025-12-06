@@ -99,5 +99,8 @@ export default {
   removeItemTips: "Diesen Artikel aus dem Warenkorb entfernen?",
   removeItem: "Artikel entfernen",
   cancel: "Abbrechen",
-  placeorder: "Bestellung abschicken"
+  placeorder: "Bestellung abschicken",
+  currencyChangeTips: "Nur zur Orientierung. Die Zahlung erfolgt in Euro (€).",
+  selectCurrency: "Währung auswählen",
+  approx: "Ca.",
 };

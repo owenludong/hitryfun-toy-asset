@@ -80,7 +80,7 @@
               </div>
               <div class="row">
                 <span class="label">
-                  {{ $t('youshippinginfo') }}
+                  {{ $t('itemtotal') }}
                 </span>
                 <span class="value">
                   {{cartInfo.symbol}} {{cartInfo.totalProductPrice}}
@@ -88,7 +88,7 @@
               </div>
               <div class="row ">
                 <span class="label">
-                  {{ $t('itemtotal') }}
+                  {{ $t('shipping') }}
                 </span>
                 <span class="value">
                   {{ $t('freeshipping') }}
@@ -102,6 +102,16 @@
                   {{cartInfo.symbol}} {{cartInfo.finalPrice}}
                 </span>
               </div>
+
+              <div class="row" v-if="localCurrencyName != 'EUR'" style="margin-top: 4px; color: #999; font-size: 13px;">
+                <span class="label">
+                  Approx. {{ localCurrencyName }}
+                </span>
+                <span class="value">
+                  {{ formatPrice(cartInfo.finalPrice) }}
+                </span>
+              </div>
+
             </div>
           </div>
         </div>
@@ -262,16 +272,44 @@ export default {
       errorText: '',
       showLoading: false,
       promCode: '',
+      localCurrencyName: '',
       checkoutText: '' // 有checkout placeOrder 2种
     }
   },
   created () {
     this.fetch()
     this.getAddress()
+    this.localCurrencyName = localStorage.getItem('currency') || 'EUR';
+  },
+  mounted () {
+    const tg = document.querySelector('.telegram-btn');
+    const wa = document.querySelector('.whatsapp-btn');
+    if (tg) tg.style.visibility = 'hidden';
+    if (wa) wa.style.visibility = 'hidden';
   },
   methods: {
     goDetail (productId) { // 访问物流详情
       this.$router.push({path: `/product/${productId}`})
+    },
+    formatPrice(basePrice) {
+      if (basePrice === null || basePrice === undefined) return '';
+
+      const currency = localStorage.getItem('currency') || 'EUR';
+      const rate = parseFloat(localStorage.getItem('currencyRate')) || 1;
+
+      let finalPrice = basePrice * rate;
+
+      // 非欧元强制 .99 结尾
+      if (currency !== 'EUR') {
+        finalPrice = Math.floor(finalPrice) + 0.99;
+      }
+
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(finalPrice);
     },
     editQuantity (cart, type) { // 改成购物车某商品数量
       let quantity;

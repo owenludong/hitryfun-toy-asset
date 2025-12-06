@@ -100,5 +100,8 @@ export default {
   removeItemTips: "Remove this item from cart?",
   removeItem: "Remove Item",
   cancel: "Cancel",
-  placeorder: "Place Order"
+  placeorder: "Place Order",
+  currencyChangeTips: "Reference only. Transactions are settled in Euro (€).",
+  selectCurrency: "Select Currency",
+  approx: "Approx.",
 };

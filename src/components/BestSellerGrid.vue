@@ -8,209 +8,16 @@
           <span v-if="[2460, 2461].includes(item.id)" class="cp-badge">Custom Link</span>
         </div>
         <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">{{ item.name || 'Product ' + (i + 1) }}</h3>
+
         <p class="cp-price">
-          €{{ item.productPrice}}
-          <span v-if="item.originalPrice" class="cp-old-price">€{{ item.originalPrice }}</span>
+          {{ formatPrice(item.productPrice) }}
+          <span v-if="item.originalPrice" class="cp-old-price">
+            {{ formatPrice(item.originalPrice) }}
+          </span>
         </p>
       </div>
 
-      <!--<div class="cp-product" @click="showDetail(2461)">
-          <div class="cp-img-wrapper">
-            <img
-              src="https://www.calmpurr.com/productImg/DEFAULT/2461/SMALL/1760799417450.webp"
-
-              :srcset="`
-                https://www.calmpurr.com/productImg/DEFAULT/2461/SMALL/1760799417450.webp 300w,
-                https://www.calmpurr.com/productImg/DEFAULT/2461/MEDIUM/1760799417450.webp 600w,
-                https://www.calmpurr.com/productImg/DEFAULT/2461/LARGE/1760799417450.webp 1000w
-              `"
-
-              sizes="(max-width: 600px) 45vw, 230px"
-
-              alt="Customized Big Size Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram"
-            />
-
-            <span class="cp-badge">Custom Link</span>
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}"> Customized Big Size Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram (Bottom Right Icon) </h3>
-          <p class="cp-price">
-            €106.99
-            <span class="cp-old-price">€119.99</span>
-          </p>
       </div>
-
-      <div class="cp-product" @click="showDetail(2460)">
-          <div class="cp-img-wrapper">
-            <img
-              src="https://www.calmpurr.com/productImg/DEFAULT/2460/SMALL/1760788074694.webp"
-
-              :srcset="`
-                https://www.calmpurr.com/productImg/DEFAULT/2460/SMALL/1760788074694.webp 300w,
-                https://www.calmpurr.com/productImg/DEFAULT/2460/MEDIUM/1760788074694.webp 600w,
-                https://www.calmpurr.com/productImg/DEFAULT/2460/LARGE/1760788074694.webp 1000w
-              `"
-
-              sizes="(max-width: 600px) 45vw, 230px"
-
-              alt="Customized Slim Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram (Bottom Right Icon)"
-            />
-
-            <span class="cp-badge">Custom Link</span>
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">Customized Slim Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram (Bottom Right Icon)</h3>
-          <p class="cp-price">
-            €89.99
-            <span class="cp-old-price">€99.99</span>
-          </p>
-      </div>
-
-      <div class="cp-product" @click="showDetail(2500)">
-          <div class="cp-img-wrapper">
-            <img
-              src="https://www.calmpurr.com/productImg/DEFAULT/2500/SMALL/1762537381575.webp"
-
-              :srcset="`
-                https://www.calmpurr.com/productImg/DEFAULT/2500/SMALL/1762537381575.webp 300w,
-                https://www.calmpurr.com/productImg/DEFAULT/2500/MEDIUM/1762537381575.webp 600w,
-                https://www.calmpurr.com/productImg/DEFAULT/2500/LARGE/1762537381575.webp 1000w
-              `"
-
-              sizes="(max-width: 600px) 45vw, 230px"
-
-              alt="Customized Mini Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram (Bottom Right Icon)"
-            />
-
-            <span class="cp-badge">Custom Link</span>
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">Customized Mini Cat Silicone Squishy Toy — Send Your Cat Photos via WhatsApp or Telegram (Bottom Right Icon)</h3>
-          <p class="cp-price">
-            €36.99
-            <span class="cp-old-price">€39.99</span>
-          </p>
-      </div>
-
-
-      <div class="cp-product" @click="showDetail(2485)">
-          <div class="cp-img-wrapper">
-          <img
-            src="https://www.calmpurr.com/productImg/DEFAULT/2485/SMALL/1760965548233.webp"
-
-            :srcset="`
-              https://www.calmpurr.com/productImg/DEFAULT/2485/SMALL/1760965548233.webp 300w,
-              https://www.calmpurr.com/productImg/DEFAULT/2485/MEDIUM/1760965548233.webp 600w,
-              https://www.calmpurr.com/productImg/DEFAULT/2485/LARGE/1760965548233.webp 1000w
-            `"
-
-            sizes="(max-width: 600px) 45vw, 230px"
-
-            alt="Handmade Flocked Tabby Cat with Green Vertical Slit Pupils - Food-Grade Silicone Squishy"
-          />
-
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">Handmade Flocked Tabby Cat with Green Vertical Slit Pupils - Food-Grade Silicone Squishy</h3>
-          <p class="cp-price">
-            €62.99
-            <span class="cp-old-price">€69.99</span>
-          </p>
-      </div>
-
-      <div class="cp-product" @click="showDetail(2473)">
-          <div class="cp-img-wrapper">
-             <img
-               src="https://www.calmpurr.com/productImg/DEFAULT/2473/SMALL/1760950319908.webp"
-
-               :srcset="`
-                 https://www.calmpurr.com/productImg/DEFAULT/2473/SMALL/1760950319908.webp 300w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2473/MEDIUM/1760950319908.webp 600w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2473/LARGE/1760950319908.webp 1000w
-               `"
-
-               sizes="(max-width: 600px) 45vw, 230px"
-
-               alt="Handmade Flocked Couple Cats - A Pair of Food-Grade Silicone Squishy Toys"
-             />
-
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}"> Handmade Flocked Couple Cats - A Pair of Food-Grade Silicone Squishy Toys </h3>
-          <p class="cp-price">
-            €106.99
-            <span class="cp-old-price">€119.99</span>
-          </p>
-      </div>
-
-      <div class="cp-product" @click="showDetail(2458)">
-          <div class="cp-img-wrapper">
-             <img
-               src="https://www.calmpurr.com/productImg/DEFAULT/2458/SMALL/1763397338133.webp"
-
-               :srcset="`
-                 https://www.calmpurr.com/productImg/DEFAULT/2458/SMALL/1763397338133.webp 300w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2458/MEDIUM/1763397338133.webp 600w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2458/LARGE/1763397338133.webp 1000w
-               `"
-
-               sizes="(max-width: 600px) 45vw, 230px"
-
-               alt="Handmade Flocked Chubby Tabby Cat - Food-Grade Silicone Squishy Toy"
-             />
-
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}"> Handmade Flocked Chubby Tabby Cat - Food-Grade Silicone Squishy Toy </h3>
-          <p class="cp-price">
-            €62.99
-            <span class="cp-old-price">€69.99</span>
-          </p>
-      </div>
-
-      <div class="cp-product" @click="showDetail(2478)">
-          <div class="cp-img-wrapper">
-              <img
-                src="https://www.calmpurr.com/productImg/DEFAULT/2478/SMALL/1760951686910.webp"
-
-                :srcset="`
-                  https://www.calmpurr.com/productImg/DEFAULT/2478/SMALL/1760951686910.webp 300w,
-                  https://www.calmpurr.com/productImg/DEFAULT/2478/MEDIUM/1760951686910.webp 600w,
-                  https://www.calmpurr.com/productImg/DEFAULT/2478/LARGE/1760951686910.webp 1000w
-                `"
-
-                sizes="(max-width: 600px) 45vw, 230px"
-
-                alt="The Flocked Little Tiger - A Mighty and Squishy Food-Safe Stress Reliever"
-              />
-
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">The Flocked Little Tiger - A Mighty and Squishy Food-Safe Stress Reliever</h3>
-          <p class="cp-price">
-            €62.99
-            <span class="cp-old-price">€69.99</span>
-          </p>
-      </div>
-
-      <div class="cp-product" @click="showDetail(2476)">
-          <div class="cp-img-wrapper">
-             <img
-               src="https://www.calmpurr.com/productImg/DEFAULT/2476/SMALL/1760951193383.webp"
-
-               :srcset="`
-                 https://www.calmpurr.com/productImg/DEFAULT/2476/SMALL/1760951193383.webp 300w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2476/MEDIUM/1760951193383.webp 600w,
-                 https://www.calmpurr.com/productImg/DEFAULT/2476/LARGE/1760951193383.webp 1000w
-               `"
-
-               sizes="(max-width: 600px) 45vw, 230px"
-
-               alt="The Gilded Flocked Cat - A New Luxe & Plump Silicone Squishy for Stress Relief"
-             />
-
-          </div>
-          <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">The Gilded Flocked Cat - A New Luxe & Plump Silicone Squishy for Stress Relief</h3>
-          <p class="cp-price">
-            €62.99
-            <span class="cp-old-price">€69.99</span>
-          </p>
-      </div>
--->
-    </div>
   </section>
 </template>
 
@@ -224,6 +31,28 @@ export default {
     },
   },
   methods: {
+    // ✅ 新增：价格格式化方法 (与 Index.vue 逻辑一致)
+    formatPrice(basePrice) {
+      if (basePrice === null || basePrice === undefined) return '';
+
+      const currency = localStorage.getItem('currency') || 'EUR';
+      const rate = parseFloat(localStorage.getItem('currencyRate')) || 1;
+
+      let finalPrice = basePrice * rate;
+
+      // 非欧元强制 .99 结尾
+      if (currency !== 'EUR') {
+        finalPrice = Math.floor(finalPrice) + 0.99;
+      }
+
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(finalPrice);
+    },
+
     placeholder(i) {
       const c = ['#f6fffa', '#f0fff4', '#ecfdf5', '#e0f2f1'][i % 4];
       return (

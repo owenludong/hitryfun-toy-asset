@@ -22,9 +22,7 @@
 
     <ul class="right-btn">
 
-      <li class="currency-button-container" @click="showCurrencySheet = true">
-        <span class="currency-code">{{ currentCurrency }}</span>
-      </li>
+      <li class="currency-button-container" @click="showCurrencySheet = true"></li>
 
       <li class="lang-button-container" @click="showLangSheet = true"></li>
 
@@ -69,7 +67,7 @@
 
   <div class="lang-overlay" v-if="showCurrencySheet" @click="showCurrencySheet = false">
       <div class="lang-panel" @click.stop>
-        <div class="lang-title">Select Currency</div>
+        <div class="lang-title">{{ $t('selectCurrency') }}</div>
 
         <div class="lang-item"
              v-for="item in currencyActions"
@@ -77,6 +75,10 @@
              @click="changeCurrency(item.code)">
           <span class="flag">{{ item.symbol }}</span>
           <span>{{ item.name }} ({{ item.code }})</span>
+        </div>
+
+        <div class="currency-note">
+          {{ $t('currencyChangeTips') }}
         </div>
 
         <div class="lang-cancel" @click="showCurrencySheet = false">
@@ -108,21 +110,16 @@
 
     /* 币种按钮样式 */
     .currency-button-container {
-      width: auto;
-      min-width: 38px;
+      width: 44px;
       height: 44px;
       cursor: pointer;
-      margin-right: 2px; /* 给右边的语言按钮留点缝隙 */
+      margin-right: 0;
 
-      .currency-code {
-        font-size: 13px;
-        font-weight: 700;
-        color: #fff;
-        padding: 4px 6px;
-        border-radius: 4px;
-        background-color: rgba(255, 255, 255, 0.25);
-        line-height: 1;
-      }
+      /* 白色线条图标 (适配绿色 Header) */
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>');
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .lang-button-container {
@@ -168,13 +165,13 @@
     }
   }
 
-  /* ✅ LOGO 样式：强制绝对居中 */
+  /* LOGO 样式 */
   #logo {
     display: block;
-    position: absolute; /* 绝对定位，脱离文档流 */
+    position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* 完美的几何居中 */
+    transform: translate(-50%, -50%);
     margin: 0;
     height: 60px;
     line-height: 1;
@@ -190,9 +187,7 @@
     }
   }
 
-  /* ⚠️ 重要：已删除 .isMenu #logo { left: 48px } 的旧代码，防止Logo跑偏 */
-
-  /* 菜单容器确保相对定位 */
+  /* 菜单容器 */
   .menu {
     position: relative;
     height: 44px;
@@ -244,7 +239,6 @@
     background-color: #8dd9bf;
   }
 
-  /* 页面内容下推 */
   .page-wrap, #app, .main-content {
     padding-top: 48px;
   }
@@ -301,12 +295,19 @@
     z-index: 2000;
   }
   .lang-panel {
-    width: 92%; margin-bottom: 20px;
-    background: #fff; border-radius: 16px;
-    padding: 16px 0;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.2);
-    animation: slideUp 0.25s ease-out;
-  }
+      width: 92%;
+      margin-bottom: 20px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px 0;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+      animation: slideUp 0.25s ease-out;
+
+      /* 限制最大高度，超出显示滚动条 */
+      max-height: 60vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   @keyframes slideUp {
     from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -315,17 +316,44 @@
     text-align: center; font-size: 16px; padding-bottom: 12px;
     font-weight: 600; color: #333;
   }
+
   .lang-item {
-    display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: center;
+    /* gap: 10px; 已删除，依靠 width 控制间距 */
     padding: 14px 20px; font-size: 15px;
     border-bottom: 1px solid #f1f1f1; cursor: pointer;
   }
   .lang-item:last-child { border-bottom: none; }
-  .lang-item .flag { font-size: 18px; }
+
+  /* ✅ 修改：固定宽度 flag，确保对齐 */
+  .lang-item .flag {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    width: 45px;        /* 关键：给符号预留足够且固定的宽度 */
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  /* 币种结算提示样式 */
+  .currency-note {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    padding: 12px 16px 0;
+    line-height: 1.4;
+  }
+
   .lang-cancel {
-    text-align: center; padding: 12px 0; font-size: 15px; color: #555;
-    background: #fff; border-radius: 12px;
-    margin-top: 12px; margin-bottom: 4px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    color: #555;
+    background: #fff;
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-bottom: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }
   .bounce { animation: pulsate 1500ms 1 alternate ease-in-out; }
@@ -351,13 +379,33 @@ export default {
       showLangSheet: false,
       showCurrencySheet: false,
       currentCurrency: localStorage.getItem('currency') || 'EUR',
-      // 币种列表
+      // ✅ 币种列表：名称已清理 (去掉重复符号)，汇率更新至 2025.12
       currencyActions: [
-          { code: 'EUR', name: 'Euro (€)', symbol: '€' },
-          { code: 'USD', name: 'US Dollar ($)', symbol: '$' },
-          { code: 'GBP', name: 'British Pound (£)', symbol: '£' },
-          { code: 'JPY', name: 'Japanese Yen (¥)', symbol: '¥' },
+        // --- 核心币种 ---
+        { code: 'EUR', name: 'Euro', symbol: '€', rate: 1.0 },
+        { code: 'USD', name: 'US Dollar', symbol: '$', rate: 1.16 },
+        { code: 'GBP', name: 'British Pound', symbol: '£', rate: 0.87 },
+        { code: 'SAR', name: 'Saudi Riyal', symbol: 'SR', rate: 4.35 },
+        { code: 'AED', name: 'UAE Dirham', symbol: 'AED', rate: 4.27 },
+
+        // --- 美洲 ---
+        { code: 'CAD', name: 'Canadian Dollar', symbol: 'C$', rate: 1.61 },
+        { code: 'MXN', name: 'Mexican Peso', symbol: '$', rate: 21.18 },
+        { code: 'COP', name: 'Colombian Peso', symbol: '$', rate: 4425.0 },
+        { code: 'BRL', name: 'Brazilian Real', symbol: 'R$', rate: 6.19 },
+
+        // --- 亚洲 & 中东 ---
+        { code: 'INR', name: 'Indian Rupee', symbol: '₹', rate: 104.55 },
+        { code: 'PHP', name: 'Philippine Peso', symbol: '₱', rate: 68.73 },
+
       ],
+      // ✅ 提示文案字典
+      currencyNoteText: {
+        en: 'Reference only. Transactions are settled in Euro (€).',
+        de: 'Nur zur Orientierung. Die Zahlung erfolgt in Euro (€).',
+        fr: 'À titre indicatif. Le règlement s\'effectue en Euro (€).',
+        es: 'Solo como referencia. El pago se procesará en Euro (€).'
+      },
       isFading: false,
       currentLang: localStorage.getItem('lang') || 'en',
       langActions: [
@@ -390,7 +438,14 @@ export default {
     },
     // 币种切换
     changeCurrency(code) {
+      // 找到选中的币种对象
+      const selectedCurrency = this.currencyActions.find(c => c.code === code);
+      const rate = selectedCurrency ? selectedCurrency.rate : 1;
+
+      // 写入 Storage
       localStorage.setItem('currency', code);
+      localStorage.setItem('currencyRate', rate); // 关键：把汇率存进去
+
       this.currentCurrency = code;
       this.showCurrencySheet = false;
       this.isFading = true;
@@ -493,9 +548,22 @@ export default {
       const wa = document.querySelector('.whatsapp-btn');
       if (tg) tg.style.visibility = val ? 'hidden' : 'visible';
       if (wa) wa.style.visibility = val ? 'hidden' : 'visible';
-    }
+    },
+     // ✅ 监听币种弹窗：隐藏悬浮的 Telegram/WhatsApp 按钮
+     showCurrencySheet(val) {
+       const tg = document.querySelector('.telegram-btn');
+       const wa = document.querySelector('.whatsapp-btn');
+       if (tg) tg.style.visibility = val ? 'hidden' : 'visible';
+       if (wa) wa.style.visibility = val ? 'hidden' : 'visible';
+     }
   },
   created () {
+    if (!localStorage.getItem('currencyRate')) {
+      const current = this.currencyActions.find(c => c.code === this.currentCurrency);
+      const rate = current ? current.rate : 1;
+      localStorage.setItem('currencyRate', rate);
+    }
+
     if (!localStorage.getItem('lang')) {
       const navLang = navigator.language.toLowerCase();
       if (navLang.includes('fr')) {

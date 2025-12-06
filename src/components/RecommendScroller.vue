@@ -5,10 +5,14 @@
       <div v-for="(item, i) in list" :key="i" class="cp-item" @click="showDetail(item.id)">
         <img :src="item.mainImage || placeholder(i)" :alt="item.name" />
         <h3 class="cp-item-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">{{ item.name || 'Recommended ' + (i + 1) }}</h3>
+
         <p class="cp-price">
-          €{{ item.productPrice }}
-          <span v-if="item.originalPrice" class="cp-old-price">€{{ item.originalPrice }}</span>
+          {{ formatPrice(item.productPrice) }}
+          <span v-if="item.originalPrice" class="cp-old-price">
+            {{ formatPrice(item.originalPrice) }}
+          </span>
         </p>
+
       </div>
     </div>
   </section>
@@ -24,6 +28,28 @@ export default {
     },
   },
   methods: {
+    // ✅ 新增：价格格式化方法 (统一逻辑)
+    formatPrice(basePrice) {
+      if (basePrice === null || basePrice === undefined) return '';
+
+      const currency = localStorage.getItem('currency') || 'EUR';
+      const rate = parseFloat(localStorage.getItem('currencyRate')) || 1;
+
+      let finalPrice = basePrice * rate;
+
+      // 非欧元强制 .99 结尾
+      if (currency !== 'EUR') {
+        finalPrice = Math.floor(finalPrice) + 0.99;
+      }
+
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(finalPrice);
+    },
+
     placeholder(i) {
       const c = ['#f6fffa', '#fff4f2', '#f0fdfa'][i % 3];
       return (
