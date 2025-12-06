@@ -159,7 +159,7 @@
             {{ formatPrice(detail.originalPrice) }}
           </span>
           <span class="banner-currency-subscript">
-            {{detail.currencyCode}}
+            {{localCurrencyName}}
           </span>
         </div>
         <div class="contest-buy-button contest-bottom-button" @click="buy">{{ $t('buyText') }}</div>
@@ -184,7 +184,7 @@
             </div>
             <div class="content-text">
               <div class="added">{{ $t('addtocart') }}</div>
-              <div class="saved" v-show="detail.discounted">{{ $t('yoursavings') }}: {{detail.symbol}} {{detail.originalPrice - detail.productPrice}}</div>
+              <div class="saved" v-show="detail.discounted">{{ $t('yoursavings') }}:   {{ formatPrice(detail.originalPrice - detail.productPrice) }}  </div>
             </div>
           </div>
         </div>
@@ -985,6 +985,7 @@ export default {
     return {
       hasVideo: false,
       hasPlayVideo: false,
+      localCurrencyName: '',
       swiperOption: {
         // some swiper options/callbacks
         on: {
@@ -1035,6 +1036,7 @@ export default {
     this.prodcutId = this.$route.params.id
     this.clientWidth = document.documentElement.clientWidth + 'px'
     this.fetch()
+    this.localCurrencyName = localStorage.getItem('currency') || 'EUR';
   },
   methods: {
 

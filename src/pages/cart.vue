@@ -287,6 +287,13 @@ export default {
     if (tg) tg.style.visibility = 'hidden';
     if (wa) wa.style.visibility = 'hidden';
   },
+  // 【新增这个方法】离开时还原
+  beforeDestroy () {
+    const tg = document.querySelector('.telegram-btn');
+    const wa = document.querySelector('.whatsapp-btn');
+    if (tg) tg.style.visibility = 'visible';
+    if (wa) wa.style.visibility = 'visible';
+  },
   methods: {
     goDetail (productId) { // 访问物流详情
       this.$router.push({path: `/product/${productId}`})
