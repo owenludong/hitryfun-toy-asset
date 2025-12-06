@@ -400,7 +400,7 @@ export default {
         //          showCancelButton: true,
         //          cancelButtonText: 'cancel'
         this.$messagebox({
-          message: `<img src="${cart.image}" class="remove-img"/> <div class="remove-text">{{ $t('removeItemTips') }}</div>`,
+          message: `<img src="${cart.image}" class="remove-img"/> <div class="remove-text">${this.$t("removeItemTips")}</div>`,
           confirmButtonText: this.$t("removeItem"),
           showCancelButton: true,
           cancelButtonText: this.$t("cancel")

@@ -150,7 +150,7 @@
       <!-- 底部 -->
       <div class="bottom-padding-space" style="height: 56px; display: block;">
       </div>
-      <div class="contest-price-banner-bottom" style="display: block;">
+      <div class="contest-price-banner-bottom">
         <div class="contest-price">
           <span class="contest-real-price">
             {{ formatPrice(detail.productPrice) }}
@@ -158,9 +158,9 @@
           <span class="contest-retail-price" v-show="detail.discounted">
             {{ formatPrice(detail.originalPrice) }}
           </span>
-          <span class="banner-currency-subscript">
+          /*<span class="banner-currency-subscript">
             {{localCurrencyName}}
-          </span>
+          </span>*/
         </div>
         <div class="contest-buy-button contest-bottom-button" @click="buy">{{ $t('buyText') }}</div>
         <div class="contest-sold-out-button contest-bottom-button" style="display: none;">SOLD OUT</div>
@@ -788,82 +788,111 @@
       height: 12px;
   }
 
-  .mobile-contest-page .contest-price-banner-bottom {
-      width: 100%;
-      height: 56px;
-      position: fixed;
-      background-color: #1B2020;
-      bottom: 0px;
-      z-index: 10;
-      -webkit-transform: translateZ(0);
-      -moz-transform: translateZ(0);
-      -ms-transform: translateZ(0);
-      -o-transform: translateZ(0);
-      transform: translateZ(0);
-  }
+  /* --- 底部栏容器 --- */
+    .mobile-contest-page .contest-price-banner-bottom {
+        width: 100%;
+        height: 56px; /* 保持固定高度 */
+        position: fixed;
+        background-color: #1B2020;
+        bottom: 0px;
+        z-index: 10;
 
-  .mobile-contest-page .contest-price-banner-bottom .contest-price {
-      display: inline-block;
-      margin-left: 16px;
-      font-family: roboto;
-      height: 56px;
-      line-height: 56px;
-  }
+        /* 【修改点1】启用 Flex 布局 */
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: space-between; /* 左右两端对齐 */
+        padding-right: 16px; /* 给右侧按钮留出呼吸空间 */
+        box-sizing: border-box; /* 确保 padding 不增加总宽度 */
 
-  .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
-      display: inline-block;
-      height: 40px;
-      border-radius: 2px;
-      font-weight: bold;
-      font-size: 14px;
-      color: white;
-      background-color: #EA9C51;
-      width: 96px;
-      text-align: center;
-      line-height: 40px;
-      position: absolute;
-      top: 8px;
-      right: 16px;
-  }
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+    }
 
-  @media (min-width: 350px) {
-      .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
-          width: 140px;
-      }
-  }
+    /* --- 左侧价格区域 --- */
+    .mobile-contest-page .contest-price-banner-bottom .contest-price {
+        /* 【修改点2】内部也用 Flex，实现自动换行 */
+        display: flex;
+        flex-wrap: wrap;      /* 关键：空间不足时自动换行 */
+        align-items: baseline; /* 文字底部对齐 */
 
-  .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
-      color: #EA9C51;
-      font-size: 18px;
-      font-weight: bold;
-      margin-right: 8px;
-  }
+        flex: 1;              /* 占满左侧剩余空间 */
+        margin-left: 16px;    /* 左边距 */
+        margin-right: 8px;    /* 必须给右边留点空隙，防止紧贴按钮 */
 
-  @media (min-width: 350px) {
-      .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
-          font-size: 24px;
-      }
-  }
+        /* 重置行高，防止换行后文字重叠或太散 */
+        height: auto;
+        line-height: 1.2;
+        overflow: hidden;     /* 防止溢出 */
+    }
 
-  .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
-      text-decoration: line-through;
-      font-size: 18px;
-      color: #B0BFBF;
-  }
+    /* --- 购买按钮 --- */
+    .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
+        /* 【修改点3】取消绝对定位，改由 Flex 控制 */
+        display: block; /* 或者 flex */
+        position: static; /* 移除 absolute */
+        top: auto;
+        right: auto;
 
-  @media (min-width: 350px) {
-      .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
-          font-size: 20px;
-      }
-  }
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        font-weight: bold;
+        font-size: 14px;
+        color: white;
+        background-color: #EA9C51;
+        text-align: center;
 
-  .mobile-contest-page .contest-price-banner-bottom .contest-price .banner-currency-subscript {
-      display: inline-block;
-      color: #4e5867;
-      font-size: 9px;
-      font-weight: normal;
-      margin-left: 1px;
-  }
+        flex-shrink: 0; /* 关键：防止按钮被价格挤扁 */
+        width: 96px;    /* 默认宽度 */
+    }
+
+    /* 平板/大屏适配 */
+    @media (min-width: 350px) {
+        .mobile-contest-page .contest-price-banner-bottom .contest-bottom-button {
+            width: 140px;
+        }
+    }
+
+    /* 现价样式 */
+    .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
+        color: #EA9C51;
+        font-size: 18px;
+        font-weight: bold;
+        white-space: nowrap; /* 保持数字不换行 */
+    }
+
+    @media (min-width: 350px) {
+        .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-real-price {
+            font-size: 24px;
+        }
+    }
+
+    /* 原价样式 */
+    .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
+        text-decoration: line-through;
+        font-size: 14px; /* 稍微改小一点，避免换行后太喧宾夺主 */
+        color: #B0BFBF;
+        margin-left: 6px; /* 使用 margin 控制间距 */
+        white-space: nowrap; /* 保持数字不换行 */
+    }
+
+    @media (min-width: 350px) {
+        .mobile-contest-page .contest-price-banner-bottom .contest-price .contest-retail-price {
+            font-size: 16px; /* 调整原价字体大小 */
+        }
+    }
+
+    /* 货币符号后缀 */
+    .mobile-contest-page .contest-price-banner-bottom .contest-price .banner-currency-subscript {
+        display: inline-block;
+        color: #4e5867;
+        font-size: 9px;
+        font-weight: normal;
+        margin-left: 2px;
+    }
 
   .mobile-contest-page .contest-price-banner-bottom .contest-sold-out-button {
       // opacity: 0.7;
@@ -985,7 +1014,7 @@ export default {
     return {
       hasVideo: false,
       hasPlayVideo: false,
-      localCurrencyName: '',
+      /*localCurrencyName: '',*/
       swiperOption: {
         // some swiper options/callbacks
         on: {
@@ -1036,7 +1065,7 @@ export default {
     this.prodcutId = this.$route.params.id
     this.clientWidth = document.documentElement.clientWidth + 'px'
     this.fetch()
-    this.localCurrencyName = localStorage.getItem('currency') || 'EUR';
+    //this.localCurrencyName = localStorage.getItem('currency') || 'EUR';
   },
   methods: {
 
