@@ -1241,6 +1241,31 @@ export default {
             window.setTimeout(() => {
               this.popupVisible = false
             }, 1500)
+            //更新TK的加入购物车事件
+            if (window.ttq && this.detail) {
+              try {
+                window.ttq.track('AddToCart', {
+                  contents: [{
+                    content_id: this.detail.id,
+                    content_type: "product",
+                    content_name: this.detail.name,
+                    quantity: 1,              // 默认添加一个
+                    price: this.detail.productPrice
+                  }],
+                  value: Number(this.detail.productPrice), // 商品价格
+                  currency: this.detail.symbol || "EUR"
+                });
+
+                console.log("TikTok Pixel AddToCart sent:", {
+                  content_id: this.detail.id,
+                  value: this.detail.productPrice,
+                  currency: this.detail.symbol || "EUR"
+                });
+
+              } catch (e) {
+                console.error("TikTok AddToCart error:", e);
+              }
+            }
           })
           .catch((err) => {
             this.isShowMask = false

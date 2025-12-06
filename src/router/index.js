@@ -104,7 +104,7 @@ const routers = new Router({
       component: TransactionDetailPage
     },
     {
-      path: '//1/:tid',
+      path: '/purchase-confirmation/:tid',
       component: TransactionDetailPage,
       name: 'order-confirm'
     },
