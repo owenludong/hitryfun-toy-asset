@@ -1,30 +1,30 @@
 <template>
   <div>
-    <my-header></my-header>
+    <my-header/>
     <div id="shippingPage">
       <div class="mobile-cart-shipping-page ui-page-theme-a">
         <div class="address-form">
-          <label id="required-text">* Indicates a field is required</label>
+          <label id="required-text">{{ $t('signinReq') }}</label>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="email" placeholder="Please enter your email*" type="email" v-model.trim="info.email"/>
+              <input class="full-width-input required-input" name="email" :placeholder="$t('contactemail')" type="email" v-model.trim="info.email"/>
             </div>
           </div>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="subject" placeholder="Subject*" type="text" v-model.trim="info.title"/>
+              <input class="full-width-input required-input" name="subject" :placeholder="$t('contactsubject')" type="text" v-model.trim="info.title"/>
             </div>
           </div>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <textarea class="full-width-input required-input" name="description" placeholder="Description*" v-model.trim="info.content" rows="10"></textarea>
+              <textarea class="full-width-input required-input" name="description" :placeholder="$t('contactDesc')" v-model.trim="info.content" rows="10"></textarea>
             </div>
           </div>
 
           <div class="cart-footer defaulthide ui-footer ui-footer-fixed slideup ui-bar-inherit">
             <div class="checkout-button-container">
               <div class="orange-button checkout-button touchable done-btn" @click="submit">
-                Done
+                {{ $t('done') }}
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@
 </style>
 
 <script>
-import MyHeader from '../components/header'
+import MyHeader from '@/components/header.vue'
 import Validator from '../_common/js/validate.js'
 import qs from 'qs'
 
@@ -109,7 +109,7 @@ export default {
             // position: 'bottom',
             duration: 3000
           });
-          this.info.content = ''
+          //this.info.content = ''
         })
         .catch((err) => {
           if (!err.data.success) {

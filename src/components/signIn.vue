@@ -2,7 +2,7 @@
   <div>
     <div class="mobile-signup-dialog ui-page ui-page-theme-a ui-dialog" data-close-btn="none" data-corners="false" data-page-active="true" data-role="dialog" id="signup-dialog-0a0389d1-7bc5-4c63-9ca1-c78fc8945195" style="display: block;" tabindex="0">
       <div class="ui-dialog-contain ui-overlay-shadow" role="dialog">
-        <div class="msite-signin-signup-modal" id="msite-signup-modal">
+    i    <div class="msite-signin-signup-modal" id="msite-signup-modal">
           <div class="singup-v2" v-show="currentContent === 'signup'">
             <ul>
               <li>
@@ -155,7 +155,7 @@
               <li>
                 <div class="signin-new">
                   <div class="signin-new-txt">
-                    New to Hitryfun?
+                    New to Calmpurr?
                   </div>
                   <div class="text-link signin-btn-signup cronkite touchable" @click="changeContent('signup')">
                     Sign Up

@@ -4,31 +4,31 @@
     <div class="singup-v2">
       <ul>
         <li>
-          <label id="required-text">* Indicates a field is required</label>
+          <label id="required-text">{{ $t('signinReq') }}</label>
           <form class="input-fields-v2 ui-mobile-input-overwrite">
             <div class="signup-v2-names">
               <div class="signup-v2-fname-div">
                 <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                  <input class="highlight-v2" id="signup-v2-fname" spellcheck="false" type="text" v-model.trim="firstName" placeholder="First Name*" />
+                  <input class="highlight-v2" id="signup-v2-fname" spellcheck="false" type="text" v-model.trim="firstName" :placeholder="$t('firstName')" />
                 </div>
               </div>
               <div class="signup-v2-lname-div">
                 <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                  <input class="highlight-v2" id="signup-v2-lname" spellcheck="false" type="text" v-model.trim="lastName" placeholder="Last Name*"/>
+                  <input class="highlight-v2" id="signup-v2-lname" spellcheck="false" type="text" v-model.trim="lastName" :placeholder="$t('lastName')"/>
                 </div>
               </div>
             </div>
             <div class="signup-v2-input-div">
               <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                <input class="highlight-v2" id="signup-v2-email" spellcheck="false" type="email" v-model.trim="email" placeholder="Email*"/>
+                <input class="highlight-v2" id="signup-v2-email" spellcheck="false" type="email" v-model.trim="email" :placeholder="$t('emailReq')"/>
               </div>
               <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                <input class="highlight-v2" id="signup-v2-password" type="password" v-model.trim="password" placeholder="Password*"/>
+                <input class="highlight-v2" id="signup-v2-password" type="password" v-model.trim="password" :placeholder="$t('passwordReq')"/>
               </div>
             </div>
             <button class="btn-v2 ui-mobile-btn-overwrite email-signup-button-v2 ui-btn ui-shadow ui-corner-all" type="button" @click="signUp">
               <span class="text">
-                Create an Account
+                {{ $t('createAccount') }}
               </span>
             </button>
           </form>
@@ -64,10 +64,10 @@
         <li>
           <div class="signup-existing">
             <div class="signup-existing-txt">
-              Already have an account?
+              {{ $t('alreadyHaveAccount') }}
             </div>
             <router-link class="text-link signup-btn-signin cronkite touchable" tag="div" to="/login">
-              Sign In
+              {{ $t('signin') }}
             </router-link>
           </div>
         </li>

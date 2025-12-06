@@ -16,6 +16,7 @@ import LuojiPlugins from './plugins/index.js'
 import CookieApi from './_common/js/cookies.js'
 import VideoPlayer from 'vue-video-player'
 import IScrollView from 'vue-iscroll-view'
+import { t } from './lang/index.js';
 //import IScroll from 'iscroll'
 // 改为使用 probe 版本：
 import IScroll from 'iscroll/build/iscroll-probe.js'
@@ -31,6 +32,7 @@ Object.keys(custom).forEach(key => {
   Vue.filter(key, custom[key])
 })
 
+Vue.prototype.$t = t;
 Vue.prototype.$axios = axios
 Vue.prototype.$cookieApi = CookieApi
 

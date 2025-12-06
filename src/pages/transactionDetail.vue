@@ -186,7 +186,7 @@
                     </img>
                   </td>-->
                   <td class="guarantee-text">
-                    We have your back! You never have to worry when you shop on Hitryfun.
+                    We have your back! You never have to worry when you shop on CalmPurr.
                   </td>
                 </tr>
               </tbody>
@@ -483,11 +483,42 @@ export default {
     fetch () {
       this.$axios(this.ApiList.orderDetail + `${this.transactionId}`)
         .then((res) => {
-          console.log(res)
+          //console.log(res)
           this.orderDetail = res.data.order
           this.emailAddress = res.data.email
-          console.log('this.orderDetail')
-          console.log(this.orderDetail)
+          //console.log('this.orderDetail')
+          //console.log(this.orderDetail)
+          // ------------ TikTok 购买事件：只在支付成功页面触发 ------------
+          if (this.$route.name === 'order-confirm' && window.ttq && this.orderDetail) {
+            try {
+
+              const order = this.orderDetail
+
+              const contents = (order.products || []).map(item => ({
+                content_id: item.product.id,
+                content_type: "product",
+                content_name: item.name,
+                quantity: item.quantity,
+                price: item.price
+              }))
+
+              window.ttq.track('Purchase', {
+                contents: contents,
+                value: Number(order.totalPrice),          // 订单总金额
+                currency: order.symbol || "EUR"          // 默认 EUR
+              })
+
+              console.log("TikTok Pixel CompletePayment sent:", {
+                contents,
+                value: order.totalPrice,
+                currency: order.symbol || "EUR"
+              })
+
+            } catch (e) {
+              console.error("TikTok Pixel CompletePayment error:", e)
+            }
+          }
+          // ==========================================================
         })
         .catch((err) => {
           console.log(err)

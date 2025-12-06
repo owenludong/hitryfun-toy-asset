@@ -24,12 +24,12 @@
                 </a> -->
                 <router-link class="ui-link" to="/settings/change-email">
                   <li class="settings-tab">
-                    Change Email Address
+                     {{ $t('changeemail') }}
                   </li>
                 </router-link>
                 <router-link class="ui-link" to="/settings/change-password">
                   <li class="settings-tab">
-                    Change Password
+                    {{ $t('changepass') }}
                   </li>
                 </router-link>
                 <!-- <a class="ui-link" href="/m/settings/payment">
@@ -38,7 +38,7 @@
                   </li>
                 </a> -->
                 <li class="settings-tab logout" @click="showLogoutModal">
-                  Logout
+                  {{ $t('logout') }}
                 </li>
               </ul>
               <div class="information-text">

@@ -4,7 +4,9 @@
       <div class="menu-button-container" v-show="isMenu&isLogin" @click="showAsideMenu"></div>
       <div class="close-button" @click="goBack" v-show="isCartPage"></div>
       <div class="go-back-button" v-show="isBack" @click="goBack"></div>
-      <div class="page-name" v-show="$route.name !== 'notFound'">{{$route.name}}</div>
+      <div class="page-name" v-show="$route.name !== 'notFound'">
+         {{ pageTitle }}
+      </div>
     </div>
   </div>
 </template>
@@ -110,6 +112,20 @@ export default {
   computed: {
     isLogin () {
       return this.$store.getters.getLoginStatus
+    },
+    pageTitle () {
+        // 1. 按你说的规则拼 key：header + route.name
+        const key = 'header' + this.$route.name; // 比如 route.name=Details => headerDetails
+
+        // 2. 用你现有的 $t 去取
+        //   这里假设：如果 key 不存在，$t 会原样返回 key（这是我们建议的实现方式）
+        const translated = this.$t ? this.$t(key) : key;
+
+        // 3. 如果翻译不到，就 fallback 到 route.name
+        if (translated === key) {
+          return this.$route.name;
+        }
+        return translated;
     }
   },
   watch: {

@@ -8,12 +8,12 @@
             <div class="mobile-settings-change-email-page">
               <div class="mobile-settings-change-email-page-main-content">
                 <div class="email-explanation">
-                  <div class="form-title">Use this form to change your email address.</div>
+                  <div class="form-title">{{ $t('changeemailtips') }}</div>
                   <!-- <div>We will send you an e-mail to confirm the address change.</div> -->
                 </div>
                 <div class="old-email">
                   <div class="label">
-                    Current e-mail address
+                    {{ $t('currentemail') }}
                   </div>
                   <div class="old-email-text">{{account.email}}</div>
                 </div>
@@ -27,19 +27,19 @@
                 </div> -->
                 <div class="new-email" :class="{'focus': email.focus.new, 'error': !email.value.new && !email.firstInput.new || email.itemInvalidate.new}">
                   <div class="label">
-                    New e-mail address
+                    {{ $t('newemail') }}
                   </div>
                   <div class="input-container">
-                    <input autocapitalize="none" autocorrect="off" class="new-email-input" placeholder="Enter e-mail address" type="email" @focus="focus('new')" @blur="blur('new')" v-model.trim="email.value.new"/>
+                    <input autocapitalize="none" autocorrect="off" class="new-email-input" :placeholder="$t('enteremail')" type="email" @focus="focus('new')" @blur="blur('new')" v-model.trim="email.value.new"/>
                   </div>
                   <div class="required" v-show="!email.value.new && !email.firstInput.new || email.itemInvalidate.new">{{email.errorText.new}}</div>
                 </div>
                 <div class="new-email" :class="{'focus': email.focus.confirm, 'error': !email.value.confirm && !email.firstInput.confirm || email.itemInvalidate.confirm}">
                   <div class="label">
-                    Confirm e-mail address
+                    {{ $t('confirmemail') }}
                   </div>
                   <div class="input-container">
-                    <input autocapitalize="none" autocorrect="off" class="new-email-input" placeholder="Confirm new e-mail address" type="email" @focus="focus('confirm')" @blur="blur('confirm')" v-model.trim="email.value.confirm"/>
+                    <input autocapitalize="none" autocorrect="off" class="new-email-input" :placeholder="$t('enterconfirmemail')" type="email" @focus="focus('confirm')" @blur="blur('confirm')" v-model.trim="email.value.confirm"/>
                   </div>
                   <div class="required" v-show="!email.value.confirm && !email.firstInput.confirm || email.itemInvalidate.confirm">{{email.errorText.confirm}}</div>
                 </div>

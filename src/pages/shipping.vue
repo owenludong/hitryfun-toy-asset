@@ -8,20 +8,20 @@
           <div class="cancel-link">Cancel</div>
         </div> -->
         <div class="address-form">
-          <label id="required-text">* Indicates a field is required</label>
+          <label id="required-text">{{ $t('signinReq') }}</label>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="full-name" placeholder="First Name*" type="text" v-model.trim="address.firstName"/>
+              <input class="full-width-input required-input" name="full-name" :placeholder="$t('firstName')" type="text" v-model.trim="address.firstName"/>
             </div>
           </div>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="full-name" placeholder="Last Name*" type="text" v-model.trim="address.lastName"/>
+              <input class="full-width-input required-input" name="full-name" :placeholder="$t('lastName')" type="text" v-model.trim="address.lastName"/>
             </div>
           </div>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="street-address1" placeholder="Street Address*" type="text" v-model.trim="address.address"/>
+              <input class="full-width-input required-input" name="street-address1" :placeholder="$t('streetaddress')" type="text" v-model.trim="address.address"/>
             </div>
           </div>
           <!-- <div class="form-row">
@@ -134,7 +134,7 @@
                   </div> -->
                   <!-- placeholder="State (Optional)" -->
                   <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                    <input class="state-input" name="state" placeholder="State*" type="text" v-model.trim="address.state"/>
+                    <input class="state-input" name="state" :placeholder="$t('state')" type="text" v-model.trim="address.state"/>
                   </div>
                 </td>
               </tr>
@@ -142,7 +142,7 @@
           </table>
           <div class="form-row">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="full-width-input required-input" name="city" placeholder="City*" type="text" v-model.trim="address.city"/>
+              <input class="full-width-input required-input" name="city" :placeholder="$t('city')" type="text" v-model.trim="address.city"/>
             </div>
           </div>
           <table class="table-form-row">
@@ -150,12 +150,12 @@
               <tr>
                 <td class="half-width-input left-cell">
                   <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                    <input class="required-input half-width-input" id="zipcode" name="zipcode" placeholder="Zip/Postal Code*" type="text" v-model.trim="address.zip"/>
+                    <input class="required-input half-width-input" id="zipcode" name="zipcode" :placeholder="$t('zip')" type="text" v-model.trim="address.zip"/>
                   </div>
                 </td>
                 <td class="half-width-input right-cell">
                   <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                    <input class="required-input half-width-input raw_phone_number" name="raw-phone-number" placeholder="Phone*" type="tel" v-model.trim="address.telephone"/>
+                    <input class="required-input half-width-input raw_phone_number" name="raw-phone-number" :placeholder="$t('phone')" type="tel" v-model.trim="address.telephone"/>
                   </div>
                 </td>
               </tr>
@@ -164,7 +164,7 @@
           <div class="cart-footer defaulthide ui-footer ui-footer-fixed slideup ui-bar-inherit">
             <div class="checkout-button-container">
               <div class="orange-button checkout-button touchable done-btn" @click="submitAddress">
-                Done
+                {{ $t('done') }}
               </div>
             </div>
           </div>
@@ -304,13 +304,11 @@ export default {
     }
   },
   beforeRouteLeave (to, from, next) {
-    console.log('haha')
     if (this.address.firstName === '' || this.address.lastName === '' || this.address.telephone === '' || this.address.address === '' || this.address.city === '' || this.address.zip === '' || this.address.state === '' || this.address.country === '') {
       next(false)
-      console.log('hahas')
       this.$messagebox({
-        title: 'Are you sure?',
-        message: 'Do you want to cancel entering your shipping info?',
+        title: this.$t("areyousure"),
+        message: this.$t("cancelshipping"),
         confirmButtonText: 'YES',
         showCancelButton: true,
         cancelButtonText: 'NO'

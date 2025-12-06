@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CalmPurr - Handmade Squishy Cats (Fully Functional)</title>
+<style>
+:root { --brand:#a7e0c4; --accent:#ffb347; --text:#222; --muted:#6b7280; --bg:#fff; --card:#fafafa; --shadow:0 2px 8px rgba(0,0,0,.08); }
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
+header{position:sticky;top:0;z-index:20;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 14px}
+.menu-icon{font-size:1.5rem}.logo{display:flex;align-items:center;gap:8px;font-weight:700}.cart{position:relative}
+.cart:after{content:'1';position:absolute;top:-6px;right:-6px;background:#fff;color:var(--brand);border-radius:50%;width:16px;height:16px;display:grid;place-items:center;font-size:.65rem;font-weight:700}
+.product-menu{display:flex;gap:16px;overflow-x:auto;background:var(--brand);color:#fff;padding:6px 12px;white-space:nowrap}
+.product-menu span{padding-bottom:4px;border-bottom:2px solid transparent}.product-menu .active{border-color:#fff;font-weight:600}
+
+/* Carousel */
+.carousel{position:relative;overflow:hidden}.slides{display:flex;transition:transform .6s ease}.carousel img{width:100%;height:auto;display:block;border-radius:0}
+.dots{text-align:center;margin:8px 0}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#ccc;margin:0 4px;cursor:pointer}.dot.active{background:var(--accent)}
+
+/* Coupons */
+.coupon-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px}.coupon-box{background:#ffe9d2;color:#222;border-radius:8px;padding:8px 10px;text-align:center;font-size:.85rem;box-shadow:var(--shadow);min-width:90px}.coupon-box strong{display:block;color:#ef4444;font-size:1rem}
+
+/* Best Sellers */
+.section{padding:14px}.section h2{margin:0 0 10px;font-size:1.15rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.product{background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;text-align:center}.product img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.product h3{margin:8px 0 2px;font-size:1rem}.price{margin-bottom:10px;color:#ef4444;font-weight:700}
+
+/* Recommended */
+.recommend{padding:14px}.recommend .scroll{display:flex;gap:10px;overflow-x:auto}.recommend .item{min-width:70%;background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;text-align:center}.recommend img{width:100%;aspect-ratio:1/1;object-fit:cover}
+
+/* Reviews */
+.reviews{padding:14px;background:#fafafa}.reviews-grid{display:flex;gap:10px;overflow-x:auto}.review-card{min-width:70%;background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden}.review-card img{width:100%;aspect-ratio:4/3;object-fit:cover}.review-text{padding:10px;font-size:.9rem}
+
+/* FAQ */
+.faq{padding:14px}.faq-item{border-bottom:1px solid #eee}.faq-question{padding:12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600}.faq-answer{display:none;padding:0 12px 12px;color:var(--muted)}
+
+footer{background:#f7f7f7;color:var(--muted);text-align:center;padding:20px}.links{margin:8px 0}.socials{display:flex;justify-content:center;gap:12px;margin-top:8px}footer .socials a{color:var(--muted);font-size:1.2rem;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class='menu-icon'>☰</div><div class='logo'>🐱 CALMPURR</div><div class='cart'>🛒</div></header>
+<nav class='product-menu'><span class='active'>Popular</span><span>Photo Custom 🔥</span><span>Fat Cat</span><span>Slim Cat</span><span>Accessories</span></nav>
+
+<section class='carousel'><div class='slides' id='slides'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360"><rect width="800" height="360" fill="%23fff6e8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="%23999">Slide 1</text></svg>'/><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360"><rect width="800" height="360" fill="%23eafff6"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="%23999">Slide 2</text></svg>'/><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360"><rect width="800" height="360" fill="%23f0f8ff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="%23999">Slide 3</text></svg>'/></div><div class='dots'><span class='dot active'></span><span class='dot'></span><span class='dot'></span></div></section>
+
+<div class='coupon-row'><div class='coupon-box'><strong>$5 OFF</strong>Orders $60+<br><code>OFF5</code></div><div class='coupon-box'><strong>$10 OFF</strong>Orders $110+<br><code>OFF10</code></div><div class='coupon-box'><strong>$20 OFF</strong>Orders $200+<br><code>OFF20</code></div></div>
+
+<section class='section'><h2>Best Sellers</h2><div class='grid'>
+<script>
+let imgs='';for(let c=1;c<=8;c++){imgs+=`<div class='product'><img src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\"><rect width=\"300\" height=\"300\" fill=\"%23fffaf2\"/><text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"20\" fill=\"%23999\">cat${c}</text></svg>'/><h3>Cat ${c}</h3><p class='price'>€${55+Math.floor(Math.random()*20)}.99</p></div>`;}document.currentScript.insertAdjacentHTML('beforebegin',imgs);
+</script></div></section>
+
+<section class='recommend'><h2>Recommended for You</h2><div class='scroll'><div class='item'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="%23fffaf2"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Rec 1</text></svg>'/><h3>Orange Cat</h3><p class='price'>€59.99</p></div><div class='item'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="%23fff4f2"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Rec 2</text></svg>'/><h3>Curly Cat</h3><p class='price'>€64.99</p></div><div class='item'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="%23f2fff4"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Rec 3</text></svg>'/><h3>Custom Cat</h3><p class='price'>€79.99</p></div></div></section>
+
+<section class='reviews'><h2>Customer Reviews</h2><div class='reviews-grid'><div class='review-card'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="%23fffaf2"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Review 1</text></svg>'/><div class='review-text'>“Super cute cat!”</div></div><div class='review-card'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="%23f2fff4"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Review 2</text></svg>'/><div class='review-text'>“Looks just like my pet.”</div></div><div class='review-card'><img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="%23fff4f2"/><text x="50%" y="50%" text-anchor="middle" font-size="20" fill="%23999">Review 3</text></svg>'/><div class='review-text'>“Perfect handmade gift.”</div></div></div></section>
+
+<section class='faq'><h2>FAQ</h2><div class='faq-item'><div class='faq-question'>Do you ship overseas?<span>+</span></div><div class='faq-answer'>Yes, we offer worldwide shipping!</div></div><div class='faq-item'><div class='faq-question'>How long will it take to get my order?<span>+</span></div><div class='faq-answer'>Orders may take 6-10 working days depending on region.</div></div><div class='faq-item'><div class='faq-question'>How to track my order?<span>+</span></div><div class='faq-answer'>You will receive an email notification with tracking info.</div></div><div class='faq-item'><div class='faq-question'>What is it made of? Is it safe?<span>+</span></div><div class='faq-answer'>Our cats are made from food-grade silicone, safe and non-toxic.</div></div></section>
+
+<footer><p>© 2025 CalmPurr · Handmade Silicone Cats</p><div class='links'><a href='#'>Privacy Policy</a> · <a href='#'>Return Policy</a></div><div class='socials'><a href='#'>🎵</a><a href='#'>📸</a><a href='#'>🐦</a></div></footer>
+
+<script>
+const slides=document.querySelector('#slides');const dots=document.querySelectorAll('.dot');let i=0;setInterval(()=>{i=(i+1)%3;slides.style.transform=`translateX(-${i*100}%)`;dots.forEach((d,j)=>d.classList.toggle('active',j===i));},3000);
+document.querySelectorAll('.faq-question').forEach(q=>q.addEventListener('click',()=>{const ans=q.nextElementSibling;ans.style.display=ans.style.display==='block'?'none':'block';}));
+</script>
+</body>
+</html>

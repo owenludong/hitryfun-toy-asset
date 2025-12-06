@@ -83,13 +83,13 @@
           <table class="guarantee-table mobile-guarantee">
             <tbody>
               <tr>
-                
+
                 <td class="guarantee-seal-container">
                   <img class="guarantee-seal" src="http://www.wish.com/static/img/ic_guarantee_wish.png">
                   </img>
                 </td>
                 <td class="guarantee-text">
-                  We have your back! You never have to worry when you shop on Hitryfun.
+                  We have your back! You never have to worry when you shop on CalmPurr.
                 </td>
               </tr>
             </tbody>
@@ -126,6 +126,7 @@ export default {
     return {
       tid: '',
       transactionId: '',
+      lc: '',
       // tid: '', // 单号
       hasTid: false, // 是否获取到了tid的值
       orderDetail: {} // 订单详情
@@ -149,6 +150,7 @@ export default {
         .then((res) => {
           this.orderDetail = res.data.order
           this.tid = this.orderDetail.trackNo
+          this.lc = this.orderDetail.logisticsCarrier
           this.hasTid = true
         })
         .catch((err) => {
@@ -159,6 +161,7 @@ export default {
       this.$router.push({path: `/transaction/${this.transactionId}`})
     },
     build17Info () {
+      console.log("lc=" + this.lc)
       let YQV5 = window.YQV5
       YQV5.trackSingle({
         // 必须，指定承载内容的容器ID。
@@ -166,7 +169,7 @@ export default {
         // 可选，指定查询结果高度，最大为800px，默认为560px。
         YQ_Height: 560,
         // 可选，指定运输商，默认为自动识别。
-        YQ_Fc: '0',
+        YQ_Fc: this.lc ? this.lc : '0',
         // 可选，指定UI语言，默认根据浏览器自动识别。
         YQ_Lang: 'en',
         // 必须，指定要查询的单号。

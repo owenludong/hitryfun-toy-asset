@@ -32,7 +32,7 @@
               <div class="row-icon home-icon">
               </div>
               <div class="row-description">
-                Home
+                {{ $t('home') }}
               </div>
             </li>
           </a>
@@ -51,7 +51,7 @@
               <div class="row-icon shopping-cart-icon">
               </div>
               <div class="row-description">
-                Shopping Cart
+                  {{ $t('shoppingcart') }}
               </div>
             </li>
           </a>
@@ -60,11 +60,12 @@
               <div class="row-icon order-history-icon">
               </div>
               <div class="row-description">
-                Order History
+                {{ $t('orderhistory') }}
               </div>
               <!-- <div class="row-notification hide"></div> -->
             </li>
           </a>
+          <!--
           <a class="menu-item ui-link" href="javascript:void(0);" @click="goTo('/contact-us')">
             <li class="profile-menu-row" :class="{'active':activeMenu==='ContactUs'}">
               <div class="row-icon customer-icon">
@@ -74,6 +75,7 @@
               </div>
             </li>
           </a>
+          -->
           <li class="mobile-profile-menu-section-devider">
           </li>
           <!-- <a class="menu-item ui-link" data-tid="1933" href="/m/help">
@@ -91,7 +93,7 @@
               <div class="row-icon settings-icon">
               </div>
               <div class="row-description">
-                Settings
+                 {{ $t('settings') }}
               </div>
               <!-- 有消息的状态 -->
               <!-- <div class="row-notification hide"></div> -->
@@ -351,11 +353,12 @@ export default {
           this.loginName = response.data.userName
           let gender = response.data.gender
           if(gender){
-             if ('M' == gender) {
-                this.personImage = 'https://www.hitryfun.com/logo/male.jpeg'
-             } else if ('F' == gender) {
-                this.personImage = 'https://www.hitryfun.com/logo/female.jpeg'
-             }
+             //if ('M' == gender) {
+             //   this.personImage = 'https://www.hitryfun.com/logo/male.jpeg'
+             //} else if ('F' == gender) {
+             //   this.personImage = 'https://www.hitryfun.com/logo/female.jpeg'
+             //}
+             this.personImage = 'https://www.calmpurr.com/img/logo/logo.png'
           }
         })
         .catch((err) => {

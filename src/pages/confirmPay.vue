@@ -53,7 +53,7 @@
         },
         failTitle: {
           cn: '支付失败',
-          en: 'Sorry, the payment is fail, please repay or contact us with service@hitryfun.com'
+          en: 'Sorry, the payment is fail, please repay or contact us'
         }
       }
     },

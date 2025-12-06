@@ -4,52 +4,28 @@
     <div class="singin-v2">
       <ul>
         <li>
-          <label id="required-text">* Indicates a field is required</label>
+          <label id="required-text">{{ $t('signinReq') }}</label>
           <form class="input-fields-v2 ui-mobile-input-overwrite">
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="highlight-v2" id="signin-v2-email" spellcheck="false" type="email" placeholder="Email*" autocomplete="off" v-model.trim="email"/>
+              <input class="highlight-v2" id="signin-v2-email" spellcheck="false" type="email" :placeholder="$t('emailReq')" autocomplete="off" v-model.trim="email"/>
             </div>
             <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-              <input class="highlight-v2" id="signin-v2-password" type="password" placeholder="Password*" v-model.trim="password" autocomplete="off"/>
+              <input class="highlight-v2" id="signin-v2-password" type="password" :placeholder="$t('passwordReq')" v-model.trim="password" autocomplete="off"/>
             </div>
-            <!--
-            <router-link class="forgot-password-link-v2 forgot-password-v2 text-link" tag="div" to="/forgotPassword">
-              Forgot password?
-            </router-link>-->
             <button class="btn-v2 ui-mobile-btn-overwrite email-signin-button-v2 ui-btn ui-shadow ui-corner-all" @click="signin" type="button">
               <span class="text">
-                Sign In
+                {{ $t('signin') }}
               </span>
             </button>
           </form>
         </li>
-        <!-- <li>
-          <div class="login-separator-v2">
-            <div class="text">
-              or
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="loginmodal-v2-social-div">
-            <div class="loginmodal-v2-social-btn fb-login-btn btn-v2 cronkite" data-tid="1518" @click="tofb">
-              <div>
-                <img src="../assets/images/fb.png?v=13"/>
-                <span class="text">
-                  Facebook
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </li> -->
         <li>
           <div class="signin-new">
             <div class="signin-new-txt">
-              New to Hitryfun?
+              {{ $t('newTo') }}
             </div>
             <router-link class="text-link signin-btn-signup cronkite touchable" to="/signup" tag="div">
-              Create Account
+              {{ $t('createAccount') }}
             </router-link>
           </div>
         </li>

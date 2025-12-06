@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-    <!-- <my-header></my-header> -->
-    <router-view></router-view>
+  <div id="app" class="app-wrapper">
+    <keep-alive include="index">   <!-- ✅ 只缓存首页 -->
+      <router-view class="page-container" v-if="$route.meta.keepAlive" />
+    </keep-alive>
+    <router-view class="page-container" v-if="!$route.meta.keepAlive" />
     <aside-menu></aside-menu>
     <aside-category></aside-category>
     <loading-circle :isShowMask="showLoadingCircle"></loading-circle>
-    <!-- <login-modal></login-modal> -->
-
   </div>
 </template>
 
@@ -16,11 +16,12 @@ import AsideCategory from './components/asideCategory'
 import CookieApi from './_common/js/cookies.js'
 import LoadingCircle from './components/base/loadingCircle'
 import Bus from './_common/js/bus'
+import SiteFooter from '@/components/SiteFooter.vue'
 // import LoginModal from './components/signIn'
 // import MyHeader from './components/header'
 export default {
   name: 'app',
-  components: { AsideMenu, AsideCategory, LoadingCircle},
+  components: { AsideMenu, AsideCategory, LoadingCircle, SiteFooter},
   data () {
     return {
       showLoadingCircle: false
@@ -31,7 +32,7 @@ export default {
       console.log(to)
       // document.body.docu
     }
-  }, 
+  },
   created () {
     let user = CookieApi.getCookie('user')
     let email = CookieApi.getCookie('email')
@@ -60,4 +61,6 @@ export default {
 </script>
 
 <style >
+
+
 </style>

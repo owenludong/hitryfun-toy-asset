@@ -6,7 +6,7 @@ import router from '../router/index'
 import store from '../store/index'
 import axios from 'axios'
 // axios.defaults.baseURL = '/api' // 以后改成真正的接口地址
-axios.defaults.baseURL = 'https://api.hitryfun.com' // 以后改成真正的接口地址
+axios.defaults.baseURL = 'https://api.calmpurr.com:8443' // 以后改成真正的接口地址
 //axios.defaults.baseURL = 'http://localhost'
 axios.defaults.timeout = 5000
 axios.defaults.withCredentials = true
@@ -14,6 +14,8 @@ axios.defaults.withCredentials = true
 axios.interceptors.request.use((config) => {
   // Do something before request is sent
   // config.data = qs.stringify(config.data)
+  const lang = localStorage.getItem('lang') || 'en'
+  config.headers['Accept-Language'] = lang
   return config
 }, (error) => {
   // Do something with request error
@@ -66,7 +68,7 @@ axios.interceptors.response.use((response) => {
   } else {
     if (response.data.code === 'G0006') {
       // 不需要登录的路由 产品列表页面、产品详情页、搜索页、搜索结果页、退款政策
-      let notNessaryPath = ['Browse', 'Details', 'search', 'searchResult']
+      let notNessaryPath = ['Browse', 'Details', 'search', 'searchResult', 'aboutUs', 'privatePolicy', 'refundPolicy', 'terms', 'ContactUs']
       if (notNessaryPath.indexOf(router.currentRoute.name) === -1) {
         // 跳转到登录页面
         console.log(router)

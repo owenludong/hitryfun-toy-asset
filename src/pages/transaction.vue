@@ -3,26 +3,14 @@
     <my-header></my-header>
     <div id="transactionPage" class="mobile-transaction-list-page">
       <div class="page-title">
-        Order History
+        {{ $t('orderhistory') }}
       </div>
-      <!--
-      <div class="guarantee-placeholder">
-        <table class="mobile-guarantee">
-          <tbody>
-            <tr>
-              
-              <td class="guarantee-seal-container"><img class="guarantee-seal" src="../assets/images/ic_guarantee_wish.png" /></td>
-              <td class="guarantee-text">We have your back! You never have to worry when you shop on Hitryfun.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>-->
       <div class="empty-view" v-show="!pagination.total">
         <div class="empty-message">
-          You haven't made any orders.
+          {{ $t('notorderyet') }}
         </div>
         <router-link class="gray-button close-button touchable" to="/" tag="div">
-          Shop Now
+          {{ $t('shopnow') }}
         </router-link>
       </div>
       <div class="transaction-list" v-show="pagination.total">

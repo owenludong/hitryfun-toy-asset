@@ -20,6 +20,9 @@ import ConfirmPayPage from '@/pages/confirmPay'
 import PayLoadingPage from '@/pages/payloading'
 import NotFoundPage from '@/pages/404'
 import OauthCallBackPage from '@/pages/oauthCallback'
+import refundPolicyPage from '@/pages/refundPolicy'
+import privatePolicyPage from '@/pages/privatePolicy'
+import termsPage from '@/pages/terms'
 
 Vue.use(Router)
 // Router.prototype.goBack = function () {
@@ -32,7 +35,8 @@ const routers = new Router({
     {
       path: '/',
       name: 'Browse',
-      component: IndexPage
+      component: IndexPage,
+      meta: { keepAlive: true }
     },
     {
       path: '/product/:id',
@@ -43,6 +47,26 @@ const routers = new Router({
       path: '/product-detail/:id',
       name: 'ProductDetails',
       component: ProductDetailPage
+    },
+    {
+      path: '/about-us',
+      name: 'aboutUs',
+      component: () => import(`@/pages/aboutus/aboutUs-${localStorage.getItem('lang') || 'en'}.vue`)
+    },
+    {
+      path: '/private-policy',
+      name: 'privatePolicy',
+      component: () => import(`@/pages/privatepolicy/privatePolicy-${localStorage.getItem('lang') || 'en'}.vue`)
+    },
+    {
+      path: '/refund-policy',
+      name: 'refundPolicy',
+      component: () => import(`@/pages/refundpolicy/refundPolicy-${localStorage.getItem('lang') || 'en'}.vue`)
+    },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: () => import(`@/pages/terms/terms-${localStorage.getItem('lang') || 'en'}.vue`)
     },
     {
       path: '/search',
@@ -80,7 +104,7 @@ const routers = new Router({
       component: TransactionDetailPage
     },
     {
-      path: '/purchase-confirmation/:tid',
+      path: '//1/:tid',
       component: TransactionDetailPage,
       name: 'order-confirm'
     },

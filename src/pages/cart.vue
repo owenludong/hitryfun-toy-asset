@@ -4,15 +4,15 @@
     <div id="cartPage" class="mobile-cart-page">
       <div class="cart-item-content" v-show="cartInfo.cartItems.length">
         <div class="shipment-info">
-          <div class="header">Your Shipment Info</div>
+          <div class="header">{{ $t('youshippinginfo') }}</div>
           <router-link class="info-item"  to="/shipping" tag="div">
-            <div class="info-item-name">Shipping</div>
+            <div class="info-item-name">{{ $t('shipping') }}</div>
             <div class="info-item-result">
               <span>{{address.address}} <i class="wconfont wm-arrow-right"></i></span>
             </div>
           </router-link>
           <router-link class="info-item" to="/payment" tag="div">
-            <div class="info-item-name">Payment</div>
+            <div class="info-item-name">{{ $t('payment') }}</div>
             <div class="info-item-result">
               <!--<div class="paypal"></div>-->
               <span>{{paymethod}} <i class="wconfont wm-arrow-right"></i></span>
@@ -20,41 +20,6 @@
           </router-link>
         </div>
         <div class="cart-items-container">
-          <!-- <div class="mobile-cart-item">
-            <div clas="item-details">
-              <div class="item-picture">
-                <img class="cart-product-image" src="https://contestimg.wish.com/api/image/fetch?contest_id=58a1f57137d7be52210e11d6&w=160&h=160" />
-
-              </div>
-              <div class="item-info">
-                <div class="item-name">
-                  Kitchen Silicone Macaron Macaroon Pastry Oven Baking Mould Sheet Mat 30-Cavity DIY Mold Baking Mat
-                </div>
-                <div class="item-customization">
-                  Shipping: HK$54.00
-                </div>
-                <div class="item-customization">
-                  Dec 27 - Jan 3
-                </div>
-                <div class="item-quantity">
-                  <a class="sub-quantity main-color wconfont wm-jian"></a>
-                  <span class="quantity">
-                    3
-                  </span>
-                  <a class="add-quantity main-color wconfont wm-jia"></a>
-                </div>
-              </div>
-              <div class="item-price">
-                <div>
-                  HK$126.00
-                </div>
-                <div>
-                </div>
-              </div>
-            </div>
-            <div class="shipping-options">
-            </div>
-          </div> -->
           <div class="mobile-cart-item" v-for="cart in cartInfo.cartItems">
             <div clas="item-details">
               <div class="item-picture">
@@ -95,92 +60,6 @@
             <div class="shipping-options">
             </div>
           </div>
-          <!-- <div>
-            <div class="mobile-cart-item">
-              <div clas="item-details">
-                <div class="item-picture">
-                  <img class="cart-product-image" src="https://contestimg.wish.com/api/image/fetch?contest_id=568260f88a90b4244ff247f5&w=160&h=160&s=8" />
-
-                </div>
-                <div class="item-info">
-                  <div class="item-name">
-                    WAQIA  Adjustable snap kitchen sink faucet Storage Basket Drain racks sponge holder
-                  </div>
-                  <div class="item-customization">
-                    Pink
-                  </div>
-                  <div class="item-customization">
-                    Shipping: HK$8.00
-                  </div>
-                  <div class="item-customization">
-                    Jan 2 - Jan 12
-                  </div>
-                  <div class="item-quantity">
-                    <a class="sub-quantity main-color wconfont wm-jian"></a>
-                    <span class="quantity">
-                      1
-                    </span>
-                    <a class="add-quantity main-color wconfont wm-jia"></a>
-                  </div>
-                </div>
-                <div class="item-price">
-                  <div>
-                    HK$8.00
-                  </div>
-                  <div>
-                    <span class="crossed-price">
-                      HK$24.00
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="shipping-options">
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="mobile-cart-item">
-              <div clas="item-details">
-                <div class="item-picture">
-                  <img class="cart-product-image" src="https://contestimg.wish.com/api/image/fetch?contest_id=57bba4da3722bb1bd8f79068&w=160&h=160" />
-
-                </div>
-                <div class="item-info">
-                  <div class="item-name">
-                    This over-door hanging towel rack can be used in kitchens or bathrooms.
-                  </div>
-                  <div class="item-customization">
-                    Blue, 1
-                  </div>
-                  <div class="item-customization">
-                    Shipping: HK$9.00
-                  </div>
-                  <div class="item-customization">
-                    Dec 24 - Jan 3
-                  </div>
-                  <div class="item-quantity">
-                    <a class="sub-quantity main-color wconfont wm-jian"></a>
-                    <span class="quantity">
-                      1
-                    </span>
-                    <a class="add-quantity main-color wconfont wm-jia"></a>
-                  </div>
-                </div>
-                <div class="item-price">
-                  <div>
-                    HK$8.00
-                  </div>
-                  <div>
-                    <span class="crossed-price">
-                      HK$94.00
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="shipping-options">
-              </div>
-            </div>
-          </div> -->
         </div>
         <!-- <div class="cart-return-policy">
           <span class="return-policy-button main-color">
@@ -192,8 +71,8 @@
           <div>
             <div class="mobile-cart-footer">
               <div class="cart-promo-container">
-                <input id="promCode" type="text" placeholder="Enter Promo Code" maxlength="20" class="promo-input" v-model="promCode">
-                <a class="clickable main-color main-color-border-color" @click="calProm" v-show="!showLoading">Apply</a>
+                <input id="promCode" type="text" :placeholder="$t('enterpromotioncode')" maxlength="20" class="promo-input" v-model="promCode">
+                <a class="clickable main-color main-color-border-color" @click="calProm" v-show="!showLoading">{{ $t('apply') }}</a>
                 <img v-show="showLoading"  id="prom-loader" src="../assets/images/ajax_loader_24_transparent.gif"/>
               </div>
               <div class="row2">
@@ -201,7 +80,7 @@
               </div>
               <div class="row">
                 <span class="label">
-                  Item Total
+                  {{ $t('youshippinginfo') }}
                 </span>
                 <span class="value">
                   {{cartInfo.symbol}} {{cartInfo.totalProductPrice}}
@@ -209,15 +88,15 @@
               </div>
               <div class="row ">
                 <span class="label">
-                  Shipping
+                  {{ $t('itemtotal') }}
                 </span>
                 <span class="value">
-                  Free Shipping
+                  {{ $t('freeshipping') }}
                 </span>
               </div>
               <div class="row order-total ">
                 <span class="label">
-                  Order Total
+                  {{ $t('ordertotal') }}
                 </span>
                 <span class="value">
                   {{cartInfo.symbol}} {{cartInfo.finalPrice}}
@@ -238,10 +117,10 @@
       </div>
       <div class="cart-empty-view" v-show="!cartInfo.cartItems.length">
         <div class="message">
-          Your cart is empty
+          {{ $t('cartisempty') }}
         </div>
         <router-link class="blue-button start-shopping-button touchable default-hide" to="/" tag="div">
-          Continue Shopping
+          {{ $t('continueshopping') }}
         </router-link>
       </div>
     </div>
@@ -451,7 +330,7 @@ export default {
           if (response.data.stripeToken) {
             this.stripeToken = response.data.stripeToken
           }
-          this.checkoutText = 'Place Order'      
+          this.checkoutText = this.$t("placeorder")
         })
         .catch((err) => {
           console.log(err)
@@ -459,13 +338,10 @@ export default {
     },
     checkout () { // 下单
       if (!this.hasAddress) {
-         console.log('设置地址')
          this.$router.push({path: '/shipping'})
       } else if (!this.paymethod) {
-         console.log('设置付款方式')
          this.$router.push({path: '/payment'})
       } else if(this.paymethod === 'CreditCard' && !this.stripeToken) {
-         console.log('设置信用卡账号')
          this.$router.push({path: '/payment'})
       } else {
          this.$router.push({name: 'pay-loading', params: {paymethod: this.paymethod, stripeToken: this.stripeToken}})
@@ -479,10 +355,10 @@ export default {
         //          showCancelButton: true,
         //          cancelButtonText: 'cancel'
         this.$messagebox({
-          message: `<img src="${cart.image}" class="remove-img"/> <div class="remove-text">Remove this item from cart?</div>`,
-          confirmButtonText: 'Remove Item',
+          message: `<img src="${cart.image}" class="remove-img"/> <div class="remove-text">{{ $t('removeItemTips') }}</div>`,
+          confirmButtonText: this.$t("removeItem"),
           showCancelButton: true,
-          cancelButtonText: 'cancel'
+          cancelButtonText: this.$t("cancel")
         }).then(action => {
           if (action === 'confirm') {
             Bus.$emit('show-circle-loading', 'show')

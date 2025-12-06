@@ -19,7 +19,50 @@
                 </div>
               </mt-swipe-item>
             </mt-swipe> -->
+
+            <!--
             <h-video v-show="hasPlayVideo && currentImgIndex === 1" ref="video" @on-error="onError" @on-cancel="onCancel"></h-video>
+            -->
+
+            <swiper :options="swiperOption" ref="mySwiper">
+              <!-- ✅ 视频 slide（自动播放、静音） -->
+              <swiper-slide v-if="hasVideo">
+                <div class="video-wrapper" :style="{ height: clientWidth, width: clientWidth }">
+                  <video
+                    class="intro-video"
+                    ref="introVideo"
+                    src=""
+                    autoplay
+                    muted="muted"
+                    defaultMuted="true"
+                    loop
+                    playsinline
+                    webkit-playsinline="true"
+                    x5-playsinline="true"
+                    x-webkit-airplay="true"
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                  ></video>
+                </div>
+              </swiper-slide>
+
+              <!-- ✅ 图片 slides -->
+              <swiper-slide v-for="(img, index) in detail.images" :key="index">
+                <div
+                  class="image-wrapper-cell"
+                  :style="{ height: clientWidth, width: clientWidth, lineHeight: clientWidth }"
+                >
+                  <img
+                    class="contest-imgs"
+                    :src="img"
+                    :style="{ maxHeight: clientWidth, maxWidth: clientWidth, lineHeight: clientWidth }"
+                  />
+                </div>
+              </swiper-slide>
+            </swiper>
+
+
+           <!--
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
                 <swiper-slide v-for="(img,index) in detail.images" :key="index">
@@ -32,6 +75,7 @@
                     </span>
                   </div>
                 </swiper-slide>
+
                 <!-- <swiper-slide>
                   <div class="image-wrapper-cell" style="left: 0px;" :style="{ height: clientWidth,width: clientWidth,lineHeight: clientWidth}">
                     <img class="contest-imgs" id="0photo-id" src="https://contestimg.wish.com/api/webimage/543c8b127541ce3172f44f88-1-large.jpg" style="vertical-align: middle; margin-bottom: 3px; height: 100%;" :style="{ maxHeight: clientWidth, maxWidth: clientWidth, lineHeight: clientWidth}"/>
@@ -43,12 +87,12 @@
                   </div>
                 </swiper-slide> -->
 
-            </swiper>
+            </swiper> -->
           </div>
         </div>
         <div class="mobile-contest-extra-photos black-pill-button" v-show="!hasPlayVideo || currentImgIndex !== 1">
           <span class="extra-photos-text">
-            <span class="image-index">{{currentImgIndex}}</span>/{{detail.images.length}}
+            <span class="image-index">{{currentImgIndex + 1}}</span>/{{ hasVideo ? detail.images.length + 1 : detail.images.length }}
           </span>
         </div>
         <!-- <div class="share-button">
@@ -58,46 +102,23 @@
       <!-- 描述 -->
       <div class="mobile-contest-info-container">
         <div class="mobile-contest-info">
-          <div>
             <div class="mobile-contest-name">
               {{detail.name}}
             </div>
-            <!-- <div class="product-rating-stars">
-              <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
-              <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
-              <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
-              <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_fullstar_16.png?v=13" />
-              <img class="rating-star" src="//main.cdn.wish.com/803e2d9bedb9/img/stars/wish_emptystar_16.png?v=13" />
-            </div>
-            <span class="contest-rating-count blue-small-text main-color">
-              (6854)
-            </span> -->
-          </div>
+
         </div>
       </div>
-      <!-- item specification -->
-      <div class="mobile-contest-separator"></div>
-      <!-- <div class="contest-product-details-container" @click="toggleDescr('#spec')" :class="{open: isShow['#spec']}">
-        <div class="contest-product-details-text title-text">
-          Item Specification
-        </div>
-        <span class="arrow-img-container">
-          <i class="wconfont wm-arrow-down"></i>
-        </span>
-      </div> -->
-      <div class="item-content" id="spec">
-        <div class="item-detail-content">
-          这里是spec
-        </div>
-      </div>
+
+      <CouponsRowDetail />
+
       <div class="mobile-contest-separator"></div>
       <!-- description -->
       <div class="contest-product-details-container" @click="toggleDescr('#descr')" :class="{open: isShow['#descr']}">
         <span class="contest-product-details-text title-text">
-          Description
+          {{ $t('description') }}
         </span>
         <span class="arrow-img-container">
-          <i class="wconfont wm-arrow-down"></i>
+          <span class="arrow-icon">⌄</span>
         </span>
       </div>
       <div class="item-content" id="descr">
@@ -109,15 +130,15 @@
       <!-- shipping -->
       <div class="contest-product-details-container" @click="toggleDescr('#ship')" :class="{open: isShow['#ship']}">
         <span class="contest-product-details-text title-text">
-          Shipping Information
+          {{ $t('shippingInfo') }}
         </span>
         <span class="arrow-img-container">
-          <i class="wconfont wm-arrow-down"></i>
+          <span class="arrow-icon">⌄</span>
         </span>
       </div>
       <div class="item-content" id="ship">
         <div class="item-detail-content">
-          Free Shipping.  Ships to Worldwide <br/><br/>
+          {{ $t('shippingInfoDetail') }} <br/><br/>
           <!--
           <p style="font-family:courier">Estimated Arrival:</p>
           <p>Europe:&nbsp;  3 ~ 10 Days</p>
@@ -132,16 +153,16 @@
       <div class="contest-price-banner-bottom" style="display: block;">
         <div class="contest-price">
           <span class="contest-real-price">
-            {{detail.symbol}}{{detail.productPrice}}
+            €{{detail.productPrice}}
           </span>
           <span class="contest-retail-price" v-show="detail.discounted">
-            {{detail.symbol}}{{detail.originalPrice}}
+            €{{detail.originalPrice}}
           </span>
           <span class="banner-currency-subscript">
             {{detail.currencyCode}}
           </span>
         </div>
-        <div class="contest-buy-button contest-bottom-button" @click="buy">Buy</div>
+        <div class="contest-buy-button contest-bottom-button" @click="buy">{{ $t('buyText') }}</div>
         <div class="contest-sold-out-button contest-bottom-button" style="display: none;">SOLD OUT</div>
       </div>
       <!-- 遮罩 -->
@@ -156,14 +177,14 @@
         v-model="popupVisible"
         position="bottom">
         <div class="popuo-goods">
-          <div class="header">Thank you</div>
+          <div class="header">{{ $t('thankyou') }}</div>
           <div class="content">
             <div class="content-img">
               <img :src="detail.mainImage" height="120" width="120">
             </div>
             <div class="content-text">
-              <div class="added">Items Added to Cart!</div>
-              <div class="saved" v-show="detail.discounted">Your Savings: {{detail.symbol}}{{detail.originalPrice - detail.productPrice}}</div>
+              <div class="added">{{ $t('addtocart') }}</div>
+              <div class="saved" v-show="detail.discounted">{{ $t('yoursavings') }}: {{detail.symbol}} {{detail.originalPrice - detail.productPrice}}</div>
             </div>
           </div>
         </div>
@@ -220,6 +241,15 @@
     position: relative;
     display: flex;
     align-items: center;
+  }
+
+  .arrow-icon {
+    font-size: 14px;
+    color: #3C4646;
+    transition: transform .3s;
+  }
+  .contest-product-details-container.open .arrow-icon {
+    transform: rotate(180deg);
   }
 
   /* 左侧缩略图容器（占位） */
@@ -399,7 +429,7 @@
       opacity: 0.7;
   }
   .mobile-contest-page{
-      margin-top: 64px;
+      margin-top: 44px;
   }
 
   table {
@@ -934,13 +964,14 @@
 </style>
 <script>
 // import $ from 'jquery'
-import MyHeader from '../components/header'
+import MyHeader from '../components/headerProductDetails'
 import MyLoading from '../components/base/loadingThreePoints'
 import Bus from '../_common/js/bus'
 import qs from 'qs'
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import hVideo from '../components/h-video'
+import CouponsRowDetail from '@/components/CouponsRowDetail.vue'
 
 let $ = function (ele) {
   return document.querySelector(ele)
@@ -949,7 +980,7 @@ let $ = function (ele) {
 export default {
 
   name: 'productDetail',
-  components: { MyHeader, MyLoading, swiper, swiperSlide, hVideo },
+  components: { MyHeader, MyLoading, swiper, swiperSlide, hVideo, CouponsRowDetail },
   data () {
     return {
       hasVideo: false,
@@ -957,7 +988,7 @@ export default {
       swiperOption: {
         // some swiper options/callbacks
         on: {
-          slideChange: this.slideChange
+          slideChange: this.handleSlideChange
         }
       },
       isShow: {
@@ -994,7 +1025,7 @@ export default {
       sizeColorMap: {}, // 尺寸和颜色的映射
       prodcutId: '', // 产品id
       currentImg: '', // 当前放大的图片url
-      currentImgIndex: 1, // 当前图片的下标
+      currentImgIndex: 0, // 当前图片的下标
       clientWidth: '', // 设备宽度
       dataObject: '', // data对象
       isSkuPopupShow: false // 是否显示多sku
@@ -1006,31 +1037,37 @@ export default {
     this.fetch()
   },
   methods: {
-    playVideo () {
-      // 添加视屏
-      this.hasPlayVideo = true
-      // 视频位置调整
-      let contestVideo = document.querySelector('.photo-slide-container')
-      let domVideo = document.querySelector('.contest-video .video-player div')
-      if (domVideo) {
-        domVideo.setAttribute('style', 'height:' + contestVideo.clientHeight + 'px !important')
+
+
+    handleSlideChange() {
+      const swiperRef = this.$refs.mySwiper
+      if (swiperRef && swiperRef.swiper) {
+        const swiper = swiperRef.swiper
+        this.currentImgIndex =
+          (typeof swiper.realIndex !== 'undefined'
+            ? swiper.realIndex
+            : typeof swiper.activeIndex !== 'undefined'
+            ? swiper.activeIndex
+            : 0)
       }
-      // 第一张图片隐藏
-      this.$refs.mySwiper.$children[0].$el.firstChild.style = 'display:none'
-      // 轮播中嵌入 视频
-      this.$refs.mySwiper.$children[0].$el.appendChild(this.$refs.video.$el)
-      // 播放视频
-      let vdo = this.$refs.video.$refs.videoPlayer.$refs.video
-      vdo.currentTime = 0
-      vdo.play()
-    },
-    onCancel () {
-      this.hasPlayVideo = false
-      // 第一张图片展示
-      this.$refs.mySwiper.$children[0].$el.firstChild.style = 'display:block'
-      // 暂停视频
-      let vdo = this.$refs.video.$refs.videoPlayer.$refs.video
-      vdo.pause()
+
+      // 控制视频暂停
+      const video = this.$refs.introVideo
+      if (video) {
+        if (this.currentImgIndex === 0) {
+          // 回到视频页：恢复播放
+          if (video.paused) {
+            console.log('[DEBUG] 重新播放视频')
+            video.play().catch(() => {})
+          }
+        } else {
+          // 滑走时暂停
+          if (!video.paused) {
+            console.log('[DEBUG] 离开视频页 -> 暂停播放')
+            video.pause()
+          }
+        }
+      }
     },
     hideSkuPopup () { // 隐藏sku弹窗
       this.isSkuPopupShow = false
@@ -1083,19 +1120,6 @@ export default {
         }
       }
 
-    },
-    slideChange () {
-      this.currentImgIndex = this.swiper.activeIndex + 1
-      // 播放开启
-      if (this.currentImgIndex === 1 && this.hasPlayVideo) {
-        let vdo = this.$refs.video.$refs.videoPlayer.$refs.video
-        vdo.play()
-      }
-      // 播放关闭
-      if (this.currentImgIndex !== 1 && this.hasPlayVideo) {
-        let vdo = this.$refs.video.$refs.videoPlayer.$refs.video
-        vdo.pause()
-      }
     },
     buy () {
       // 选择sku
@@ -1204,10 +1228,6 @@ export default {
           this.detail = res.data.product
           if (this.detail.video) {
             this.hasVideo = true
-            this.$refs.video.playerOptions.sources.push({
-              type: '',
-              src: this.detail.video
-            })
           }
           if (this.detail.images) {
             this.currentImg = this.detail.images[0]
@@ -1278,23 +1298,56 @@ export default {
       if (!val) {
         Bus.$emit('cart-zoom')
       }
+    },
+    'detail.description'(val) {
+      if (val && !this.isShow['#descr']) {
+        this.$nextTick(() => {
+          this.toggleDescr('#descr')
+        })
+      }
     }
   },
   computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper
-    },
+
     isLogin () {
       return this.$store.getters.getLoginStatus
     }
   },
   mounted() {
-    console.log(this.$refs.mySwiper)
-    // current swiper instance
-    // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-    console.log('this is current swiper instance object', this.swiper)
-    // this.swiper.slideTo(3, 1000, false)
+      // 尝试立即找 video
+      const tryInitVideo = () => {
+        const video = this.$refs.introVideo
+        if (video && this.detail.video) {
+          video.muted = true
+          video.defaultMuted = true
+          video.src = this.detail.video
+          video.load()
+
+          const playPromise = video.play()
+          if (playPromise) {
+            playPromise
+              .then(() => console.log('[DEBUG] autoplay success'))
+              .catch(err => console.warn('[DEBUG] autoplay blocked:', err))
+          }
+          return true
+        }
+        return false
+      }
+
+      // 第一次尝试
+      if (!tryInitVideo()) {
+        console.log('[DEBUG] video not found yet, start observer...')
+        const observer = new MutationObserver(() => {
+          if (tryInitVideo()) {
+            console.log('[DEBUG] video appeared -> stop observing')
+            observer.disconnect()
+          }
+        })
+        observer.observe(this.$el, { childList: true, subtree: true })
+      }
   }
+
+
 }
 </script>
 
