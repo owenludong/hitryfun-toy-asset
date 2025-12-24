@@ -72,7 +72,7 @@ export default {
   continueshopping: "Seguir comprando",
   itemtotal: "Subtotal",
   freeshipping: "Envío gratis",
-  ordertotal: "Total del pedido",
+  ordertotal: "Total",
   notorderyet: "Aún no has realizado ningún pedido.",
   shopnow: "Comprar ahora",
   changeemail: "Cambiar correo",
@@ -103,4 +103,8 @@ export default {
   currencyChangeTips: "Solo como referencia. El pago se procesará en Euro (€).",
   selectCurrency: "Seleccionar moneda",
   approx: "Aprox.",
+  specialOffer: "Oferta especial",
+  christmasOffer: "Especial de Navidad",
+  christmasOfferCopy: "Haz clic en el código abajo para copiarlo",
+  christmasOfferCondition: "Pedido superior a 50 €",
 };

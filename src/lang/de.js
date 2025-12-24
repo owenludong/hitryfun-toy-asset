@@ -72,7 +72,7 @@ export default {
   continueshopping: "Weiter einkaufen",
   itemtotal: "Zwischensumme",
   freeshipping: "Kostenloser Versand",
-  ordertotal: "Gesamtsumme",
+  ordertotal: "Gesamt",
   notorderyet: "Du hast noch keine Bestellung aufgegeben.",
   shopnow: "Jetzt einkaufen",
   changeemail: "E-Mail ändern",
@@ -103,4 +103,8 @@ export default {
   currencyChangeTips: "Nur zur Orientierung. Die Zahlung erfolgt in Euro (€).",
   selectCurrency: "Währung auswählen",
   approx: "Ca.",
+  specialOffer: "Sonderangebot",
+  christmasOffer: "Weihnachtsaktion",
+  christmasOfferCopy: "Klicken Sie auf den untenstehenden Code, um ihn zu kopieren",
+  christmasOfferCondition: "Bestellwert über 50 €",
 };

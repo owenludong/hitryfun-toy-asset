@@ -125,36 +125,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Christmas Discount Popup -->
-    <div
-      v-if="showXmasPopup"
-      class="xmas-popup-overlay"
-      @click.self="closeXmasPopup"
-    >
-      <div class="xmas-popup-content">
-        <button class="close-btn" @click="closeXmasPopup">×</button>
-
-        <div class="xmas-header">
-          🎄 {{ $t('christmasOffer') }} 🎄
-        </div>
-
-        <div class="discount-highlight">20% OFF</div>
-
-        <div class="xmas-body">
-          <p class="instruction">{{ $t('christmasOfferCopy') }}:</p>
-          <div class="xmas-code" @click="copyCode('XMAS20', 0)">
-            XMAS20
-            <div v-if="copiedIndex === 0" class="copied-bubble">Copied!</div>
-          </div>
-          <div class="xmas-info">
-            <p>{{ $t('christmasOfferCondition') }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 </template>
 
@@ -190,106 +160,6 @@ table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
 .cp-img-wrapper { position: relative; }
 .cp-badge { position: absolute; top: 6px; left: 6px; background: linear-gradient(135deg, #9dd6c2, #7fb0d1); color: #fff; font-size: 0.7rem; font-weight: 600; padding: 3px 6px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
 .cp-freeship-banner { background: linear-gradient(90deg, #a8e0c4, #9dd6c2); color: #ffffff; font-weight: 600; font-size: 0.9rem; text-align: center; padding: 8px 0; border-radius: 10px; margin: 10px 14px 12px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); letter-spacing: 0.3px; }
-
-.xmas-popup-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-}
-
-.xmas-popup-content {
-  background: #fff;
-  border-radius: 28px;
-  width: 85%;
-  max-width: 360px;
-  padding: 30px 25px;
-  text-align: center;
-  box-shadow: 0 16px 32px rgba(0,0,0,0.15);
-  position: relative;
-  border: 2px solid #fbe9e7; // 温暖粉色边框
-}
-
-.close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 22px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  color: #555;
-}
-
-.xmas-header {
-  font-size: 20px;
-  font-weight: 700;
-  color: #b71c1c;
-  margin-bottom: 8px;
-}
-
-.discount-highlight {
-  font-size: 28px;
-  font-weight: 900;
-  color: #2e7d32; /* 松绿 */
-  margin-bottom: 18px;
-}
-
-.xmas-body .instruction {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.xmas-code {
-  font-weight: 700;
-  font-size: 18px;
-  background: linear-gradient(90deg, #ffe5e5, #edf7ed);
-  padding: 14px 18px;
-  border-radius: 14px;
-  border: 2px dashed #b71c1c;
-  cursor: pointer;
-  position: relative;
-  margin: 10px 0;
-  transition: all 0.2s ease;
-}
-
-.xmas-code:hover {
-  background: linear-gradient(90deg, #ffd6d6, #d7f0d7);
-  transform: scale(1.05);
-}
-
-.copied-bubble {
-  position: absolute;
-  top: -28px;
-  right: 0;
-  background: #2e7d32;
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  opacity: 0.95;
-  animation: fadeInOut 1s forwards;
-}
-
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(-5px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-5px); }
-}
-
-.xmas-info p {
-  font-size: 14px;
-  margin: 6px 0;
-  color: #333;
-}
-
-
 </style>
 
 <script>
@@ -378,8 +248,6 @@ export default {
     return {
       // Index 不需要存储汇率表了，直接读取 Storage
       loadMoreThreshold: 200,
-      showXmasPopup: true,
-      copiedIndex: null,
       loadTimer: null,
       bestSellers: [],
       recommendList: [],
@@ -445,20 +313,6 @@ export default {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       }).format(finalPrice);
-    },
-
-    closeXmasPopup() {
-      this.showXmasPopup = false;
-    },
-
-    async copyCode(code, index) {
-      try {
-        await navigator.clipboard.writeText(code);
-        this.copiedIndex = index;
-        setTimeout(() => (this.copiedIndex = null), 1000);
-      } catch (err) {
-        alert('Copied: ' + code);
-      }
     },
 
     async fetchBestSellers () {

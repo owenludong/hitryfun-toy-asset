@@ -104,4 +104,8 @@ export default {
   currencyChangeTips: "Reference only. Transactions are settled in Euro (€).",
   selectCurrency: "Select Currency",
   approx: "Approx.",
+  specialOffer: "Special Offer",
+  christmasOffer: "Christmas Special",
+  christmasOfferCopy: "Click the code below to copy it",
+  christmasOfferCondition: "Order amount over €50",
 };

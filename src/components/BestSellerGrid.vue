@@ -5,7 +5,15 @@
       <div v-for="(item, i) in list" :key="i" class="cp-product" @click="showDetail(item.id)">
         <div class="cp-img-wrapper">
           <img :src="item.mainImage || placeholder(i)" :alt="item.name" />
-          <span v-if="[2460, 2461].includes(item.id)" class="cp-badge">Custom Link</span>
+          <span
+            v-if="item.originalPrice && getDiscount(item) >= 20"
+            class="cp-sale-badge"
+          >
+            ✨ {{ $t('specialOffer') }}
+          </span>
+          <!--
+          <span v-if="[2500, 2460, 2461].includes(item.id)" class="cp-badge">Custom Link</span>
+          -->
         </div>
         <h3 class="cp-product-title" :style="{display: '-webkit-box', WebkitLineClamp: 2,WebkitBoxOrient: 'vertical',overflow: 'hidden',textOverflow: 'ellipsis'}">{{ item.name || 'Product ' + (i + 1) }}</h3>
 
@@ -53,6 +61,12 @@ export default {
       }).format(finalPrice);
     },
 
+    getDiscount(item) {
+      if (!item.originalPrice || !item.productPrice) return 0;
+      const diff = item.originalPrice - item.productPrice;
+      return Math.round((diff / item.originalPrice) * 100);
+    },
+
     placeholder(i) {
       const c = ['#f6fffa', '#f0fff4', '#ecfdf5', '#e0f2f1'][i % 4];
       return (
@@ -74,6 +88,26 @@ export default {
 </script>
 
 <style scoped>
+
+.cp-sale-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+
+
 .cp-section {
   padding: 14px;
 }
