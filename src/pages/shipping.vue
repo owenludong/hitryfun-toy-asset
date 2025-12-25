@@ -36,87 +36,9 @@
                 <td class="half-width-input left-cell">
                   <div class="ui-select">
                     <div class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" id="select-67-button">
-                      <span class="required-input country-select" id="countrySelect">{{address.country}}</span>
+                      <span class="required-input country-select" id="countrySelect">{{ countryName }}</span>
                       <select class="required-input country-select" name="country" v-model="address.country">
-                        <option value="">Country</option>
-                        <option value="AL">Albania</option>
-                        <option value="AR">Argentina</option>
-                        <option value="AU">Australia</option>
-                        <option value="AT">Austria</option>
-                        <option value="BB">Barbados</option>
-                        <option value="BE">Belgium</option>
-                        <option value="BM">Bermuda</option>
-                        <option value="BA">Bosnia and Herzegovina</option>
-                        <option value="BR">Brazil</option>
-                        <option value="BG">Bulgaria</option>
-                        <option value="CA">Canada</option>
-                        <option value="CL">Chile</option>
-                        <option value="CO">Colombia</option>
-                        <option value="CR">Costa Rica</option>
-                        <option value="HR">Croatia</option>
-                        <option value="CZ">Czech Republic</option>
-                        <option value="DK">Denmark</option>
-                        <option value="DO">Dominican Republic</option>
-                        <option value="EC">Ecuador</option>
-                        <option value="EG">Egypt</option>
-                        <option value="EE">Estonia</option>
-                        <option value="FI">Finland</option>
-                        <option value="FR">France</option>
-                        <option value="DE">Germany</option>
-                        <option value="GR">Greece</option>
-                        <option value="HK">Hong Kong</option>
-                        <option value="HU">Hungary</option>
-                        <option value="IN">India</option>
-                        <option value="ID">Indonesia</option>
-                        <option value="IE">Ireland</option>
-                        <option value="IL">Israel</option>
-                        <option value="IT">Italy</option>
-                        <option value="JM">Jamaica</option>
-                        <option value="JP">Japan</option>
-                        <option value="JO">Jordan</option>
-                        <option value="KW">Kuwait</option>
-                        <option value="LV">Latvia</option>
-                        <option value="LI">Liechtenstein</option>
-                        <option value="LT">Lithuania</option>
-                        <option value="LU">Luxembourg</option>
-                        <option value="MK">Macedonia</option>
-                        <option value="MY">Malaysia</option>
-                        <option value="MX">Mexico</option>
-                        <option value="MD">Moldova</option>
-                        <option value="MC">Monaco</option>
-                        <option value="MA">Morocco</option>
-                        <option value="NL">Netherlands</option>
-                        <option value="NZ">New Zealand</option>
-                        <option value="NO">Norway</option>
-                        <option value="PK">Pakistan</option>
-                        <option value="PE">Peru</option>
-                        <option value="PH">Philippines</option>
-                        <option value="PL">Poland</option>
-                        <option value="PT">Portugal</option>
-                        <option value="PR">Puerto Rico</option>
-                        <option value="RO">Romania</option>
-                        <option value="RU">Russia</option>
-                        <option value="SA">Saudi Arabia</option>
-                        <option value="RS">Serbia</option>
-                        <option value="SG">Singapore</option>
-                        <option value="SK">Slovakia</option>
-                        <option value="SI">Slovenia</option>
-                        <option value="ZA">South Africa</option>
-                        <option value="KR">South Korea</option>
-                        <option value="ES">Spain</option>
-                        <option value="SE">Sweden</option>
-                        <option value="CH">Switzerland</option>
-                        <option value="TW">Taiwan</option>
-                        <option value="TH">Thailand</option>
-                        <option value="TR">Turkey</option>
-                        <option value="UA">Ukraine</option>
-                        <option value="AE">United Arab Emirates</option>
-                        <option value="GB">United Kingdom (Great Britain)</option>
-                        <option value="US">United States</option>
-                        <option value="VE">Venezuela</option>
-                        <option value="VN">Vietnam</option>
-                        <option value="VG">Virgin Islands, British</option>
-                        <option value="VI">Virgin Islands, U.S.</option>
+                           <option v-for="c in countries" :key="c.code" :value="c.code">{{ c.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -215,11 +137,84 @@ export default {
         city: '',
         zip: '',
         telephone: '',
-      }
+      },
+      countries: [
+
+        { code: 'AL', name: 'Albania' },
+        { code: 'AR', name: 'Argentina' },
+        { code: 'AU', name: 'Australia' },
+        { code: 'AT', name: 'Austria' },
+        { code: 'BE', name: 'Belgium' },
+        { code: 'BR', name: 'Brazil' },
+        { code: 'BG', name: 'Bulgaria' },
+        { code: 'CA', name: 'Canada' },
+        { code: 'CL', name: 'Chile' },
+        { code: 'CO', name: 'Colombia' },
+        { code: 'HR', name: 'Croatia' },
+        { code: 'CZ', name: 'Czech Republic' },
+        { code: 'DK', name: 'Denmark' },
+        { code: 'EC', name: 'Ecuador' },
+        { code: 'EG', name: 'Egypt' },
+        { code: 'EE', name: 'Estonia' },
+        { code: 'FI', name: 'Finland' },
+        { code: 'FR', name: 'France' },
+        { code: 'DE', name: 'Germany' },
+        { code: 'GR', name: 'Greece' },
+        { code: 'HU', name: 'Hungary' },
+        { code: 'IN', name: 'India' },
+        { code: 'ID', name: 'Indonesia' },
+        { code: 'IE', name: 'Ireland' },
+        { code: 'IT', name: 'Italy' },
+        { code: 'JP', name: 'Japan' },
+        { code: 'JO', name: 'Jordan' },
+        { code: 'LV', name: 'Latvia' },
+        { code: 'LI', name: 'Liechtenstein' },
+        { code: 'LT', name: 'Lithuania' },
+        { code: 'LU', name: 'Luxembourg' },
+        { code: 'MK', name: 'Macedonia' },
+        { code: 'MY', name: 'Malaysia' },
+        { code: 'MX', name: 'Mexico' },
+        { code: 'MD', name: 'Moldova' },
+        { code: 'MC', name: 'Monaco' },
+        { code: 'MA', name: 'Morocco' },
+        { code: 'NL', name: 'Netherlands' },
+        { code: 'NZ', name: 'New Zealand' },
+        { code: 'NO', name: 'Norway' },
+        { code: 'PE', name: 'Peru' },
+        { code: 'PH', name: 'Philippines' },
+        { code: 'PL', name: 'Poland' },
+        { code: 'PT', name: 'Portugal' },
+        { code: 'RO', name: 'Romania' },
+        { code: 'RU', name: 'Russia' },
+        { code: 'SA', name: 'Saudi Arabia' },
+        { code: 'RS', name: 'Serbia' },
+        { code: 'SG', name: 'Singapore' },
+        { code: 'SK', name: 'Slovakia' },
+        { code: 'SI', name: 'Slovenia' },
+        { code: 'KR', name: 'South Korea' },
+        { code: 'ES', name: 'Spain' },
+        { code: 'SE', name: 'Sweden' },
+        { code: 'CH', name: 'Switzerland' },
+        { code: 'TW', name: 'Taiwan' },
+        { code: 'TH', name: 'Thailand' },
+        { code: 'TR', name: 'Turkey' },
+        { code: 'UA', name: 'Ukraine' },
+        { code: 'AE', name: 'United Arab Emirates' },
+        { code: 'GB', name: 'United Kingdom (Great Britain)' },
+        { code: 'US', name: 'United States' },
+        { code: 'VE', name: 'Venezuela' },
+        { code: 'VN', name: 'Vietnam' }
+      ]
     }
   },
   created () {
     this.fetch()
+  },
+  computed: {
+    countryName() {
+      const country = this.countries.find(c => c.code === this.address.country)
+      return country ? country.name : this.$t("country")
+    }
   },
   methods: {
     fetch () {
@@ -268,16 +263,16 @@ export default {
         return
       }
       // 验证邮编
-      let zipResult = Validator.zip(this.address.zip)
-      if (!zipResult.status) {
-        this.$messagebox({
-          title: 'Oops!',
-          message: zipResult.errorText,
-          confirmButtonText: 'ok',
-          confirmButtonHighlight: true
-        });
-        return false
-      }
+      //let zipResult = Validator.zip(this.address.zip)
+      //if (!zipResult.status) {
+      //  this.$messagebox({
+      //    title: 'Oops!',
+      //    message: zipResult.errorText,
+      //    confirmButtonText: 'ok',
+      //    confirmButtonHighlight: true
+      //  });
+      //  return false
+      //}
       let data = {
         firstName: this.address.firstName,
         lastName: this.address.lastName,

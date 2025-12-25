@@ -16,6 +16,7 @@ export default {
   city: "Ciudad*",
   zip: "Código postal*",
   phone: "Teléfono*",
+  country: "País*",
   done: "Listo",
   categoryPopular: "Popular",
   categoryCustom: "Personalizado con foto",

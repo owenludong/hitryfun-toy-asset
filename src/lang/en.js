@@ -16,6 +16,7 @@ export default {
   city: "City*",
   zip: "Zip/Postal Code*",
   phone: "Phone*",
+  country: "Country*",
   done: "Done",
   categoryPopular: "Popular",
   categoryCustom: "Photo Custom",

@@ -16,6 +16,7 @@ export default {
   city: "Stadt*",
   zip: "PLZ*",
   phone: "Telefon*",
+  country: "Land*",
   done: "Fertig",
   categoryPopular: "Beliebt",
   categoryCustom: "Foto-Anfertigung",
