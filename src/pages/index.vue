@@ -136,15 +136,15 @@
         <button class="close-btn" @click="closeXmasPopup">×</button>
 
         <div class="xmas-header">
-          🎄 {{ $t('christmasOffer') }} 🎄
+          🎆 {{ $t('christmasOffer') }} 🎆
         </div>
 
         <div class="discount-highlight">20% OFF</div>
 
         <div class="xmas-body">
           <p class="instruction">{{ $t('christmasOfferCopy') }}:</p>
-          <div class="xmas-code" @click="copyCode('XMAS20', 0)">
-            XMAS20
+          <div class="xmas-code" @click="copyCode('2026', 0)">
+            2026
             <div v-if="copiedIndex === 0" class="copied-bubble">Copied!</div>
           </div>
           <div class="xmas-info">
@@ -211,7 +211,8 @@ table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
   text-align: center;
   box-shadow: 0 16px 32px rgba(0,0,0,0.15);
   position: relative;
-  border: 2px solid #fbe9e7; // 温暖粉色边框
+  border: 2px solid #ffe082; /* 金色 */
+  //border: 2px solid #fbe9e7; // 温暖粉色边框
 }
 
 .close-btn {
@@ -228,14 +229,16 @@ table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
 .xmas-header {
   font-size: 20px;
   font-weight: 700;
-  color: #b71c1c;
+  color: #1a237e; /* 深蓝 */
+  //color: #b71c1c;
   margin-bottom: 8px;
 }
 
 .discount-highlight {
   font-size: 28px;
   font-weight: 900;
-  color: #2e7d32; /* 松绿 */
+  color: #ff8f00; /* 金橙 */
+  //color: #2e7d32; /* 松绿 */
   margin-bottom: 18px;
 }
 
@@ -248,10 +251,12 @@ table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
 .xmas-code {
   font-weight: 700;
   font-size: 18px;
-  background: linear-gradient(90deg, #ffe5e5, #edf7ed);
+  background: linear-gradient(90deg, #e3f2fd, #fff8e1);
+  border: 2px dashed #ffb300;
+  //background: linear-gradient(90deg, #ffe5e5, #edf7ed);
   padding: 14px 18px;
   border-radius: 14px;
-  border: 2px dashed #b71c1c;
+  //border: 2px dashed #b71c1c;
   cursor: pointer;
   position: relative;
   margin: 10px 0;
@@ -259,7 +264,8 @@ table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
 }
 
 .xmas-code:hover {
-  background: linear-gradient(90deg, #ffd6d6, #d7f0d7);
+   background: linear-gradient(90deg, #bbdefb, #ffecb3);
+  //background: linear-gradient(90deg, #ffd6d6, #d7f0d7);
   transform: scale(1.05);
 }
 
@@ -378,7 +384,7 @@ export default {
     return {
       // Index 不需要存储汇率表了，直接读取 Storage
       loadMoreThreshold: 200,
-      showXmasPopup: true,
+      showXmasPopup: false,
       copiedIndex: null,
       loadTimer: null,
       bestSellers: [],

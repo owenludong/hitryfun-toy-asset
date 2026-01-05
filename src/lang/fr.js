@@ -105,7 +105,7 @@ export default {
   selectCurrency: "Sélectionner la devise",
   approx: "Env.",
   specialOffer: "Offre spéciale",
-  christmasOffer: "Offre spéciale Noël",
+  christmasOffer: "Offre spéciale Nouvel An 2026",
   christmasOfferCopy: "Cliquez sur le code ci-dessous pour le copier",
   christmasOfferCondition: "Commande supérieure à 50 €",
 };
